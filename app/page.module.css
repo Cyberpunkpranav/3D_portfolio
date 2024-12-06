@@ -1,0 +1,62 @@
+.name{
+color: transparent;
+-webkit-background-clip: text;
+text-shadow: 2px 0px 3px 10px #fff;
+background-color: var(--white);
+}
+.box{
+  background-color: var(--white);
+}
+@media screen and (min-width:1200px) {
+  .name{
+    font-size: 108px;
+  }
+}
+.bee_animate{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--white);
+}
+.bee-animate2,.bee-animate3{
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: var(--white);
+}
+
+.bee-animate2{
+  opacity: 0;
+  box-sizing: border-box;
+  /* background-color: red; */
+  overflow: hidden;
+}
+.cracked_floor{
+  position: absolute;
+  bottom:-5%;
+  left:50%;
+  transform: translateX(-50%) translateY(-5%);
+  width:40vh;
+  z-index: 5;
+}
+.bee-animate3{
+  opacity: 0;
+  box-sizing: border-box;
+  /* background-color: yellow; */
+  overflow: hidden;
+  z-index: 15;
+
+}
+.bee-animate1-image{
+  width:70vh;
+}
+.bee-animate2-image{
+  position: relative;
+  width:70vh;
+  z-index: 10;
+} 
+.bee-animate3-image{
+
+  width:80vh;
+}
