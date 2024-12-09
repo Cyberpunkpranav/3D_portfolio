@@ -9,6 +9,9 @@
   --black: #000000;
   --sparkles-top:0;
   --sparkles-left:0;
+  --sparkles-size:1vh;
+  --sparkles-duration:1s;
+  --sparkles-delay:0.5s;
 }
 * {
   box-sizing: border-box;
