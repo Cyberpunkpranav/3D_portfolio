@@ -7,6 +7,8 @@
 :root {
   --white: #ffffff;
   --black: #000000;
+  --sparkles-top:0;
+  --sparkles-left:0;
 }
 * {
   box-sizing: border-box;
@@ -14,7 +16,6 @@
   margin: 0;
 }
 body {
-   background-color:var(--black);
   font-family: "Permanent Marker", cursive;
 }
 
@@ -23,11 +24,11 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
 
  
 body::-webkit-scrollbar {

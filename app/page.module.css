@@ -16,7 +16,7 @@ background-color: var(--white);
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: var(--white);
+  /* background-color: var(--white); */
 }
 .bee-animate2,.bee-animate3{
   position: absolute;
@@ -46,7 +46,6 @@ background-color: var(--white);
   /* background-color: yellow; */
   overflow: hidden;
   z-index: 15;
-
 }
 .bee-animate1-image{
   width:70vh;
@@ -57,6 +56,71 @@ background-color: var(--white);
   z-index: 10;
 } 
 .bee-animate3-image{
-
   width:80vh;
+}
+.bee-image{
+  height: 100vh;
+  width: auto;
+  margin: 0 auto;
+}
+.blast{
+  width: 10vh;
+  height: 10vh;
+  box-shadow: 0px 2px 100px 4px blue;
+  z-index: 100;
+  position: absolute;
+  border-radius: 50%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: black;
+}
+.cover{
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: black;
+  z-index: 200;
+}
+.sparkles{
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vh;
+  top: var(--sparkles-top);
+  left: var(--sparkles-left);
+  animation: imposed 5s ease 0s forwards;
+}
+.caption{
+  display: grid;
+  place-items: center;  
+  font-size: 42px;
+}
+.name{
+  display: grid;
+  place-items: center;
+  font-size: 72px;
+}
+
+@keyframes imposed {
+    from{
+      top: var(--sparkles-top);
+      left: var(--sparkles-left);
+      height: 0vh;
+      width:0vh;
+      transform: translate(0%,0%);
+    }
+    to{
+      top: 50%;
+      left: 50%;
+      height: 5vh;
+      width: 5vh;
+      transform: translate(-50%,-50%);
+      background-color: black;
+    }
 }
