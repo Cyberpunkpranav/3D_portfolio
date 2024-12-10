@@ -1,12 +1,8 @@
-.name{
-color: transparent;
--webkit-background-clip: text;
-text-shadow: 2px 0px 3px 10px #fff;
-background-color: var(--white);
+.explosion{
+  height: 100vh;
+  width: 100%;
 }
-.box{
-  background-color: var(--white);
-}
+
 @media screen and (min-width:1200px) {
   .name{
     font-size: 108px;
@@ -51,6 +47,7 @@ background-color: var(--white);
 }
 .content{
   opacity: 0;
+  perspective:1000px;
   animation: expose 1s ease 3s forwards;
 }
 .caption{
@@ -58,9 +55,69 @@ background-color: var(--white);
 }
 .name{
   font-size: 72px;
-  color: black;
 }
+.stack{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: 300;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: black;
+  overflow: hidden;
+  transform: rotate(45deg);
+}
+.gate1,.gate2{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 50%;
+  border: 1px solid black;
+  /* transform: translate(-50%,-50%) rotate(120deg); */
+  transition: all 0.5s;
+  background-color: white;
+}
+.gate1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(160%);
+  perspective: 2000px; 
+}
+.gate2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateZ(160%);
+  perspective: 2000px; 
+}
+.circle1{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  height: 0vh;
+  width: 0vh;
+  border-radius: 50%;
+  background-color: black;
+}
+.circle2{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  height: 0vh;
+  width: 0vh;
+  border-radius: 50%;
+  background-color: white;
 
+}
+.circle2 .circle2_content{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
 @keyframes expose {
   from{
     opacity: 0;
