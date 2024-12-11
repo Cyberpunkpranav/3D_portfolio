@@ -58,66 +58,100 @@
 }
 .stack{
   position: relative;
-  height: 100vh;
-  width: 100%;
-  z-index: 300;
-  display: flex;
-  flex-wrap: nowrap;
   background-color: black;
-  overflow: hidden;
-  transform: rotate(45deg);
+  display: flex;
 }
-.gate1,.gate2{
+.techstacks{
+  position: relative;
+  height: 150px;
+  width: 37vw;
+}
+.stack h1{
+  color: white;
+  text-wrap: nowrap;
+  font-size: 108px;
+}
+.front{
+position: relative;
+background-color: black;
+z-index: 300;
+height: 100%;
+overflow: hidden;
+}
+.back{
+  z-index: 200;
+  overflow: hidden;
+  height: 100%;
+}
+.full{
+  z-index: 100;
+  overflow: hidden;
+  height: 100%;
+}
+.back, .full{
+  background-color: black;
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  width: 100%;
+}
+.rectangle1{
+  position: absolute;
+  top:50%;
+  left:0;
+  right: 0;
+  transform: translateY(-50%);
+  height: 0px;
+  width: 100%;
+  background-color: black;
+  perspective:1000px;
+  overflow: hidden;
+}
+.experience{
+  background-color: white;
+  position: absolute;
+  height: 0;
+  left:0;
+  right: 0;
+  overflow: hidden;
+}
+.tech_container{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top:0;
+  left:0;
+  right:0;
+  width: 100%;
+  height: 100vh;
+}
+
+.techs article {
+  white-space: nowrap;
+  animation: horizontal_scroll var(--time) linear infinite;
+  animation-delay: calc(var(--time)*-1);
+}
+.techs article div{
   display: grid;
   place-items: center;
-  height: 100vh;
-  width: 50%;
-  border: 1px solid black;
-  /* transform: translate(-50%,-50%) rotate(120deg); */
-  transition: all 0.5s;
-  background-color: white;
-}
-.gate1{
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateZ(160%);
-  perspective: 2000px; 
-}
-.gate2{
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateZ(160%);
-  perspective: 2000px; 
-}
-.circle1{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  height: 0vh;
-  width: 0vh;
-  border-radius: 50%;
+  width:7rem;
+  height:7rem;
   background-color: black;
+  margin-left:40px;
+  margin-right:40px;
 }
-.circle2{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  height: 0vh;
-  width: 0vh;
-  border-radius: 50%;
-  background-color: white;
+.techs article img{
+  height: auto;
+  width: 100%;
+}
+.techs article:nth-child(2) {
+  animation: horizontal_scroll2 var(--time) linear infinite;
+  animation-delay: calc(var(--time)/-2);
+}
 
-}
-.circle2 .circle2_content{
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    place-items: center;
-}
+
 @keyframes expose {
   from{
     opacity: 0;
@@ -193,4 +227,22 @@
       transform: translate(-50%,-50%);
       background-color: black;
     }
+}
+@keyframes horizontal_scroll {
+  0% {
+      transform: translateX(100%);
+  }
+
+  100% { 
+      transform: translateX(-100%);
+  }
+}
+@keyframes horizontal_scroll2 {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(-200%);
+  }
 }
