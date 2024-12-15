@@ -1,5 +1,5 @@
 'use client'
-import {useState, useEffect } from "react";
+import {useState, useEffect, useRef } from "react";
 import styles from "./page.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -28,21 +28,7 @@ export default function Home() {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(()=>{
-    
     const t1 = gsap.timeline()
-    // t1.to('#stack',{
-    //   transform:'translateY(-100%)',
-    // },0.5)
-    // .fromTo('.gate1',{
-    //   width: '50%',
-    // },{
-    //   width: '0%',
-    // },1)
-    // .fromTo('.gate2',{
-    //   width: '50%',
-    // },{
-    //   width: '0%',
-    // },1)
     t1.to('#content',{
       rotateX:60,
       rotateY:60,
@@ -60,31 +46,27 @@ export default function Home() {
     },0)
     .to('#rectangle1',{
       height:'5px',
-    })
+    },0.6)
     .to('#content',{
       opacity:0
-    })
+    },0.6)
     .to('#content',{
       rotateX:0,
       rotateY:0,
       z:0
-    })
+    },1.2)
     .to('#rectangle1',{
       height:'100vh',
-    })
+    },1.2)
     .to('#content',{
       z:0,
-    }).to('#front',{
-     height:0
-    }).to('#back',{
-      height:0
-     })
+    },1.2)
      .to('#rectangle1',{
-      z:1000
-     })
+      xPercent:-100
+     },1.9)
      .to('#experience',{
-      height:'100vh'
-     })
+      width:'100%'
+     },2)
     ScrollTrigger.create({
       animation:t1,
       start:'1vh center',
@@ -96,7 +78,19 @@ export default function Home() {
     })
   },[])
 
-  console.log();
+  const thumbnails = ['make your website flow','make sustainable softwares','experienced in different domains of softwares','creativity in every page of your website','team player with worthful skills']
+  const [thumbnail,setthumbnail] = useState(thumbnails[0])
+  const indexRef = useRef(0); // Use a ref to track the current index
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      indexRef.current = (indexRef.current + 1) % thumbnails.length; // Update the index
+      setthumbnail(thumbnails[indexRef.current]); // Set the new thumbnail
+    }, 3000);
+
+    return () => clearInterval(interval); // Cleanup the interval on unmount
+  }, [thumbnails]);
   
   return (
     <div id="portfolio">
@@ -117,26 +111,25 @@ export default function Home() {
       ))
     }
     <div id="cover" className={styles.cover}>
-      <div  className={`${styles.content} grid place-items-center h-full w-full`}>
+      <div className={`${styles.content} grid place-items-center h-full w-full`}>
       <div id="content" className="p-5">
       <div id="caption" className={`${styles.caption}`}>This is your's truly</div>
       <div id="name" className={`${styles.name}`}>Pranav Sharma</div>
       </div>
       <div id="rectangle1" className={styles.rectangle1}>
-        <div id="stack" className="h-full w-full grid place-items-center overflow-hidden">
+        <div id="stack" className="h-[100vh] w-full flex flex-col align-items-center justify-center overflow-hidden">
         <div className={styles.stack}>
-          <div className={styles.techstacks}>
-          <h1 className={styles.front} id="front">FrontEnd</h1>
-          <h1 className={styles.back} id="back"> BackEnd</h1>
-          <h1 className={styles.full} id="full"> FullStack</h1>
-          </div>
-          <div>
-            <h1>Engineer</h1>
-          </div>
+          <h4>Expertise in</h4>
+          <h1>FullStack Development</h1>
+        </div>
+        <div id="thumbnail-container" className={styles['thumbnails-container']}>
+        <div className={styles.thumbnails}>
+        <p id="thumbnail1" className={`${styles.thumbnail}`}>{thumbnail}</p>
         </div>
         </div>
-        <div className={` ${styles.tech_container}`}>   
-      <div className={`flex mt-[30px] relative overflow-hidden gap-x-5 py-5 ${styles.techs}`} style={{ '--time': '60s' }}>
+        </div>
+        <div className={`${styles.tech_container}`}>   
+      <div className={`flex relative gap-x-5 overflow-hidden py-5 ${styles.techs}`} style={{ '--time': '80s' }}>
       <article className='flex items-center'>
       <div><Image alt='html' width={100} height={100} src='/logo/html.png'/></div>
       <div><Image alt='css' width={100} height={100} src='/logo/css.png'/></div>
@@ -156,6 +149,7 @@ export default function Home() {
       <div><Image alt='html' width={100} height={100} src='/logo/html.png'/></div>
       <div><Image alt='css' width={100} height={100} src='/logo/css.png'/></div>
       <div><Image alt='css' width={100} height={100} src='/logo/js.png'/></div>
+      <div><Image alt='css' width={100} height={100} src='/logo/jQuery.png'/></div>
       <div><Image alt='css' width={100} height={100} src='/logo/bootstrap.png'/></div>
       <div><Image alt='css' width={100} height={100} src='/logo/tailwind.png'/></div>
       <div><Image alt='css' width={100} height={100} src='/logo/reactjs.png'/></div>
@@ -167,7 +161,7 @@ export default function Home() {
       <div><Image alt='css' width={100} height={100} src='/logo/aws.png'/></div>
       </article>
       </div>
-      <div className={`flex relative gap-x-5 overflow-hidden py-5 ${styles.techs}`} style={{ '--time': '60s' }}>
+      <div className={`flex relative gap-x-5 overflow-hidden py-5 ${styles.techs}`} style={{ '--time': '80s' }}>
       <article className='flex items-center'>
       <div><Image alt='css' width={100} height={100} src='/logo/aws.png'/></div>
       <div><Image alt='css' width={100} height={100} src='/logo/mysql.png'/></div>
@@ -204,7 +198,6 @@ export default function Home() {
       <div id="experience" className={styles.experience}>
         <h1>Experience</h1>
       </div>
-      {/* <div id="circle2" className={styles.circle2}></div> */}
       </div>
     </div>
     </div>
