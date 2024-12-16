@@ -66,7 +66,7 @@ export default function Home() {
      },1.9)
      .to('#experience',{
       width:'100%'
-     },2)
+     },1.9)
     ScrollTrigger.create({
       animation:t1,
       start:'1vh center',
