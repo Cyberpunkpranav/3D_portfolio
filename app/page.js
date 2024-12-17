@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
+import Cursor from "./components/cursor/cursor";
 
 export default function Home() {  
   const [sparkles,setsparkles]=useState([])
@@ -62,11 +63,23 @@ export default function Home() {
       z:0,
     },1.2)
      .to('#rectangle1',{
-      xPercent:-100
+      opacity:0
      },1.9)
      .to('#experience',{
-      width:'100%'
+      z:0
      },1.9)
+     .to('#experience2',{
+      height:'100vh'
+     },3)
+     .to('#experience3',{
+      height:'100vh'
+     },4)
+     .to('#experience4',{
+      height:'100vh'
+     },5)
+    //  .to('#experience4',{
+    //   height:'0'
+    //  },2.6)
     ScrollTrigger.create({
       animation:t1,
       start:'1vh center',
@@ -92,8 +105,22 @@ export default function Home() {
     return () => clearInterval(interval); // Cleanup the interval on unmount
   }, [thumbnails]);
   
+  const [x,setX] = useState(0)
+  const [y,setY] = useState(0)
+  useEffect(()=>{
+const MouseMov = (e)=>{
+setX(e.clientX)
+setY(e.clientY)
+}
+document.addEventListener('mousemove',MouseMov)
+return()=>{
+  document.removeEventListener('mousemove',MouseMov)
+
+}
+  },[x,y])
   return (
     <div id="portfolio">
+      <Cursor x={x} y={y}/>
     <div id="explosion" className={styles.explosion}>
     <div id="blast" className={styles.blast}></div>
     {
@@ -196,7 +223,25 @@ export default function Home() {
       </div>
       </div>
       <div id="experience" className={styles.experience}>
-        <h1>Experience</h1>
+        <h2>Experience</h2>
+        <section className="relative ">
+        <article id="experience1" className={styles.experience1}>
+        <h3>Tech Rajendra</h3>
+        <h5>Front End Engineer</h5>
+        </article>
+        <article id="experience2" className={styles.experience2}>
+        <h3>Legal Buddy India Pvt Ltd</h3>
+        <h5>Full Stack Engineer</h5>
+        </article>
+        <article id="experience3" className={styles.experience3}>
+        <h3>Aartas Care Pvt Ltd</h3>
+        <h5>Software Developer Associate</h5>
+        </article>
+        <article id="experience4" className={styles.experience4}>
+        <h3>Addon ShareWare Pvt Ltd</h3>
+        <h5>Front Developer</h5>
+        </article>
+        </section>
       </div>
       </div>
     </div>

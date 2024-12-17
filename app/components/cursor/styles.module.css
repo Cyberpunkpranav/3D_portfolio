@@ -1,0 +1,11 @@
+.cursor{
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    width: 5vw;
+    height: 5vw;
+    z-index: 300;
+    transform: translate(-50%,-50%);
+    cursor: none;
+}

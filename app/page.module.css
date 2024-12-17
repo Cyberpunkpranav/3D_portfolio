@@ -105,14 +105,81 @@
   animation: trail 3s ease-in-out infinite;  
 }
 .experience{
-  background-color: white;
+  background-color: black;
   position: absolute;
   height: 100vh;
-  width: 0;
+  width: 100%;
   left:0;
   right: 0;
-  z-index: 300;
+  z-index: 400;
+  perspective: 1000px;
+  transform: translateZ(1000px);
   overflow: hidden;
+  color: white;
+  padding:5vw;
+}
+.experience h2{
+  margin-bottom: 5vh;
+}
+.experience  article{
+  overflow: hidden;
+}
+.experience .experience1{
+  position: absolute;
+  left:0;
+  right:0;
+  top: 0;
+  height:100vh;
+  width: 100%;
+  background-color: black;
+}
+.experience .experience2{
+  position: absolute;
+  left:0;
+  right:0;
+  top: 0;
+  height:0;
+  width: 100%;
+  background-color: black;
+
+}
+.experience .experience3{
+  position: absolute;
+  left:0;
+  right:0;
+  top: 0;
+  height:0;
+  width: 100%;
+  background-color: black;
+
+}
+.experience .experience4{
+  position: absolute;
+  left:0;
+  right:0;
+  top: 0;
+  height:0;
+  width: 100%;
+  background-color: black;
+}
+.experience h2{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  word-spacing: 10px;
+  font-weight: 400;
+  font-size: 62px;
+}
+.experience h3{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-size: 52px;
+}
+.experience h5{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 32px;
+  font-weight: 100;
 }
 .tech_container{
   position: absolute;
