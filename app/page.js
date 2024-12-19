@@ -62,12 +62,15 @@ export default function Home() {
     .to('#content',{
       z:0,
     },1.2)
-     .to('#rectangle1',{
-      opacity:0
-     },1.9)
+    //  .to('#rectangle1',{
+    //   opacity:0.8,
+    //  },1.9)
+     .to('#rectangle1-content',{
+      scale:0.5
+     },2.1)
      .to('#experience',{
       z:0
-     },1.9)
+     },2.2)
      .to('#experience2',{
       height:'100vh'
      },3)
@@ -77,16 +80,13 @@ export default function Home() {
      .to('#experience4',{
       height:'100vh'
      },5)
-    //  .to('#experience4',{
-    //   height:'0'
-    //  },2.6)
     ScrollTrigger.create({
       animation:t1,
       start:'1vh center',
       trigger: "#content",
-      end:'+=4000vh top',
+      end:'+=6000vh top',
       pin:'#portfolio',
-      scrub:1,
+      scrub: [2, 3],
       markers:false
     })
   },[])
@@ -144,6 +144,7 @@ return()=>{
       <div id="name" className={`${styles.name}`}>Pranav Sharma</div>
       </div>
       <div id="rectangle1" className={styles.rectangle1}>
+      <div id="rectangle1-content">
         <div id="stack" className="h-[100vh] w-full flex flex-col align-items-center justify-center overflow-hidden">
         <div className={styles.stack}>
           <h4>Expertise in</h4>
@@ -222,6 +223,7 @@ return()=>{
       </div>
       </div>
       </div>
+      </div>
       <div id="experience" className={styles.experience}>
         <h2>Experience</h2>
         <section className="relative ">
@@ -240,6 +242,10 @@ return()=>{
         <article id="experience4" className={styles.experience4}>
         <h3>Addon ShareWare Pvt Ltd</h3>
         <h5>Front Developer</h5>
+        <div className="flex justify-between">
+        <div>Wedding Web</div>
+        <video autoPlay muted loop src="/videos/weddingweb.mov"/>
+        </div>
         </article>
         </section>
       </div>
