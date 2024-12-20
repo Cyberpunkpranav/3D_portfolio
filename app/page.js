@@ -71,20 +71,21 @@ export default function Home() {
      .to('#experience',{
       z:0
      },2.2)
-     .to('#experience2',{
-      height:'100vh'
-     },3)
-     .to('#experience3',{
-      height:'100vh'
-     },4)
-     .to('#experience4',{
-      height:'100vh'
-     },5)
+
+    //  .to('#experience2',{
+    //   height:'100vh'
+    //  },3)
+    //  .to('#experience3',{
+    //   height:'100vh'
+    //  },4)
+    //  .to('#experience4',{
+    //   height:'100vh'
+    //  },5)
     ScrollTrigger.create({
       animation:t1,
       start:'1vh center',
       trigger: "#content",
-      end:'+=6000vh top',
+      end:'+=5000vh top',
       pin:'#portfolio',
       scrub: [2, 3],
       markers:false
@@ -156,7 +157,7 @@ return()=>{
         </div>
         </div>
         </div>
-        <div className={`${styles.tech_container}`}>   
+      <div className={`${styles.tech_container}`}>   
       <div className={`flex relative gap-x-5 overflow-hidden py-5 ${styles.techs}`} style={{ '--time': '80s' }}>
       <article className='flex items-center'>
       <div><Image alt='html' width={100} height={100} src='/logo/html.png'/></div>
@@ -224,9 +225,9 @@ return()=>{
       </div>
       </div>
       </div>
-      <div id="experience" className={styles.experience}>
+      <div id="experience" className={`${styles.experience}`}>
         <h2>Experience</h2>
-        <section className="relative ">
+        <section className="relative bg-purple-400 h-[50vh] scroll-y">
         <article id="experience1" className={styles.experience1}>
         <h3>Tech Rajendra</h3>
         <h5>Front End Engineer</h5>
@@ -240,23 +241,26 @@ return()=>{
         <h5>Software Developer Associate</h5>
         </article>
         <article id="experience4" className={styles.experience4}>
-        <h3>Addon ShareWare Pvt Ltd</h3>
-        <h5>Front Developer</h5>
-        <div className="flex justify-between">
-        <div>Wedding Web</div>
-        <video autoPlay muted loop src="/videos/weddingweb.mov"/>
-        </div>
+          <div>
+          <h3>Front End Developer </h3>
+          <h5>Addon ShareWare Pvt Ltd</h5>
+          </div>
+          <div className="flex items-center">
+          <div>
+          <h5>Wedding Web</h5>
+          <video autoPlay muted loop src="/videos/weddingweb.mp4"/>
+          </div>
+          <div>
+          <h5>Ayur Homes</h5>
+          <video autoPlay muted loop src="/videos/ayurhomes.mp4"/>
+          </div>
+          </div>
         </article>
         </section>
       </div>
       </div>
     </div>
     </div>
-    {/* <div id="stack" className={`${styles.stack}`}>
-    <div className={`${styles.gate1} gate1`}>1</div>
-    <div className={`${styles.gate2} gate2`}>2</div>
-
-    </div> */}
     </div>
   )
 }
