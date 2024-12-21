@@ -85,7 +85,7 @@ export default function Home() {
       animation:t1,
       start:'1vh center',
       trigger: "#content",
-      end:'+=5000vh top',
+      end:'+=4000vh top',
       pin:'#portfolio',
       scrub: [2, 3],
       markers:false
@@ -226,8 +226,8 @@ return()=>{
       </div>
       </div>
       <div id="experience" className={`${styles.experience}`}>
-        <h2>Experience</h2>
-        <section className="relative bg-purple-400 h-[50vh] scroll-y">
+        <h2 className="">Experience</h2>
+        <section className="relative p-2 bg-purple-400 scroll" style={{height:'80vh'}}>
         <article id="experience1" className={styles.experience1}>
         <h3>Tech Rajendra</h3>
         <h5>Front End Engineer</h5>
@@ -244,8 +244,8 @@ return()=>{
           <div>
           <h3>Front End Developer </h3>
           <h5>Addon ShareWare Pvt Ltd</h5>
+          • Developed frontend responsive websites for the fellow clients of the company.
           </div>
-          <div className="flex items-center">
           <div>
           <h5>Wedding Web</h5>
           <video autoPlay muted loop src="/videos/weddingweb.mp4"/>
@@ -253,7 +253,6 @@ return()=>{
           <div>
           <h5>Ayur Homes</h5>
           <video autoPlay muted loop src="/videos/ayurhomes.mp4"/>
-          </div>
           </div>
         </article>
         </section>
