@@ -71,23 +71,16 @@ export default function Home() {
      .to('#experience',{
       z:0
      },2.2)
-
-    //  .to('#experience2',{
-    //   height:'100vh'
-    //  },3)
-    //  .to('#experience3',{
-    //   height:'100vh'
-    //  },4)
-    //  .to('#experience4',{
-    //   height:'100vh'
-    //  },5)
+     .to('#experiences',{
+      overflow:'scroll'
+     },3)
     ScrollTrigger.create({
       animation:t1,
       start:'1vh center',
       trigger: "#content",
-      end:'+=4000vh top',
+      end:'+=5000vh top',
       pin:'#portfolio',
-      scrub: [2, 3],
+      scrub:1.5,
       markers:false
     })
   },[])
@@ -101,10 +94,9 @@ export default function Home() {
     const interval = setInterval(() => {
       indexRef.current = (indexRef.current + 1) % thumbnails.length; // Update the index
       setthumbnail(thumbnails[indexRef.current]); // Set the new thumbnail
-    }, 3000);
-
+    }, 3000)
     return () => clearInterval(interval); // Cleanup the interval on unmount
-  }, [thumbnails]);
+  }, [thumbnails])
   
   const [x,setX] = useState(0)
   const [y,setY] = useState(0)
@@ -119,12 +111,12 @@ return()=>{
 
 }
   },[x,y])
+
   return (
     <div id="portfolio">
-      <Cursor x={x} y={y}/>
     <div id="explosion" className={styles.explosion}>
     <div id="blast" className={styles.blast}></div>
-    {
+    {/* {
       sparkles.map((data,i)=>(
         <div key={i} data-top={data.x} data-left={data.y} 
         style={{
@@ -137,7 +129,7 @@ return()=>{
           boxShadow:`0px 0px 1px 4px ${sparkleColors[Math.round(Math.random(sparkleColors)*sparkleColors.length)]}`
         }} className={styles.sparkles}></div>
       ))
-    }
+    } */}
     <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`}>
       <div id="content" className="p-5">
@@ -145,6 +137,7 @@ return()=>{
       <div id="name" className={`${styles.name}`}>Pranav Sharma</div>
       </div>
       <div id="rectangle1" className={styles.rectangle1}>
+      <Cursor x={x} y={y}/>
       <div id="rectangle1-content">
         <div id="stack" className="h-[100vh] w-full flex flex-col align-items-center justify-center overflow-hidden">
         <div className={styles.stack}>
@@ -226,25 +219,24 @@ return()=>{
       </div>
       </div>
       <div id="experience" className={`${styles.experience}`}>
+        <section id="experiences" className={`${styles.experiences} scroll relative p-2`}>
         <h2 className="">Experience</h2>
-        <section className="relative p-2 scroll" style={{height:'80vh'}}>
         <article id="experience1" className={styles.experience1}>
         <h3>Tech Rajendra</h3>
         <h5>Front End Engineer</h5>
-        <ul>
-          <li className="text-wrap">Contributing as a software engineer with the team to and developing Banking As a service Software which is used by the companies to manage all their banking procedures of different banks with a single software.</li>
-          <li className="text-wrap">Developed Customer Relation Management System with the team for the companies to manage all their customer queries, complaints and other customer related services.</li>
-          <li className="text-wrap">Developed animated website for the company techrajendra.com</li>
-
-        </ul>
-        <p></p>
+        <p>Contributing as a software engineer with the team to and developing Banking As a service Software which is used by the companies to manage all their banking procedures of different banks with a single software.</p>
+        <p>Developed Customer Relation Management System with the team for the companies to manage all their customer queries, complaints and other customer related services.</p>
+        <p>Developed animated website for the company techrajendra.com</p>
+          <video autoPlay muted loop src="/videos/techrajendra.mp4"/>
         </article>
         <article id="experience2" className={styles.experience2}>
         <h3>Legal Buddy India Pvt Ltd</h3>
         <h5>Full Stack Engineer</h5>
-        <ul>
-          <li className="text-wrap">Developed Clauses, Resolutions, Acts and Rules, Blogs in the software with the desired innovative functionality in it. Integration of the topics in the website with the subscription system so that user could subscribe and get access of the content on legalbuddy.in. </li>
-        </ul>
+          <p>Developed Clauses, Resolutions, Acts and Rules, Blogs in the software with the desired innovative functionality in it. Integration of the topics in the website with the subscription system so that user could subscribe and get access of the content on legalbuddy.in. </p>
+        <div className=" ">
+          <h5>legalbuddy.com</h5>
+          <video autoPlay muted loop src="/videos/legalbuddy.mp4"/>
+        </div>
         </article>
         <article id="experience3" className={styles.experience3}>
         <h3>Aartas Care Pvt Ltd</h3>
@@ -254,18 +246,27 @@ return()=>{
           <li>Developed and maintained the internal working dashboard software in React JS.</li>
           <li>Developed animated websites using GSAP and deployed it on Microsoft Azure with CI/CD Pipeline</li>
         </ul>
+              
+        <div className=" ">
+          <h5>connect app</h5>
+          <video autoPlay muted loop src="/videos/connectapp.mp4"/>
+        </div>
+        <div className=" ">
+          <h5>aartas.com prototype</h5>
+          <video autoPlay muted loop src="/videos/aartas.mp4"/>
+        </div>
         </article>
         <article id="experience4" className={styles.experience4}>
           <div>
           <h3>Front End Developer </h3>
           <h5>Addon ShareWare Pvt Ltd</h5>
-          • Developed frontend responsive websites for the fellow clients of the company.
+          <p>Developed frontend responsive websites for the fellow clients of the company.</p>
           </div>
-          <div>
+          <div className=" ">
           <h5>Wedding Web</h5>
           <video autoPlay muted loop src="/videos/weddingweb.mp4"/>
           </div>
-          <div>
+          <div className=" ">
           <h5>Ayur Homes</h5>
           <video autoPlay muted loop src="/videos/ayurhomes.mp4"/>
           </div>
