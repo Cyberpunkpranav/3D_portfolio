@@ -6,8 +6,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import Cursor from "./components/cursor/cursor";
+import Scroll from "./components/scroll/scroll";
 
 export default function Home() {  
+
   const [sparkles,setsparkles]=useState([])
   const [sparkleColors,setSparkleColors] = useState(["#08090b","#0c6da1","#0caad8","#0b5771","#09375a","#061b33","#09303c","#657171","#373a3c","#748c8c"])
   const SparklesGeneration = (number)=>{
@@ -69,11 +71,12 @@ export default function Home() {
       scale:0.5
      },2.1)
      .to('#experience',{
+      display:'block',
       z:0
-     },2.2)
+     })
      .to('#experiences',{
       overflow:'scroll'
-     },3)
+     })
     ScrollTrigger.create({
       animation:t1,
       start:'1vh center',
@@ -113,10 +116,11 @@ return()=>{
   },[x,y])
 
   return (
-    <div id="portfolio">
+    <div style={{height:'100vh'}} id="portfolio">
+    {/* <Scroll id={'porfolio'}/> */}
     <div id="explosion" className={styles.explosion}>
     <div id="blast" className={styles.blast}></div>
-    {/* {
+    {
       sparkles.map((data,i)=>(
         <div key={i} data-top={data.x} data-left={data.y} 
         style={{
@@ -129,7 +133,7 @@ return()=>{
           boxShadow:`0px 0px 1px 4px ${sparkleColors[Math.round(Math.random(sparkleColors)*sparkleColors.length)]}`
         }} className={styles.sparkles}></div>
       ))
-    } */}
+    }
     <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`}>
       <div id="content" className="p-5">
