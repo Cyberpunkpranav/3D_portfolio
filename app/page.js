@@ -28,78 +28,7 @@ export default function Home() {
   useEffect(()=>{
     setsparkles(SparklesGeneration(200))
   },[])
-  gsap.registerPlugin(ScrollTrigger)
 
-  useGSAP(()=>{
-    const t1 = gsap.timeline()
-    t1.to('#content',{
-      rotateX:60,
-      rotateY:60,
-      z:500
-    },0)
-    .to('#content',{
-      rotateX:75,
-      rotateY:75,
-      z:600
-    },0)
-    .to('#content',{
-      rotateX:90,
-      rotateY:90,
-      z:700
-    },0)
-    .to('#rectangle1',{
-      height:'5px',
-    },0.6)
-    .to('#content',{
-      opacity:0
-    },0.6)
-    .to('#content',{
-      rotateX:0,
-      rotateY:0,
-      z:0
-    },1.2)
-    .to('#rectangle1',{
-      height:'100vh',
-    },1.2)
-    .to('#content',{
-      z:0,
-    },1.2)
-    //  .to('#rectangle1',{
-    //   opacity:0.8,
-    //  },1.9)
-     .to('#rectangle1-content',{
-      scale:0.5
-     },2.1)
-     .to('#experience',{
-      display:'block',
-      z:0
-     })
-     .to('#experiences',{
-      overflow:'scroll'
-     })
-    ScrollTrigger.create({
-      animation:t1,
-      start:'1vh center',
-      trigger: "#content",
-      end:'+=5000vh top',
-      pin:'#portfolio',
-      scrub:1.5,
-      markers:false
-    })
-  },[])
-
-  const thumbnails = ['make your website flow','make sustainable softwares','experienced in different domains of softwares','creativity in every page of your website','team player with worthful skills']
-  const [thumbnail,setthumbnail] = useState(thumbnails[0])
-  const indexRef = useRef(0); // Use a ref to track the current index
-
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      indexRef.current = (indexRef.current + 1) % thumbnails.length; // Update the index
-      setthumbnail(thumbnails[indexRef.current]); // Set the new thumbnail
-    }, 3000)
-    return () => clearInterval(interval); // Cleanup the interval on unmount
-  }, [thumbnails])
   
   const [x,setX] = useState(0)
   const [y,setY] = useState(0)
@@ -116,10 +45,12 @@ return()=>{
   },[x,y])
 
   return (
-    <div style={{height:'100vh'}} id="portfolio">
-    {/* <Scroll id={'porfolio'}/> */}
-    <div id="explosion" className={styles.explosion}>
-    <div id="blast" className={styles.blast}></div>
+    <div className="h-[100vh]" id="portfolio">
+    <Scroll id='portfolio'/>
+    {/* <div id="explosion" className={styles.explosion}>
+    </div> */}
+
+    {/* <div id="blast" className={styles.blast}></div>
     {
       sparkles.map((data,i)=>(
         <div key={i} data-top={data.x} data-left={data.y} 
@@ -133,153 +64,138 @@ return()=>{
           boxShadow:`0px 0px 1px 4px ${sparkleColors[Math.round(Math.random(sparkleColors)*sparkleColors.length)]}`
         }} className={styles.sparkles}></div>
       ))
-    }
-    <div id="cover" className={styles.cover}>
-      <div className={`${styles.content} grid place-items-center h-full w-full`}>
-      <div id="content" className="p-5">
+    } */}
+    <div id="cover" className={styles.cover} style={{backgroundImage:"url(/images/profile_bg.jpg)",backgroundPosition:"right",backgroundSize:'60%',backgroundRepeat:'no-repeat'}}>
+      <div className={`${styles.content} grid place-items-center h-full w-full`} >
+      <div id="content" className="flex p-5">
+      <div className={styles.welcome}>
+      <div className={styles.hello}>Hello there...</div>
       <div id="caption" className={`${styles.caption}`}>This is your's truly</div>
-      <div id="name" className={`${styles.name}`}>Pranav Sharma</div>
+      <div className="relative">
+        <div id="name" className={`${styles.name}`}>PRANAV SHARMA</div>
       </div>
-      <div id="rectangle1" className={styles.rectangle1}>
-      <Cursor x={x} y={y}/>
-      <div id="rectangle1-content">
-        <div id="stack" className="h-[100vh] w-full flex flex-col align-items-center justify-center overflow-hidden">
+      </div>
+      <div className={styles.profile}>
+        {/* <img className={styles.image1} src="/images/profile.jpeg"/> */}
+        <img className={styles.image1} src="/images/picture_far.jpeg"/>
+        {/* <img className={styles.image3} src="/images/profilepicture_gray.jpeg"/> */}
+      </div>
+      </div>
+      </div>
+    </div>
+    <div id="thumbnail-container" className={styles['thumbnail-container']}>
+          <Cursor x={x} y={y}/>
+          <div className={styles.thumbnails} style={{ '--time': '80s' }}>
+          <article>
+          <p className={`${styles.thumbnail}`}>make your website flow</p>
+          {/* <p className={`${styles.thumbnail}`}>make sustainable softwares</p> */}
+          <p className={`${styles.thumbnail}`}>experienced in different domains of softwares</p>
+          </article>
+          <article>
+          <p className={`${styles.thumbnail}`}>make your website flow</p>
+          {/* <p className={`${styles.thumbnail}`}>make sustainable softwares</p> */}
+          <p className={`${styles.thumbnail}`}>experienced in different domains of softwares</p>
+          </article>
+          </div>
+          <div className={styles.thumbnails} style={{ '--time': '80s' }}>
+          <article>
+          <div className={`${styles.thumbnail}`}>creativity in every page of your website</div>
+          <div className={`${styles.thumbnail}`}>team player with worthful skills</div>
+          </article>
+          <article>
+          <div className={`${styles.thumbnail}`}>creativity in every page of your website</div>
+          <div className={`${styles.thumbnail}`}>team player with worthful skills</div>
+          </article>
+          </div>
+        </div>
+    <div id="rectangle1" className={styles.rectangle1}>
+        <div className={styles['rectangle1-content']}>
         <div className={styles.stack}>
+        <div className={styles.techs}>
+          <Image className={styles['techs-img']} alt='html' width={100} height={100} src='/logo/html.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/css.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/js.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/mui.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/nextjs.png'/>
+          </div>
+          <div className="flex w-full">
+          <div className="flex flex-col justify-evenly">
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/bootstrap.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/tailwind.png'/>
+          </div>
+          <div className="p-10 relative">
           <h4>Expertise in</h4>
-          <h1>FullStack Development</h1>
-        </div>
-        <div id="thumbnail-container" className={styles['thumbnails-container']}>
-        <div className={styles.thumbnails}>
-        <p id="thumbnail1" className={`${styles.thumbnail}`}>{thumbnail}</p>
-        </div>
-        </div>
-        </div>
-      <div className={`${styles.tech_container}`}>   
-      <div className={`flex relative gap-x-5 overflow-hidden py-5 ${styles.techs}`} style={{ '--time': '80s' }}>
-      <article className='flex items-center'>
-      <div><Image alt='html' width={100} height={100} src='/logo/html.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/css.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/js.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/jQuery.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/bootstrap.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/tailwind.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/reactjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/nodejs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/nextjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/expressjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/golang.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/mysql.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/aws.png'/></div>
-      </article>
-      <article className='flex items-center'>
-      <div><Image alt='html' width={100} height={100} src='/logo/html.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/css.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/js.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/jQuery.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/bootstrap.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/tailwind.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/reactjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/nodejs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/nextjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/expressjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/golang.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/mysql.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/aws.png'/></div>
-      </article>
-      </div>
-      <div className={`flex relative gap-x-5 overflow-hidden py-5 ${styles.techs}`} style={{ '--time': '80s' }}>
-      <article className='flex items-center'>
-      <div><Image alt='css' width={100} height={100} src='/logo/aws.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/mysql.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/golang.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/expressjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/nextjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/nodejs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/reactjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/tailwind.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/bootstrap.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/jQuery.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/js.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/css.png'/></div>
-      <div><Image alt='html' width={100} height={100} src='/logo/html.png'/></div>
-      </article>
-      <article className='flex items-center'>
-      <div><Image alt='css' width={100} height={100} src='/logo/aws.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/mysql.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/golang.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/expressjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/nextjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/nodejs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/reactjs.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/tailwind.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/bootstrap.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/jQuery.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/js.png'/></div>
-      <div><Image alt='css' width={100} height={100} src='/logo/css.png'/></div>
-      <div><Image alt='html' width={100} height={100} src='/logo/html.png'/></div>
-      </article>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div id="experience" className={`${styles.experience}`}>
-        <section id="experiences" className={`${styles.experiences} scroll relative p-2`}>
-        <h2 className="">Experience</h2>
-        <article id="experience1" className={styles.experience1}>
-        <h3>Tech Rajendra</h3>
-        <h5>Front End Engineer</h5>
-        <p>Contributing as a software engineer with the team to and developing Banking As a service Software which is used by the companies to manage all their banking procedures of different banks with a single software.</p>
-        <p>Developed Customer Relation Management System with the team for the companies to manage all their customer queries, complaints and other customer related services.</p>
-        <p>Developed animated website for the company techrajendra.com</p>
-          <video autoPlay muted loop src="/videos/techrajendra.mp4"/>
-        </article>
-        <article id="experience2" className={styles.experience2}>
-        <h3>Legal Buddy India Pvt Ltd</h3>
-        <h5>Full Stack Engineer</h5>
-          <p>Developed Clauses, Resolutions, Acts and Rules, Blogs in the software with the desired innovative functionality in it. Integration of the topics in the website with the subscription system so that user could subscribe and get access of the content on legalbuddy.in. </p>
-        <div className=" ">
-          <h5>legalbuddy.com</h5>
-          <video autoPlay muted loop src="/videos/legalbuddy.mp4"/>
-        </div>
-        </article>
-        <article id="experience3" className={styles.experience3}>
-        <h3>Aartas Care Pvt Ltd</h3>
-        <h5>Software Developer Associate</h5>
-        <ul>
-          <li>Developed REST APIs and Chat Functionality on websocket for internal working dashboard software in Golang.</li>
-          <li>Developed and maintained the internal working dashboard software in React JS.</li>
-          <li>Developed animated websites using GSAP and deployed it on Microsoft Azure with CI/CD Pipeline</li>
-        </ul>
-              
-        <div className=" ">
-          <h5>connect app</h5>
-          <video autoPlay muted loop src="/videos/connectapp.mp4"/>
-        </div>
-        <div className=" ">
-          <h5>aartas.com prototype</h5>
-          <video autoPlay muted loop src="/videos/aartas.mp4"/>
-        </div>
-        </article>
-        <article id="experience4" className={styles.experience4}>
-          <div>
-          <h3>Front End Developer </h3>
-          <h5>Addon ShareWare Pvt Ltd</h5>
-          <p>Developed frontend responsive websites for the fellow clients of the company.</p>
+          <h2>FULLSTACK </h2>
+          <h2>DEVELOPMENT</h2>
           </div>
-          <div className=" ">
-          <h5>Wedding Web</h5>
-          <video autoPlay muted loop src="/videos/weddingweb.mp4"/>
+          <div className="flex flex-col justify-evenly">
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/jQuery.png'/>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/reactjs.png'/>
           </div>
-          <div className=" ">
-          <h5>Ayur Homes</h5>
-          <video autoPlay muted loop src="/videos/ayurhomes.mp4"/>
           </div>
+          <div className={styles.techs}>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/nodejs.png'/>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/expressjs.png'/>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/golang.png'/>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/mysql.png'/>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/aws.png'/>
+            </div>
+        </div>
+      </div>
+      </div>
+    <div id="experience" className={`${styles.experience}`}>
+      <div className={styles.heading}>
+      <h2 >EXPERIENCE</h2>
+      </div>
+        <section id="experiences" className={`${styles.experiences}`}>
+        <article>
+        <div id="experience1" className={styles.experience1}>
+        <div className={styles.coverup}></div>
+        <h2>Tech Rajendra</h2>
+        <h3>Software Engineer</h3>
+        <video style={{left:x}} autoPlay muted loop src="/videos/techrajendra.mp4"/>
+        </div>
+        <div id="experience2" className={styles.experience2}>
+        <div className={styles.coverup}></div>
+        <h2>Legal Buddy India Pvt Ltd</h2>
+        <h3>Full Stack Engineer</h3>
+        <video style={{left:x}} autoPlay muted loop src="/videos/legalbuddy.mp4"/>
+        </div>
+        <div id="experience3" className={styles.experience3}>
+        <div className={styles.coverup}></div>
+        <h2>Aartas Care Pvt Ltd</h2>
+        <h3>Software Developer Associate</h3>    
+        <video style={{left:x}} autoPlay muted loop src="/videos/connectapp.mp4"/>  
+        </div>
+        <div id="experience4" className={styles.experience4}>
+        <div className={styles.coverup}></div>
+        <h2>Addon ShareWare Pvt Ltd</h2>
+        <h3>Front End Developer </h3>
+        <video style={{left:x}} autoPlay muted loop src="/videos/ayurhomes.mp4"/>
+        </div>
         </article>
+        {/* <aside>
+        <video autoPlay muted loop src="/videos/aartas.mp4"/>
+        <video autoPlay muted loop src="/videos/weddingweb.mp4"/>
+        <video autoPlay muted loop src="/videos/ayurhomes.mp4"/>
+        </aside> */}
         </section>
       </div>
+      <div id="education" className={styles.education}>
+        <div className={styles.heading}>EDUCATION</div>
+        <div className={styles.educations}>
+          <div className={styles.education1}>
+            <h2>Bachelor in Computer Application</h2>
+            <h3>Indira Gandhi National Open University</h3>
+            <img style={{left:x}} src="/images/degree.jpg"/>
+          </div>
+          <div className={styles.education2}>
+            <h2>Diploma in Electronics and Communication Engineering</h2>
+            <h3>CSI Polytechnic college</h3>
+            <img style={{left:x}} src="/images/diploma.jpg"/>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
     </div>
   )
 }

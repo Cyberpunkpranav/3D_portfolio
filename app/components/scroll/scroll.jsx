@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import Scrollbar from 'smooth-scrollbar';
 
 var options={
-    damping:0.01,
+    damping:0.06,
     alwaysShowTracks:false,
     thumbMinSize:0
 }

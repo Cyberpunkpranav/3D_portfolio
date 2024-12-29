@@ -3,9 +3,9 @@
     position: absolute;
     border-radius: 50%;
     mix-blend-mode: difference;
-    width: 5vw;
-    height: 5vw;
-    z-index: 300;
+    width: 25vw;
+    height: 25vw;
+    z-index: 1000;
     transform: translate(-50%,-50%);
     /* cursor: none; */
 }
