@@ -29,7 +29,6 @@ export default function Home() {
     setsparkles(SparklesGeneration(200))
   },[])
 
-  
   const [x,setX] = useState(0)
   const [y,setY] = useState(0)
   useEffect(()=>{
@@ -150,25 +149,25 @@ return()=>{
         <section id="experiences" className={`${styles.experiences}`}>
         <article>
         <div id="experience1" className={styles.experience1}>
-        <div className={styles.coverup}></div>
+        <h6>MAY 2024 - PRESENT</h6>
         <h2>Tech Rajendra</h2>
         <h3>Software Engineer</h3>
         <video style={{left:x}} autoPlay muted loop src="/videos/techrajendra.mp4"/>
         </div>
         <div id="experience2" className={styles.experience2}>
-        <div className={styles.coverup}></div>
+        <h6>JAN 2024 - MAY 2024</h6>
         <h2>Legal Buddy India Pvt Ltd</h2>
         <h3>Full Stack Engineer</h3>
         <video style={{left:x}} autoPlay muted loop src="/videos/legalbuddy.mp4"/>
         </div>
         <div id="experience3" className={styles.experience3}>
-        <div className={styles.coverup}></div>
+        <h6>OCT 2022 - DEC 2023</h6>
         <h2>Aartas Care Pvt Ltd</h2>
         <h3>Software Developer Associate</h3>    
         <video style={{left:x}} autoPlay muted loop src="/videos/connectapp.mp4"/>  
         </div>
         <div id="experience4" className={styles.experience4}>
-        <div className={styles.coverup}></div>
+        <h6>APR 2022 - OCT 2022</h6>
         <h2>Addon ShareWare Pvt Ltd</h2>
         <h3>Front End Developer </h3>
         <video style={{left:x}} autoPlay muted loop src="/videos/ayurhomes.mp4"/>

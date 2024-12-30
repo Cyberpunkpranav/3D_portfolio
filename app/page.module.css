@@ -134,7 +134,8 @@
 .techs-img{
   width: auto;
   height: 7.5rem;
-  transition: all 0.3s;
+  animation: liquid_float 1s ease-in-out infinite alternate ;
+  /* transition: all 0.3s; */
 }
 
 .experience{
@@ -156,7 +157,8 @@
 .experience .heading h2{
   line-height: normal;
   transform: rotate(90deg);
-  font-size: 18vh;
+  font-size: 28vh;
+  opacity: 0.5;
   font-weight: 700;
   color: black;
 }
@@ -185,7 +187,7 @@
 }
 .experience1 , .experience2 , .experience3, .experience4{
   position: relative;
-  height: 25vh;
+  height: 35vh;
 }
 .experience1 video , .experience2 video, .experience3 video, .experience4 video{
   position: absolute;
@@ -193,6 +195,7 @@
   transform: translateY(-50%);
   right:0;
   display: none;
+  background-color: white;
 }
 .experience1:hover video,
 .experience2:hover video,
@@ -210,23 +213,6 @@
   color: black;
 }
 
-.coverup{
-background-color: white;
-top:50%;
-transform: translateY(-50%);
-height: 0;
-position: absolute;
-left:0;
-right:0;
-transition: all 0.5s;
-}
-.experience1:hover .coverup,
-.experience2:hover .coverup,
-.experience3:hover .coverup,
-.experience4:hover .coverup{
-  background-color: white;
-  height: 25vh;
-}
 .experiences aside video{
   width: 100%;
   height: auto;
@@ -272,7 +258,6 @@ height: 30vh;
 display:none;
 width: auto;
 z-index: 300;
-transition: all 0.5s;
 }
 .education1 h2,
 .education2 h2{
@@ -289,6 +274,15 @@ transition: all 0.5s;
 }
 .education2:hover img{
   display:block;
+}
+@keyframes liquid_float{
+  from{
+      transform: translateY(-10%);
+  }
+  to{
+      transform: translateY(10%);
+
+  }
 }
 @keyframes horizontal_scroll {
   0% {
