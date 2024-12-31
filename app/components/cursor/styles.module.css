@@ -5,7 +5,7 @@
     mix-blend-mode: difference;
     width: 25vw;
     height: 25vw;
-    z-index: 1000;
+    z-index: 100;
     transform: translate(-50%,-50%);
     /* cursor: none; */
 }

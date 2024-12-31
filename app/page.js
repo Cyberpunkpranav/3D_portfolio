@@ -9,26 +9,6 @@ import Cursor from "./components/cursor/cursor";
 import Scroll from "./components/scroll/scroll";
 
 export default function Home() {  
-
-  const [sparkles,setsparkles]=useState([])
-  const [sparkleColors,setSparkleColors] = useState(["#08090b","#0c6da1","#0caad8","#0b5771","#09375a","#061b33","#09303c","#657171","#373a3c","#748c8c"])
-  const SparklesGeneration = (number)=>{
-    let arr = []
-
-    for(let i=0;i<number;i++){
-      const x=  Math.round(Math.random()*100)
-      const y=  Math.round(Math.random()*100)
-      const size=Math.round(Math.random()*10)
-      const delay = Math.random()*1
-      const duration = Math.random()*2
-      arr.push({x:x,y:y,size:size,delay:delay,duration:duration})
-    }
-    return arr
-  }
-  useEffect(()=>{
-    setsparkles(SparklesGeneration(200))
-  },[])
-
   const [x,setX] = useState(0)
   const [y,setY] = useState(0)
   useEffect(()=>{
@@ -42,28 +22,25 @@ return()=>{
 
 }
   },[x,y])
+gsap.registerPlugin(ScrollTrigger)
+  useGSAP(()=>{
+      gsap.to('#stacks-cover',{
+        scrollTrigger:{
+         trigger: '#rectangle1',
+         start:'top top',
+         end:'top top',
+         toggleActions:'start resume none none',
+         markers:false
+        },
+        yPercent:100,
+        duration:2
+      })
+     
+  },[])
 
   return (
-    <div className="h-[100vh]" id="portfolio">
-    <Scroll id='portfolio'/>
-    {/* <div id="explosion" className={styles.explosion}>
-    </div> */}
-
-    {/* <div id="blast" className={styles.blast}></div>
-    {
-      sparkles.map((data,i)=>(
-        <div key={i} data-top={data.x} data-left={data.y} 
-        style={{
-          "--sparkles-top": `${data.x}%`,
-          "--sparkles-left": `${data.y}%`,
-          "--sparkles-size": `${data.size}vh`,
-          "--sparkles-delay": `${data.delay}s`,
-          "--sparkles-duration": `${data.duration}s`,
-          backgroundColor:`${sparkleColors[Math.round(Math.random(sparkleColors)*sparkleColors.length)]}`,
-          boxShadow:`0px 0px 1px 4px ${sparkleColors[Math.round(Math.random(sparkleColors)*sparkleColors.length)]}`
-        }} className={styles.sparkles}></div>
-      ))
-    } */}
+    <div  id="portfolio">
+    {/* <Scroll id='portfolio'/> */}
     <div id="cover" className={styles.cover} style={{backgroundImage:"url(/images/profile_bg.jpg)",backgroundPosition:"right",backgroundSize:'60%',backgroundRepeat:'no-repeat'}}>
       <div className={`${styles.content} grid place-items-center h-full w-full`} >
       <div id="content" className="flex p-5">
@@ -108,8 +85,36 @@ return()=>{
           </div>
         </div>
     <div id="rectangle1" className={styles.rectangle1}>
-        <div className={styles['rectangle1-content']}>
-        <div className={styles.stack}>
+          <div className={styles.stacks}>
+          <h4>Expertise in</h4>
+            <div className={styles.top}>
+              <div id="stacks-cover" className={styles.stacks_cover}>
+              </div>
+              <h3>HTML 5
+              CSS 3
+              JAVASCRIPT
+              TAILWIND CSS
+              BOOTSTRAP
+              MATERIAL UI
+              RESPONSIVE DESIGN
+              GSAP
+              JQUERY
+              REACT JS
+              NEXT JS
+              NODE JS
+              EXPRESS JS
+              GOLANG
+              REST API
+              WEBSOCKETS
+              MY SQL
+              AMAZON WEB SERVICES
+              POSTMAN
+              VS CODE
+              GIT & GITHUB</h3>
+            </div>
+            <h2>FULLSTACK DEVELOPMENT</h2>
+          </div>
+        {/* <div className={styles.stack}>
         <div className={styles.techs}>
           <Image className={styles['techs-img']} alt='html' width={100} height={100} src='/logo/html.png'/>
           <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/css.png'/>
@@ -139,8 +144,7 @@ return()=>{
             <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/mysql.png'/>
             <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/aws.png'/>
             </div>
-        </div>
-      </div>
+        </div> */}
       </div>
     <div id="experience" className={`${styles.experience}`}>
       <div className={styles.heading}>
@@ -195,6 +199,7 @@ return()=>{
           </div>
         </div>
       </div>
+      <p className="text-center py-4">Design & Develop with ❤️ by pranav sharma</p>
     </div>
   )
 }
