@@ -22,98 +22,109 @@ return()=>{
 
 }
   },[x,y])
-gsap.registerPlugin(ScrollTrigger)
+
+  gsap.registerPlugin(ScrollTrigger)
+
   useGSAP(()=>{
-      gsap.to('#stacks-cover',{
+      gsap.to('#content',{
         scrollTrigger:{
-         trigger: '#rectangle1',
+         trigger: '#cover',
          start:'top top',
          end:'top top',
          toggleActions:'start resume none none',
          markers:false
         },
-        yPercent:100,
+        backgroundColor:'rgb(0,0,0)',
         duration:2
-      })
-     
-  },[])
+   })
+  })
 
   return (
     <div  id="portfolio">
     {/* <Scroll id='portfolio'/> */}
-    <div id="cover" className={styles.cover} style={{backgroundImage:"url(/images/profile_bg.jpg)",backgroundPosition:"right",backgroundSize:'60%',backgroundRepeat:'no-repeat'}}>
+    <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`} >
-      <div id="content" className="flex p-5">
+      <div id="content" className="relative">
       <div className={styles.welcome}>
-      <div className={styles.hello}>Hello there...</div>
+      <div id="hello" className={styles.hello}>Hello there...</div>
       <div id="caption" className={`${styles.caption}`}>This is your's truly</div>
-      <div className="relative">
         <div id="name" className={`${styles.name}`}>PRANAV SHARMA</div>
-      </div>
       </div>
       <div className={styles.profile}>
         {/* <img className={styles.image1} src="/images/profile.jpeg"/> */}
-        <img className={styles.image1} src="/images/picture_far.jpeg"/>
-        {/* <img className={styles.image3} src="/images/profilepicture_gray.jpeg"/> */}
+        <img className={styles.image1} src="/images/profile2.png"/>
+        {/* <img className={styles.image3} src="/images/profilepicture_gray.jpeg"/> */} 
       </div>
       </div>
       </div>
     </div>
     <div id="thumbnail-container" className={styles['thumbnail-container']}>
-          <Cursor x={x} y={y}/>
-          <div className={styles.thumbnails} style={{ '--time': '80s' }}>
+          {/* <Cursor x={x} y={y}/> */}
+          <div className={styles.thumbnails} style={{ '--time': '10s' }}>
           <article>
-          <p className={`${styles.thumbnail}`}>make your website flow</p>
+          <p className={`${styles.thumbnail} ${styles['thumbnail-outline']}`}>make your website flow</p>
           {/* <p className={`${styles.thumbnail}`}>make sustainable softwares</p> */}
-          <p className={`${styles.thumbnail}`}>experienced in different domains of softwares</p>
+          <p className={`${styles.thumbnail} ${styles['thumbnail-fill']}`}>experienced in different domains of softwares</p>
           </article>
           <article>
-          <p className={`${styles.thumbnail}`}>make your website flow</p>
+          <p className={`${styles.thumbnail} ${styles['thumbnail-outline']}`}>make your website flow</p>
           {/* <p className={`${styles.thumbnail}`}>make sustainable softwares</p> */}
-          <p className={`${styles.thumbnail}`}>experienced in different domains of softwares</p>
+          <p className={`${styles.thumbnail} ${styles['thumbnail-fill']}`}>experienced in different domains of softwares</p>
           </article>
           </div>
-          <div className={styles.thumbnails} style={{ '--time': '80s' }}>
+          <div className={styles.thumbnails} style={{ '--time': '10s' }}>
           <article>
-          <div className={`${styles.thumbnail}`}>creativity in every page of your website</div>
-          <div className={`${styles.thumbnail}`}>team player with worthful skills</div>
+          <div className={`${styles.thumbnail} ${styles['thumbnail-outline']}`}>creativity in every page of your website</div>
+          <div className={`${styles.thumbnail} ${styles['thumbnail-fill']}`}>team player with worthful skills</div>
           </article>
           <article>
-          <div className={`${styles.thumbnail}`}>creativity in every page of your website</div>
-          <div className={`${styles.thumbnail}`}>team player with worthful skills</div>
+          <div className={`${styles.thumbnail} ${styles['thumbnail-outline']}`}>creativity in every page of your website</div>
+          <div className={`${styles.thumbnail} ${styles['thumbnail-fill']}`}>team player with worthful skills</div>
           </article>
           </div>
         </div>
     <div id="rectangle1" className={styles.rectangle1}>
           <div className={styles.stacks}>
           <h4>Expertise in</h4>
-            <div className={styles.top}>
-              <div id="stacks-cover" className={styles.stacks_cover}>
+            <div className={styles.developments}>
+              <div className={styles.development}>
+                <div className={styles.tape}></div>
+                <div className={styles.tape}></div>
+                <div className={styles.tape}></div>
               </div>
-              <h3>HTML 5
-              CSS 3
-              JAVASCRIPT
-              TAILWIND CSS
-              BOOTSTRAP
-              MATERIAL UI
-              RESPONSIVE DESIGN
-              GSAP
-              JQUERY
-              REACT JS
-              NEXT JS
-              NODE JS
-              EXPRESS JS
+              {/* <div className={styles.development}>
+              <h3> NODEJS
+              EXPRESSJS
               GOLANG
-              REST API
+              RESTAPI
               WEBSOCKETS
-              MY SQL
-              AMAZON WEB SERVICES
+              MYSQL</h3>
+              <h2>BACK END</h2>
+              </div>
+              <div className={styles.development}>
+                <h3>AMAZON WEB SERVICES</h3>
+                <h2>DEV OPS</h2>         
+              </div>
+              <div className={styles.development}>
+                              <h3>
               POSTMAN
-              VS CODE
+              VSCODE
               GIT & GITHUB</h3>
+                <h2>TOOLS & SOFTWARES</h2>
+              </div>
+              <h3>HTML5
+              CSS3
+              JAVASCRIPT
+              TAILWINDCSS
+              BOOTSTRAP
+              MATERIALUI
+              JQUERY
+              REACTJS
+              NEXTJS</h3>
+              <h2>FRONT END</h2> */}
+              </div>
             </div>
-            <h2>FULLSTACK DEVELOPMENT</h2>
-          </div>
+            </div>
         {/* <div className={styles.stack}>
         <div className={styles.techs}>
           <Image className={styles['techs-img']} alt='html' width={100} height={100} src='/logo/html.png'/>
@@ -145,7 +156,6 @@ gsap.registerPlugin(ScrollTrigger)
             <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/aws.png'/>
             </div>
         </div> */}
-      </div>
     <div id="experience" className={`${styles.experience}`}>
       <div className={styles.heading}>
       <h2 >EXPERIENCE</h2>

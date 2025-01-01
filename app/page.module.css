@@ -5,49 +5,49 @@
   /* font-family: "Permanent Marker", cursive; */
 }
 .cover{
-  overflow-x: hidden;
+  position: relative;
+  height: 100%;
+}
+.content{
+  color: white;
+  background-color: black;
 }
 .content .hello{
   font-size: 108px;
   font-weight: 100;
 }
 .content .welcome{
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width:100%
 }
 .content .profile{
-  position: relative;
+  position: absolute;
+  top:0;
+  height: 100%;
+  right:0;
   width: 40%;
+  background-color: transparent;
 }
  .profile .image1{
-  position: absolute;
-  top:-10%;
-  right:-25%;
-  width: 150vw;
   transition: all 0.6s;
   height: auto;
+  filter:saturate(3) grayscale(1) brightness(0.95) contrast(1.5);
   }
 
-  .cover:hover .profile .image1{
-    right:-20%;
-  }
 .caption{
   font-size: 42px;
 }
 .name{
-    background: url('/images/name_bg.gif');
+    background: url('/images/randoms.gif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
-    font-size: 15vw;
+    font-size: 12vw;
     font-weight: 700;
     line-height: 15vw;
+    text-wrap:nowrap;
 }
-
 
 .thumbnail-container{
   background-color: white;
@@ -62,15 +62,21 @@
 }
 .thumbnail{
   text-wrap: nowrap;
-  color: transparent;
-  -webkit-text-stroke: 4px black;
   text-transform: uppercase;
-  font-size: 20vw;
-  line-height: 20vw;
+  font-size: 4vw;
+  line-height: normal;
   margin-left: 25px;
   margin-right:25px;
   overflow: hidden;
-
+  font-weight: 700;
+  transition: all 0.5s;
+}
+.thumbnail-outline{
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+}
+.thumbnail-fill{
+  color: black;
 }
 .thumbnails article{
   display: flex;
@@ -84,67 +90,44 @@
   animation: horizontal_scroll2 var(--time) linear infinite ;
   animation-delay: calc(var(--time)/-2);
 }
+.thumbnails:hover article{
+  animation-play-state: paused;
+}
 .rectangle1{
   width: 100%;
   height: 100%;
   z-index: 400;
-  padding-top:5vh;
-  padding-bottom:5vh;
   overflow: hidden;
 }
-.stack{
-  padding: 5%;
-}
-.stack h4{
-  display: inline-block;
-  color: black;
-  font-size: 32px;
-}
 .stacks{
-  padding: 2.5%;
   position: relative;
   background-color: white;
 }
-.stacks .top{
-  /* display: flex; */
-  flex-wrap: wrap;
-  text-wrap: wrap;
-  /* justify-content: space-between; */
-  height: 50vh;
-  width: 100%;
+
+.stacks .development {
+  padding:2.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
-.top h3{
-  display: inline-block;
-  margin:15px;
-  font-size:5vw;
-}
-/* 
- */
-.stacks h2{
-  font-size: 16vw;
-  font-weight: 700;
-  text-wrap: wrap;
-  line-height:1;
-   /* -webkit-text-stroke: 1px black; */
+ 
+  .stacks .developments h2{
+    font-size: 8vw;
+    font-weight: 700;
+    text-wrap: nowrap;
+    line-height:1;
+       -webkit-text-stroke: 1px black;
    color: transparent;
-   opacity: 0.2;
-   background: url('/images/stack_bg.gif');
+   /* background: url('/images/stack_bg.gif');
 background-position: center;
 background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100%; */
      -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;  
   }
-  .stacks_cover{
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    width: 0;
-    height: 0;
-    width:100%;
-    height:100%;
-    background-color: white;
+  .stacks .developments h3{
+    word-spacing: 10px;
   }
 /* .stack h2{
   color: black;
@@ -173,7 +156,19 @@ background-repeat: no-repeat;
   height: 7.5rem;
   animation: liquid_float 1s ease-in-out infinite alternate ;
   /* transition: all 0.3s; */
-
+.tape{
+  /* position: absolute; */
+  width:100%;
+  height:30vh;
+  top:var(--top);
+  /* left:0;
+  bottom:0;
+  right:0; */
+  background: repeating-linear-gradient( 45deg, #ffee00 0%, #ffee00 10%, #000000 10%, #000000 20% );
+  display: flex;
+  align-items: center;
+  color: white;
+}
 .experience{
   position: relative;
   padding: 10vh;
@@ -233,6 +228,7 @@ background-repeat: no-repeat;
   right:0;
   display: none;
   background-color: white;
+  border: 10px solid #0000001a;
 }
 .experience1:hover video,
 .experience2:hover video,
