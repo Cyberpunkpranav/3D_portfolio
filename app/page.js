@@ -63,12 +63,10 @@ return()=>{
           <div className={styles.thumbnails} style={{ '--time': '10s' }}>
           <article>
           <p className={`${styles.thumbnail} ${styles['thumbnail-outline']}`}>make your website flow</p>
-          {/* <p className={`${styles.thumbnail}`}>make sustainable softwares</p> */}
           <p className={`${styles.thumbnail} ${styles['thumbnail-fill']}`}>experienced in different domains of softwares</p>
           </article>
           <article>
           <p className={`${styles.thumbnail} ${styles['thumbnail-outline']}`}>make your website flow</p>
-          {/* <p className={`${styles.thumbnail}`}>make sustainable softwares</p> */}
           <p className={`${styles.thumbnail} ${styles['thumbnail-fill']}`}>experienced in different domains of softwares</p>
           </article>
           </div>
@@ -85,12 +83,34 @@ return()=>{
         </div>
     <div id="rectangle1" className={styles.rectangle1}>
           <div className={styles.stacks}>
-          <h4>Expertise in</h4>
+          <div className={styles.tape}>
+          <Image className={styles['techs-img']} alt='html' width={100} height={100} src='/logo/html.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/css.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/js.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/mui.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/nextjs.png'/>
+        
+          </div>
+          <div className={styles.tape}>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/bootstrap.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/tailwind.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/jQuery.png'/>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/reactjs.png'/>
+          </div>
+          <div className={styles.tape}>
+          <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/nodejs.png'/>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/expressjs.png'/>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/golang.png'/>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/mysql.png'/>
+            <Image className={styles['techs-img']} alt='css' width={100} height={100} src='/logo/aws.png'/>
+          </div>
+          </div>
             <div className={styles.developments}>
               <div className={styles.development}>
-                <div className={styles.tape}></div>
-                <div className={styles.tape}></div>
-                <div className={styles.tape}></div>
+              <h2>FRONT END</h2>
+              <h2>BACK END</h2>
+              <h2>FULLSTACK </h2>
+              <h2>DEVELOPMENT</h2> 
               </div>
               {/* <div className={styles.development}>
               <h3> NODEJS
@@ -123,7 +143,7 @@ return()=>{
               NEXTJS</h3>
               <h2>FRONT END</h2> */}
               </div>
-            </div>
+           
             </div>
         {/* <div className={styles.stack}>
         <div className={styles.techs}>

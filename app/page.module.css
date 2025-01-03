@@ -15,6 +15,7 @@
 .content .hello{
   font-size: 108px;
   font-weight: 100;
+
 }
 .content .welcome{
   width:100%
@@ -58,6 +59,8 @@
 .thumbnails{
   display: flex;
   width: 100%;
+  margin-top:5vh;
+  margin-bottom:5vh;
   overflow: hidden;
 }
 .thumbnail{
@@ -94,25 +97,26 @@
   animation-play-state: paused;
 }
 .rectangle1{
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 400;
   overflow: hidden;
 }
 .stacks{
   position: relative;
+  width: 50%;
   background-color: white;
 }
 
-.stacks .development {
+.development {
   padding:2.5vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
 }
- 
-  .stacks .developments h2{
+.developments{
+  width: 50%;
+}
+.developments h2{
     font-size: 8vw;
     font-weight: 700;
     text-wrap: nowrap;
@@ -126,48 +130,29 @@ background-repeat: no-repeat;
      -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;  
   }
-  .stacks .developments h3{
+ .developments h3{
     word-spacing: 10px;
   }
-/* .stack h2{
-  color: black;
-  background: url('/images/stack_bg.gif');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;  
-   text-wrap: wrap;
-  font-weight: 700;
-  font-size: 10vw;
-  line-height:10vw;
-}
-.stack h2:hover .techs-img{
-  transform: translateX(50%)
-}
- .techs{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.techs-img{
-  width: auto;
-  height: 7.5rem;
-  animation: liquid_float 1s ease-in-out infinite alternate ;
-  /* transition: all 0.3s; */
 .tape{
-  /* position: absolute; */
   width:100%;
-  height:30vh;
-  top:var(--top);
-  /* left:0;
-  bottom:0;
-  right:0; */
-  background: repeating-linear-gradient( 45deg, #ffee00 0%, #ffee00 10%, #000000 10%, #000000 20% );
+  margin-top:5vh;
+  margin-bottom:5vh;
+  width: 70%;
+  height:20vh;
+  background: repeating-linear-gradient( 45deg, #f8ec40 0%, #f8ec40 10%, #1f1f1f 10%, #1f1f1f 20% );
   display: flex;
+  box-shadow: inset 0px 0px 14px 5px #1f1f1f;
   align-items: center;
-  color: white;
+  border-radius: 9999px;
+  overflow: hidden;
+  transform: rotate(-10deg);
+}
+
+.tape img{
+  width:7vw;
+  margin: 5vh;
+  height: auto;
+  border-radius: 12px;
 }
 .experience{
   position: relative;
