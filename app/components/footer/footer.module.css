@@ -1,0 +1,27 @@
+.footer{
+    min-height: 100vh;
+    background-color: var(--cream);
+}
+.footer-content{
+    margin: 25px;
+  }
+  
+.profile{
+    margin: 25px;
+    height: 70vh;
+    width:45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange);
+}
+.profile .image1{
+    transition: all 0.6s;
+    height: 60vh;
+    width: auto;
+    filter:saturate(1) brightness(0.95) contrast(1.5);
+    }
+
+    .contact{
+        font-size: 10vw;
+    }
