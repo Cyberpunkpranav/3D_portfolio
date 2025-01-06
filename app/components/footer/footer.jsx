@@ -1,9 +1,31 @@
+'use client'
 import React from 'react'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import styles from './footer.module.css'
 
 const Footer = () => {
+  gsap.registerPlugin(ScrollTrigger)
+
+  useGSAP(()=>{
+    const Redwall = styles.redwall
+    gsap.to(`.${Redwall}`,{
+      // yPercent:100,
+      height:0,
+      duration:1,
+      scrollTrigger: {
+        trigger: "#footer",
+        start: "-100vh top",
+        end: "top bottom", 
+        scrub: false,      
+        markers:false,
+      },
+    })
+  })
   return (
-    <footer className={styles.footer}>
+    <footer id='footer' className={styles.footer}>
+      <div className={styles.redwall}></div>
     <div className="flex h-[90vh]">
     <div className={styles.profile}>
     {/* <img className={styles.image1} src="/images/profile.jpeg"/> */}

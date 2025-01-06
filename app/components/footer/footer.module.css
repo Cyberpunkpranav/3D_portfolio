@@ -1,11 +1,20 @@
 .footer{
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
     background-color: var(--cream);
 }
 .footer-content{
+    font-family: "IBM Plex Sans", serif;
     margin: 25px;
   }
-  
+  .redwall{
+    position: absolute;
+    left:0;
+    right: 0;
+    height: 100vh;
+    background-color: var(--red);
+  }
 .profile{
     margin: 25px;
     height: 70vh;
@@ -23,5 +32,6 @@
     }
 
     .contact{
-        font-size: 10vw;
+        font-family: "wulkan-display", serif;
+        font-size: 8vw;
     }
