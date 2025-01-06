@@ -52,14 +52,12 @@ return()=>{
         markers:false,
       },
     })
-    const HorizontalRectangles = styles.horizontal_rectangles
+    const HorizontalRectangles = styles.horizontal_rectangle
     const HorizontalRectanglesArray = gsap.utils.toArray(`.${HorizontalRectangles}`)
     gsap.fromTo(HorizontalRectanglesArray, {
       scale:0,
       },{
         scale:1,
-        marginLeft:'0.3vw',
-        marginRight:'0.3vw',
         ease: "power2.out", // Add easing for smooth effect
         duration:1,
         delay:2,
@@ -116,6 +114,7 @@ return()=>{
         end: "bottom center",
         scrub: true,      
         markers:false,
+        markers:false,
       }
     })
 
@@ -170,14 +169,14 @@ return(()=>{
         <div className={styles.creative} style={{color:"var(--red)"}}>r</div>
         </span>
         </h1>
-      <div className={`${styles.horizontal_rectangle1} ${styles.horizontal_rectangles}`}></div>
-      <div className={`${styles.horizontal_rectangle2} ${styles.horizontal_rectangles}`}></div>
-      <div className={`${styles.horizontal_rectangle3} ${styles.horizontal_rectangles}`}></div>
-      <div className={`${styles.horizontal_rectangle4} ${styles.horizontal_rectangles}`}></div>
-      <div className={`${styles.horizontal_rectangle5} ${styles.horizontal_rectangles}`}></div>
-      <div className={`${styles.horizontal_rectangle6} ${styles.horizontal_rectangles}`}></div>
-      <div className={`${styles.horizontal_rectangle7} ${styles.horizontal_rectangles}`}></div>
-      <div className={`${styles.horizontal_rectangle8} ${styles.horizontal_rectangles}`}></div>
+      <div className={styles.horizontal_rectangle} style={{height:'10vh',width:'10vw'}}></div>
+      <div className={styles.horizontal_rectangle} style={{height:'20vh',width:'20vw'}}></div>
+      <div className={styles.horizontal_rectangle} style={{height:'30vh',width:'30vw'}}></div>
+      <div className={styles.horizontal_rectangle} style={{height:'40vh',width:'40vw'}}></div>
+      <div className={styles.horizontal_rectangle} style={{height:'50vh',width:'50vw'}}></div>
+      <div className={styles.horizontal_rectangle} style={{height:'60vh',width:'60vw'}}></div>
+      <div className={styles.horizontal_rectangle} style={{height:'70vh',width:'70vw'}}></div>
+      <div className={styles.horizontal_rectangle} style={{height:'80vh',width:'80vw'}}></div>
 
       </div>
     </div>
@@ -298,7 +297,19 @@ return(()=>{
               <Image className={styles['techs-img']} alt='aws' width={100} height={100} src='/logo/aws.png'/>
               <h4>AWS</h4>
               </div>
+              <div className={styles['tech-square']}>
+              <h4>GIT HUB</h4>
+              </div>
+              <div className={styles['tech-square']}>
+              <h4>POSTMAN</h4>
+              </div>
             </div>
+    </div>
+    <div id="experience" className={styles.experience}>
+    <video autoPlay muted loop src="/videos/techrajendra.mp4"/>
+    <video autoPlay muted loop src="/videos/legalbuddy.mp4"/>
+    <video autoPlay muted loop src="/videos/connectapp.mp4"/>  
+    <video autoPlay muted loop src="/videos/ayurhomes.mp4"/>
     </div>
     {/* <div id="experience" className={`${styles.experience}`}>
       <div className={styles.heading}>
