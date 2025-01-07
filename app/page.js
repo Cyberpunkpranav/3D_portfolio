@@ -50,7 +50,7 @@ return()=>{
         end: "top center", 
         scrub: false,      
         markers:false,
-      },
+      }
     })
     const HorizontalRectangles = styles.horizontal_rectangle
     const HorizontalRectanglesArray = gsap.utils.toArray(`.${HorizontalRectangles}`)
@@ -94,7 +94,7 @@ return()=>{
       scrollTrigger:{
         trigger: "#thumbnail-container",
         start: "top center",
-        end: "bottom center",
+        end: "1000vh center",
         scrub: 4,      
         markers:false,
       }
@@ -110,17 +110,39 @@ return()=>{
       stagger: 0.1,
       scrollTrigger:{
         trigger: "#rectangle1",
-        start: "-400vh top",
+        start: "-300vh top",
         end: "bottom center",
         scrub: true,      
         markers:false,
         markers:false,
       }
     })
-
   })
   
-  useEffect(()=>{
+  useGSAP(()=>{
+    const ExperienceExplain = styles['experience-explain']
+    const ExperienceExplainArray = gsap.utils.toArray(`.${ExperienceExplain}`)
+    console.log(ExperienceExplainArray);
+    
+    gsap.fromTo(ExperienceExplainArray, {
+      scale:0.5,
+      opacity:0.6
+      },{
+        scale:1,
+        opacity:1,
+        ease: "power2.out", // Add easing for smooth effect
+        duration:1,
+        stagger:0.8,
+        scrollTrigger: {
+        trigger: `#experiences`,
+        start: "-250vh top",
+        end: "bottom bottom", 
+        scrub: 4,      
+        markers:false,
+      },
+    })
+  })
+useEffect(()=>{
 // Initialize Lenis
 const lenis = new Lenis({
   duration:2,
@@ -138,7 +160,7 @@ return(()=>{
 })
   },[])
   return (
-    <div  id="portfolio">
+    <div id="portfolio">
     <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`} >
         <h1 className="flex flex-wrap justify-center z-[500] ">
@@ -229,6 +251,16 @@ return(()=>{
             <div className={styles.thumbnail}>e</div>
             <div className={styles.thumbnail}>s</div>
           </span>
+          <span className={styles.thumbnails} >
+            <div className={styles.thumbnail}>W</div>
+            <div className={styles.thumbnail}>i</div>
+            <div className={styles.thumbnail}>t</div>
+            <div className={styles.thumbnail}>h</div>
+          </span>
+          <span className={styles.thumbnails} >
+            <div className={styles.thumbnail}>M</div>
+            <div className={styles.thumbnail}>e</div>
+          </span>
           </p>
     </div>
     <div id="rectangle1" className={styles.rectangle1}>
@@ -305,45 +337,57 @@ return(()=>{
               </div>
             </div>
     </div>
-    <div id="experience" className={styles.experience}>
-    <video autoPlay muted loop src="/videos/techrajendra.mp4"/>
-    <video autoPlay muted loop src="/videos/legalbuddy.mp4"/>
-    <video autoPlay muted loop src="/videos/connectapp.mp4"/>  
-    <video autoPlay muted loop src="/videos/ayurhomes.mp4"/>
-    </div>
-    {/* <div id="experience" className={`${styles.experience}`}>
-      <div className={styles.heading}>
-      <h2 >EXPERIENCE</h2>
-      </div>
-        <section id="experiences" className={`${styles.experiences}`}>
-        <article>
-        <div id="experience1" className={styles.experience1}>
+    <div id="experiences" className={styles.experiences}>
+      <h2>Experience</h2>
+      <div id="experience1" className={styles.experience}>
+      <aside>
+      <video autoPlay muted loop src="/videos/techrajendra.mp4"/>
+      </aside>
+      <article>
+        <div className={styles['experience-explain']}>
         <h6>MAY 2024 - PRESENT</h6>
         <h2>Tech Rajendra</h2>
         <h3>Software Engineer</h3>
-        <video style={{left:x}} autoPlay muted loop src="/videos/techrajendra.mp4"/>
         </div>
-        <div id="experience2" className={styles.experience2}>
+      </article>
+      </div>
+      <div id="experience2" className={styles.experience}>
+      <article>
+      <div className={styles['experience-explain']}>
         <h6>JAN 2024 - MAY 2024</h6>
         <h2>Legal Buddy India Pvt Ltd</h2>
         <h3>Full Stack Engineer</h3>
-        <video style={{left:x}} autoPlay muted loop src="/videos/legalbuddy.mp4"/>
-        </div>
-        <div id="experience3" className={styles.experience3}>
+      </div>
+      </article>
+      <aside>
+      <video autoPlay muted loop src="/videos/legalbuddy.mp4"/>
+      </aside>
+      </div>
+      <div id="experience3" className={styles.experience}>
+      <aside>
+      <video autoPlay muted loop src="/videos/connectapp.mp4"/>  
+      </aside>
+      <article>
+      <div className={styles['experience-explain']}>
         <h6>OCT 2022 - DEC 2023</h6>
         <h2>Aartas Care Pvt Ltd</h2>
-        <h3>Software Developer Associate</h3>    
-        <video style={{left:x}} autoPlay muted loop src="/videos/connectapp.mp4"/>  
-        </div>
-        <div id="experience4" className={styles.experience4}>
+        <h3>Software Developer Associate</h3> 
+      </div>
+      </article>
+      </div>
+      <div id="experience4" className={styles.experience}>
+      <article>
+      <div className={styles['experience-explain']}>
         <h6>APR 2022 - OCT 2022</h6>
         <h2>Addon ShareWare Pvt Ltd</h2>
         <h3>Front End Developer </h3>
-        <video style={{left:x}} autoPlay muted loop src="/videos/ayurhomes.mp4"/>
-        </div>
-        </article>
-        </section>
-      </div> */}
+      </div>
+      </article>
+      <aside>
+      <video autoPlay muted loop src="/videos/ayurhomes.mp4"/> 
+      </aside>
+      </div>
+    </div>
 
       {/* <div id="education" className={styles.education}>
         <div className={styles.heading}>EDUCATION</div>

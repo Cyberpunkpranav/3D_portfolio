@@ -26,23 +26,23 @@ const Footer = () => {
   return (
     <footer id='footer' className={styles.footer}>
       <div className={styles.redwall}></div>
-    <div className="flex h-[90vh]">
+    <div className="flex items-center h-[90vh]">
     <div className={styles.profile}>
-    {/* <img className={styles.image1} src="/images/profile.jpeg"/> */}
-    {/* <img className={styles.image1} src="/images/profile2.png"/> */}
-    <img className={styles.image1} src="/images/profilepicture_gray.jpeg"/> 
+    <img className={styles.image1} src="/images/profilepicture.jpg"/> 
   </div>
   <div className={styles['footer-content']}>
     <h3>PRANAV SHARMA</h3>
     <h2 className={styles.contact}>CONTACT ME</h2>
-    <h4>+91 7339023531</h4>
+    <div className='flex justify-between flex-wrap mt-10'>
+    <h4>+917339023531</h4>
     <h4><a target='__blank' href='mailto:pranavsharma733902@gmail.com'>EMAIL</a></h4>
-    <h4>LINKED IN</h4>
-    <h4>INSTAGRAM</h4>
-    <h4>GITHUB</h4>
+    <h4><a href='https://www.linkedin.com/in/pranav-sharma-618914187/' target='__blank'>LINKED IN</a></h4>
+    <h4><a href='https://www.instagram.com/cyberpunkpranav/' target='__blank'>INSTAGRAM</a></h4>
+    <h4><a href='https://github.com/Cyberpunkpranav' target='__blank'>GITHUB</a></h4>
+    </div>
   </div>
     </div>
-    <p className="text-center py-4">Design & Develop with ❤️ by pranav sharma</p>
+    <p className="text-center py-4">Design & Develop with ❤️ by Pranav Sharma</p>
   </footer>
   )
 }
