@@ -1,5 +1,5 @@
 'use client'
-import {useState, useEffect, useRef } from "react";
+import {useState, useEffect, useRef, use } from "react";
 import styles from "./page.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -22,13 +22,12 @@ return()=>{
 
 }
   },[x,y])
-
   gsap.registerPlugin(ScrollTrigger)
 
-  useGSAP(()=>{
+
+  useGSAP(()=>{      
     const Creative = styles.creative;  
     const CreativeArray = gsap.utils.toArray(`.${Creative}`)
-    console.log(CreativeArray);
     gsap.fromTo(CreativeArray, {
       transform: 'translateY(5vh)',
       clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -63,7 +62,7 @@ return()=>{
         delay:2,
         stagger: 0.1,
         scrollTrigger: {
-        trigger: ".cover",
+        trigger: "#cover",
         start: "top bottom",
         end: "top center", 
         scrub: false,      
@@ -117,12 +116,8 @@ return()=>{
         markers:false,
       }
     })
-  })
-  
-  useGSAP(()=>{
     const ExperienceExplain = styles['experience-explain']
     const ExperienceExplainArray = gsap.utils.toArray(`.${ExperienceExplain}`)
-    console.log(ExperienceExplainArray);
     
     gsap.fromTo(ExperienceExplainArray, {
       scale:0.5,
@@ -142,6 +137,7 @@ return()=>{
       },
     })
   })
+
 useEffect(()=>{
 // Initialize Lenis
 const lenis = new Lenis({
@@ -159,8 +155,34 @@ return(()=>{
   lenis.destroy()
 })
   },[])
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+      console.log('All resources finished loading.');
+    };
+
+    if (document.readyState === 'complete') {
+      // If the page is already loaded
+      handleLoad();
+    } else {
+      // Otherwise, wait for the load event
+      window.addEventListener('load', handleLoad);
+    }
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+  
+  console.log(loading);
+  
   return (
-    <div id="portfolio">
+    <>
+      {loading && <div className="h-[100vh] w-full grid place-items-center z-[1000] absolute top-0" style={{backgroundColor:'#ffff'}}>loading...</div>}
+      <div id="portfolio">
     <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`} >
         <h1 className="flex flex-wrap justify-center z-[500] ">
@@ -268,11 +290,14 @@ return(()=>{
     <div className={`${styles['dev-utilities-wrap2']} ${styles['dev-utilities-wraps']}`}></div>  
     <div className={`${styles['dev-utilities-wrap3']} ${styles['dev-utilities-wraps']}`}></div>  
     <div className={`${styles['dev-utilities-wrap4']} ${styles['dev-utilities-wraps']}`}></div>  
-
       <article>New Edge Designs</article>
       <article>Pixel Perfect Results</article>
       <article>Responsive Designs</article>
             <div id="developments" className={styles.developments}>
+            <div className="text-center">
+            <h2 className={styles.subheading}>Knowledge</h2>
+            <h6 className={styles['subheading-description']}>Technologies i know</h6>
+            </div>
                   <div className={styles['tech-square']}>
                   <Image alt='html' width={100} height={100} src='/logo/html.png'/> 
                   <h4>HTML</h4>
@@ -338,7 +363,10 @@ return(()=>{
             </div>
     </div>
     <div id="experiences" className={styles.experiences}>
-      <h2>Experience</h2>
+      <div className="mb-10 text-center">
+      <h2 className={styles.subheading}>Experience</h2>
+      <h6 className={styles['subheading-description']}>Making softwares from 3 years and going on..</h6>
+      </div>
       <div id="experience1" className={styles.experience}>
       <aside>
       <video autoPlay muted loop src="/videos/techrajendra.mp4"/>
@@ -346,17 +374,21 @@ return(()=>{
       <article>
         <div className={styles['experience-explain']}>
         <h6>MAY 2024 - PRESENT</h6>
-        <h2>Tech Rajendra</h2>
-        <h3>Software Engineer</h3>
+        <h2>Space Pe LLP </h2>
+        <h5 className="inline-block mt-5">IT products and services</h5>
+        <small className="mb-10">Subsidary company of Rajendra management group pvt ltd</small>
+        <h3 className="font-light">Software Engineer</h3>
         </div>
-      </article>
+      </article>  
       </div>
       <div id="experience2" className={styles.experience}>
       <article>
       <div className={styles['experience-explain']}>
-        <h6>JAN 2024 - MAY 2024</h6>
+        <p>JAN 2024 - MAY 2024</p>
         <h2>Legal Buddy India Pvt Ltd</h2>
-        <h3>Full Stack Engineer</h3>
+        <h5 className="inline-block mt-5">Legal Tech</h5>
+        <small className="mb-10">A startup to help lawyers maintain compliance for the companies</small>
+        <h3 className="font-light">Full Stack Engineer</h3>
       </div>
       </article>
       <aside>
@@ -369,18 +401,22 @@ return(()=>{
       </aside>
       <article>
       <div className={styles['experience-explain']}>
-        <h6>OCT 2022 - DEC 2023</h6>
-        <h2>Aartas Care Pvt Ltd</h2>
-        <h3>Software Developer Associate</h3> 
+        <p>OCT 2022 - DEC 2023</p>
+        <h2 className="">Aartas Care Pvt Ltd</h2>
+        <h5 className="inline-block mt-5">Medical Care</h5>
+        <small className="mb-10">An innovative startup helps doctor provide medical space and care</small>
+        <h3 className="font-light">Software Developer Associate</h3> 
       </div>
       </article>
       </div>
       <div id="experience4" className={styles.experience}>
       <article>
       <div className={styles['experience-explain']}>
-        <h6>APR 2022 - OCT 2022</h6>
+        <p>APR 2022 - OCT 2022</p>
         <h2>Addon ShareWare Pvt Ltd</h2>
-        <h3>Front End Developer </h3>
+        <h5 className="inline-block mt-5">IT Services</h5>
+        <small className="mb-10">Delivers bespoken custom softwares and projects to clients </small>
+        <h3 className="font-light">Front End Developer </h3>
       </div>
       </article>
       <aside>
@@ -404,6 +440,7 @@ return(()=>{
           </div>
         </div>
       </div> */}
-    </div>
+    </div>   
+    </>
   )
 }
