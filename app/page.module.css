@@ -336,7 +336,17 @@
 }
 .dev-utilities-wrap1,.dev-utilities-wrap2,.dev-utilities-wrap3,.dev-utilities-wrap4{
   height: 10vh;
+  height: 10vh;
 }
+.dev-utilities-wrap2{
+top:10vh;
+}
+.dev-utilities-wrap3{
+  top:20vh;
+  }
+  .dev-utilities-wrap4{
+    top:30vh;
+    }
 .developments{
   row-gap: 2vh;
   column-gap: 2vh;

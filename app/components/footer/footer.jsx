@@ -34,7 +34,7 @@ const Footer = () => {
     <h3>PRANAV SHARMA</h3>
     <h2 className={styles.contact}>CONTACT ME</h2>
     <div className='flex lg:justify-between flex-wrap lg:mt-10 mt-3'>
-    <h6><a href='tel:+91 7339023531'></a>+917339023531</h6>
+    <h6><a href='tel:+91 7339023531'>+917339023531</a></h6>
     <h6><a target='__blank' href='mailto:pranavsharma733902@gmail.com'>EMAIL</a></h6>
     <h6><a href='https://www.linkedin.com/in/pranav-sharma-618914187/' target='__blank'>LINKED_IN</a></h6>
     <h6><a href='https://www.instagram.com/cyberpunkpranav/' target='__blank'>INSTAGRAM</a></h6>

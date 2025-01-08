@@ -1,0 +1,63 @@
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.about article .about_char{
+    font-family: "IBM Plex Sans", serif;
+    color: var(--gray);
+}
+.about article h1{
+    color: var(--black);
+}
+.about article span{
+    display: inline-block;
+    color: var(--gray);
+}
+aside .images{
+    position: relative;
+}
+.images .image_cover{
+    position: fixed;
+    width:40%;
+    height: 70vh;
+    animation: RevealImages 1s 0.5s linear forwards;
+    background-color: var(--white);
+}
+.images .image1{
+    margin: 0 auto;
+}
+@media screen and (min-width:1400px) {
+    .about{
+        padding-top: 15vh;
+    }
+    .about aside{
+        position: sticky;
+        top: 0;
+        width: 40%;
+    }
+    .images .image1{
+        width:30vw;
+        height: auto;
+    }
+    .about article{
+        padding-right: 10vh;
+        width: 60%;
+    }
+    .about article h4{
+        line-height: 6vh;
+    }   
+    .about article h2{
+        font-size: 5rem;
+        line-height: 10vh;
+        color: var(--black);
+    }
+}
+@keyframes RevealImages {
+    from{
+        height: 40;
+    }
+    to{
+        height: 0;
+    }
+}

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import styles from './navbar.module.css'
+import Link from 'next/link'
 
 export const Navbar = () => {
   return (
@@ -10,7 +11,7 @@ export const Navbar = () => {
       </div>
       <div className='flex'>
         <a href='/Resume.pdf' download={true}><h6 className='px-5'>Resume</h6></a>
-        <h6 className='px-5'>About me</h6>
+        <Link href='/about_me'><h6 className='px-5'>About me</h6></Link>
       </div>
     </div>
   )
