@@ -26,19 +26,19 @@ const Footer = () => {
   return (
     <footer id='footer' className={styles.footer}>
       <div className={styles.redwall}></div>
-    <div className="flex items-center h-[90vh]">
+    <div className="flex flex-wrap items-center h-[90vh]">
     <div className={styles.profile}>
     <img className={styles.image1} src="/images/profilepicture.jpg"/> 
   </div>
   <div className={styles['footer-content']}>
     <h3>PRANAV SHARMA</h3>
     <h2 className={styles.contact}>CONTACT ME</h2>
-    <div className='flex justify-between flex-wrap mt-10'>
-    <h4>+917339023531</h4>
-    <h4><a target='__blank' href='mailto:pranavsharma733902@gmail.com'>EMAIL</a></h4>
-    <h4><a href='https://www.linkedin.com/in/pranav-sharma-618914187/' target='__blank'>LINKED IN</a></h4>
-    <h4><a href='https://www.instagram.com/cyberpunkpranav/' target='__blank'>INSTAGRAM</a></h4>
-    <h4><a href='https://github.com/Cyberpunkpranav' target='__blank'>GITHUB</a></h4>
+    <div className='flex lg:justify-between flex-wrap lg:mt-10 mt-3'>
+    <h6><a href='tel:+91 7339023531'></a>+917339023531</h6>
+    <h6><a target='__blank' href='mailto:pranavsharma733902@gmail.com'>EMAIL</a></h6>
+    <h6><a href='https://www.linkedin.com/in/pranav-sharma-618914187/' target='__blank'>LINKED_IN</a></h6>
+    <h6><a href='https://www.instagram.com/cyberpunkpranav/' target='__blank'>INSTAGRAM</a></h6>
+    <h6><a href='https://github.com/Cyberpunkpranav' target='__blank'>GIT_HUB</a></h6>
     </div>
   </div>
     </div>

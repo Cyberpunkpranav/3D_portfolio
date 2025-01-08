@@ -298,74 +298,28 @@ return(()=>{
             <h2 className={styles.subheading}>Knowledge</h2>
             <h6 className={styles['subheading-description']}>Technologies i know</h6>
             </div>
-                  <div className={styles['tech-square']}>
-                  <Image alt='html' width={100} height={100} src='/logo/html.png'/> 
-                  <h4>HTML</h4>
-                  </div>
-                <div className={styles['tech-square']}>
-                <Image alt='css' width={100} height={100} src='/logo/css.png'/>
-                <h4>CSS</h4>
-                </div>
-                <div className={styles['tech-square']}>
-                <Image alt='javascript' width={100} height={100} src='/logo/js.png'/>
-                <h4>JAVASCRIPT</h4>
-                </div>
-                <div className={styles['tech-square']}>
-                <Image alt='bootstrap' width={100} height={100} src='/logo/bootstrap.png'/>
-                <h4>BOOTSTRAP</h4>
-                </div>
-                <div className={styles['tech-square']}>
-                <Image alt='tailwind' width={100} height={100} src='/logo/tailwind.png'/>
-                <h4>TAILWIND</h4>
-                </div>
-                <div className={styles['tech-square']}>
-                <Image alt='materialui' width={100} height={100} src='/logo/mui.png'/>
-                <h4>MATERIAL UI</h4>
-                </div>
-                <div className={styles['tech-square']}>
-                <Image alt='jquery' width={100} height={100} src='/logo/jQuery.png'/>
-                <h4>JQUERY</h4>
-                </div>
-                <div className={styles['tech-square']}>
-                <Image className={styles['techs-img']} alt='reactjs' width={100} height={100} src='/logo/reactjs.png'/>
-                <h4>REACT JS</h4>
-                </div>
-                <div className={styles['tech-square']}>
-                <Image className={styles['techs-img']} alt='nextjs' width={100} height={100} src='/logo/nextjs.png'/>
-                <h4>NEXT JS</h4>
-                </div>
-                <div className={styles['tech-square']}>
-              <Image className={styles['techs-img']} alt='nodejs' width={100} height={100} src='/logo/nodejs.png'/>
-              <h4>NODE JS</h4>
-              </div>
-              <div className={styles['tech-square']}>
-              <Image className={styles['techs-img']} alt='expressjs' width={100} height={100} src='/logo/expressjs.png'/>
-              <h4>EXPRESS JS</h4>
-              </div>
-              <div className={styles['tech-square']}>
-              <Image className={styles['techs-img']} alt='golang' width={100} height={100} src='/logo/golang.png'/>
-              <h4>GOLANG</h4>
-              </div>
-              <div className={styles['tech-square']}>
-              <Image className={styles['techs-img']} alt='mysql' width={100} height={100} src='/logo/mysql.png'/>
-              <h4>MY SQL</h4>
-              </div>
-              <div className={styles['tech-square']}>
-              <Image className={styles['techs-img']} alt='aws' width={100} height={100} src='/logo/aws.png'/>
-              <h4>AWS</h4>
-              </div>
-              <div className={styles['tech-square']}>
-              <h4>GIT HUB</h4>
-              </div>
-              <div className={styles['tech-square']}>
-              <h4>POSTMAN</h4>
-              </div>
+              <div className={styles['tech-square']}><h4>HTML</h4> </div>
+              <div className={styles['tech-square']}><h4>CSS</h4> </div>
+              <div className={styles['tech-square']}><h4>JAVASCRIPT</h4> </div>
+              <div className={styles['tech-square']}><h4>BOOTSTRAP</h4> </div>
+              <div className={styles['tech-square']}><h4>TAILWIND</h4> </div>
+              <div className={styles['tech-square']}><h4>MATERIAL UI</h4> </div>
+              <div className={styles['tech-square']}><h4>JQUERY</h4> </div>
+              <div className={styles['tech-square']}><h4>REACT JS</h4> </div>
+              <div className={styles['tech-square']}><h4>NEXT JS</h4> </div>
+              <div className={styles['tech-square']}><h4>NODE JS</h4> </div>
+              <div className={styles['tech-square']}><h4>EXPRESS JS</h4> </div>
+              <div className={styles['tech-square']}><h4>GOLANG</h4> </div>
+              <div className={styles['tech-square']}><h4>MY SQL</h4> </div>
+              <div className={styles['tech-square']}><h4>AWS</h4> </div>
+              <div className={styles['tech-square']}><h4>GIT HUB</h4> </div>
+              <div className={styles['tech-square']}><h4>POSTMAN</h4> </div>
             </div>
     </div>
     <div id="experiences" className={styles.experiences}>
       <div className="mb-10 text-center">
       <h2 className={styles.subheading}>Experience</h2>
-      <h6 className={styles['subheading-description']}>Making softwares from 3 years and going on..</h6>
+      <h6 className={styles['subheading-description']}>Making softwares from <span className="text-red font-semibold">3 years</span> and going on..</h6>
       </div>
       <div id="experience1" className={styles.experience}>
       <aside>
