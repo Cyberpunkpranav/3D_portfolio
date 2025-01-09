@@ -1,21 +1,20 @@
 .about{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
 }
 .about article .about_char{
     font-family: "IBM Plex Sans", serif;
     color: var(--gray);
+    flex-wrap: wrap;
+    text-wrap: wrap;
 }
 .about article h1{
     color: var(--black);
 }
-.about article span{
-    display: inline-block;
-    color: var(--gray);
-}
 aside .images{
-    position: relative;
+    padding-top:15vh;
+    position: sticky;
+    top: 0;
 }
 .images .image_cover{
     position: fixed;
@@ -43,9 +42,12 @@ aside .images{
     .about article{
         padding-right: 10vh;
         width: 60%;
+        overflow-y: auto;
     }
     .about article h4{
-        line-height: 6vh;
+        font-size: 5rem;
+        line-height: normal;
+        color: var(--gray);
     }   
     .about article h2{
         font-size: 5rem;
