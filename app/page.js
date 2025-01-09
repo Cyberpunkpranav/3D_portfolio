@@ -19,7 +19,6 @@ setY(e.clientY)
 document.addEventListener('mousemove',MouseMov)
 return()=>{
   document.removeEventListener('mousemove',MouseMov)
-
 }
   },[x,y])
   gsap.registerPlugin(ScrollTrigger)
@@ -155,33 +154,8 @@ return(()=>{
   lenis.destroy()
 })
   },[])
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-      console.log('All resources finished loading.');
-    };
-
-    if (document.readyState === 'complete') {
-      // If the page is already loaded
-      handleLoad();
-    } else {
-      // Otherwise, wait for the load event
-      window.addEventListener('load', handleLoad);
-    }
-
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
-  
-  console.log(loading);
   
   return (
-    <>
-      {loading && <div className="h-[100vh] w-full grid place-items-center z-[1000] absolute top-0" style={{backgroundColor:'#ffff'}}>loading...</div>}
       <div id="portfolio">
     <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`} >
@@ -395,6 +369,5 @@ return(()=>{
         </div>
       </div> */}
     </div>   
-    </>
   )
 }
