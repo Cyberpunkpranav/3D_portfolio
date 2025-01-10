@@ -74,6 +74,9 @@ aside .images{
         font-size: 3rem;
         line-height: 10vh;
     }   
+    .images .image_cover{
+        width:40%;
+    }
 }
 @keyframes RevealImages {
     from{

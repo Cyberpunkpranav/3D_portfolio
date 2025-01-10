@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
+import Lenis from 'lenis';
 
 const About = () => {
     const about = `Hello! I’m Pranav Sharma. 
@@ -39,7 +40,23 @@ useGSAP(()=>{
               }
             })
     })
-    console.log(About);
+    useEffect(()=>{
+        // Initialize Lenis
+        const lenis = new Lenis({
+          duration:2,
+        });
+        
+        // Use requestAnimationFrame to continuously update the scroll
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        
+        requestAnimationFrame(raf);
+        return(()=>{
+          lenis.destroy()
+        })
+          },[])
     
   return (
     <section id='about' className={styles.about}>
