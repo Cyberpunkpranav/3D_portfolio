@@ -116,6 +116,12 @@ body::-webkit-scrollbar {
 .text-red{
   color: var(--red);
 }
+.bg-cream{
+  background-color: var(--cream);
+}
+.text-cream{
+  color: var(--cream);
+}
 .loading_square1{
   width:50vh;
   height: 50vh;

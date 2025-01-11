@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
-import Lenis from "lenis";
+import Link from "next/link";
 
 export default function Home() {  
   const [x,setX] = useState(0)
@@ -137,23 +137,7 @@ return()=>{
     })
   })
 
-useEffect(()=>{
-// Initialize Lenis
-const lenis = new Lenis({
-  duration:2,
-});
 
-// Use requestAnimationFrame to continuously update the scroll
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-return(()=>{
-  lenis.destroy()
-})
-  },[])
   
   return (
       <div id="portfolio">
@@ -295,7 +279,7 @@ return(()=>{
       <h2 className={styles.subheading}>Experience</h2>
       <h6 className={styles['subheading-description']}>Making softwares from <span className="text-red font-semibold">3 years</span> and going on..</h6>
       </div>
-      <div id="experience1" className={styles.experience}>
+      <Link href='/experience/spacepe' id="experience1" className={styles.experience}>
       <aside>
       <video autoPlay muted loop src="/videos/techrajendra.mp4"/>
       </aside>
@@ -308,7 +292,7 @@ return(()=>{
         <h3 className="font-light">Software Engineer</h3>
         </div>
       </article>  
-      </div>
+      </Link>
       <div id="experience2" className={styles.experience}>
       <article>
       <div className={styles['experience-explain']}>
