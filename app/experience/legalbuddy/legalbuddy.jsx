@@ -76,8 +76,8 @@ const LegalBuddy = () => {
             <p> In Customer Relationship Management , executive needs to create a lead in order to solve customer problems.</p>
             <p> Leads will get assigned to that corresponding task to execute it.</p>
             <p>If any customer still gets the issue , the executive could also create a complaint against a task or lead in it.</p>
-            <p> Customers account lists with custom search facility</p>
-            <p> Account statements of each customer to get the information of ones statements</p>
+            <p>Customers account lists with custom search facility</p>
+            <p>Account statements of each customer to get the information of ones statements</p>
             <p>Customer explained detail to help executive to know customer better</p>
             <p>Facility to download excel sheet of leads, tasks and complaints to help executive to complete their jobs.</p>
             <p>I contribute in Rule Based Access - RBA feature along with the project manager to make it happen in front end as well as the backend structure </p>

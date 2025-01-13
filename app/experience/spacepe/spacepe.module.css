@@ -58,11 +58,19 @@
     width: auto;
     height: 50vh;
     margin: 25px;
+    border: 1px solid var(--brown);
 }
 .website video{
     width: auto;
     height: 50vh;
     margin: 25px;
+    border: 1px solid var(--brown);
+}
+.crm article video{
+    border: 1px solid var(--brown);
+}
+.crm article img{
+    border: 1px solid var(--brown);
 }
 .website article{
 display: flex;
@@ -91,9 +99,9 @@ padding: 25px 25px 25px 25px;
     top:100%;
     left:0;
     width: 0%;
-    height: 1px;
+    height: 2px;
     transition: all 0.4s;
-    background-color: var(--black);
+    background-color: var(--white);
 }
 .livesite:hover::before{
 width: 100%;
@@ -101,14 +109,18 @@ width: 100%;
 @media screen and (min-width:1400px) {
     .section{
         min-height: 100vh;
-        padding:20px
     }
-    .crm aside{
+    .crm aside {
         width: 40%;
         height: 100vh;
         position: sticky;
         top: 0;
         padding: 25px;
+    }
+    .crm article video{
+        width:95%;
+        height: auto;
+        margin: 0 auto;
     }
     .crm aside p{
         margin-top: 15px;

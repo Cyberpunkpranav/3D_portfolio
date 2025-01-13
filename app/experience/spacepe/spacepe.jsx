@@ -36,10 +36,10 @@ const SpacePe = () => {
     },[])
 
   return (
-    <div className=''>
+    <div className='bg-cream'>
      <section className={styles.section} id='section1'>
     <div id='website' className={styles.website}>
-    <article>
+    <article className='bg-brown text-white pt-[5vh]'>
         <div className={styles.box1}>
         <h2>TechRajendra</h2>
         </div>
@@ -52,7 +52,7 @@ const SpacePe = () => {
         <p className={styles.livesite}><a target='__blank' href='https://www.techrajendra.com' >Live site</a></p>
         </div>
     </article>
-    <div className='overflow-x-hidden mt-[10vh]'>
+    <div className='overflow-x-hidden pt-[5vh]'>
         <aside id='web-images' className='relative'>
             <Image alt='' className={styles['web-img-1']} unoptimized={true} src='/images/spacepe/website-homepage.png' height={100} width={100}/>
             <video src='/videos/spacepe/website-baas-mobile.mp4' autoPlay muted loop/>
@@ -68,17 +68,17 @@ const SpacePe = () => {
     </section>
     <section className={styles.section} id='section2'>
         <div className={styles.crm}>
-            <aside>
+            <aside className='bg-brown text-white'>
             <h2>Customer Relationship Management</h2>
             <div className="flex justify-between items-center mt-3">
             <p style={{marginTop:'0'}} className=''>Contribution</p>
             <p style={{marginTop:'0'}} className={styles.livesite}><a target='__blank' href='https://crm.southeast.ind.deploy.techrajendra.com/' >see demo</a></p>
             </div>
-            <p> In Customer Relationship Management , executive needs to create a lead in order to solve customer problems.</p>
-            <p> Leads will get assigned to that corresponding task to execute it.</p>
+            <p>In Customer Relationship Management , executive needs to create a lead in order to solve customer problems.</p>
+            <p>Leads will get assigned to that corresponding task to execute it.</p>
             <p>If any customer still gets the issue , the executive could also create a complaint against a task or lead in it.</p>
-            <p> Customers account lists with custom search facility</p>
-            <p> Account statements of each customer to get the information of ones statements</p>
+            <p>Customers account lists with custom search facility</p>
+            <p>Account statements of each customer to get the information of ones statements</p>
             <p>Customer explained detail to help executive to know customer better</p>
             <p>Facility to download excel sheet of leads, tasks and complaints to help executive to complete their jobs.</p>
             <p>I contribute in Rule Based Access - RBA feature along with the project manager to make it happen in front end as well as the backend structure </p>
