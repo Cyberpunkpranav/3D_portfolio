@@ -44,7 +44,7 @@ const SpacePe = () => {
         <h2>TechRajendra</h2>
         </div>
         <div className={styles.box2}>
-        <h6>techrajendra.com is a site where clients can see and have faith in the company&#39;s team that we can deliver the projects. The products we are working on and have delivered are smooth and good to use. Using animations, I made the website more catchy, and the product pages show the exact information and capability of our products.</h6>
+        <p>techrajendra.com is a site where clients can see and have faith in the company&#39;s team that we can deliver the projects. The products we are working on and have delivered are smooth and good to use. Using animations, I made the website more catchy, and the product pages show the exact information and capability of our products.</p>
         </div>
         <div className={styles.box3}>
         <p>Contribution</p>

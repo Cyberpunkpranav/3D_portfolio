@@ -44,7 +44,7 @@ const LegalBuddy = () => {
         <h2>Legal Buddy . in</h2>
         </div>
         <div className={styles.box2}>
-        <h6>legalbuddy.in is a site where clients can see and have faith in the company&#39;s team that we can deliver the projects. The products we are working on and have delivered are smooth and good to use. Using animations, I made the website more catchy, and the product pages show the exact information and capability of our products.</h6>
+        <p>legalbuddy.in is a platform designed to simplify access to legal services and resources. It offers user-friendly solutions for legal queries, documentation, and expert consultations. The website ensures a seamless experience for individuals and businesses seeking professional legal support. With LegalBuddy.in, navigating legal complexities becomes effortless.</p>
         </div>
         <div className={styles.box3}>
         <p>Contribution</p>
@@ -54,14 +54,13 @@ const LegalBuddy = () => {
     </article>
     <div className='overflow-x-hidden mt-[10vh]'>
         <aside id='web-images' className='relative'>
-            <Image alt='' className={styles['web-img-1']} unoptimized={true} src='/images/spacepe/website-homepage.png' height={100} width={100}/>
-            <video src='/videos/spacepe/website-baas-mobile.mp4' autoPlay muted loop/>
-            <Image alt='' className={styles['web-img-2']} unoptimized={true} src='/images/spacepe/website-contact.png' height={100} width={100}/>
-            <video src='/videos/techrajendra.mp4' autoPlay muted loop/>
-            <Image alt='' className={styles['web-img-3']} unoptimized={true} src='/images/spacepe/website-product-baas.png' height={100} width={100}/>
-            <Image alt='' className={styles['web-img-4']} unoptimized={true} src='/images/spacepe/website-products.png' height={100} width={100}/>
-            <video src='/videos/spacepe/website-product-crm.mp4' autoPlay muted loop/>
-            <Image alt='' className={styles['web-img-5']} unoptimized={true} src='/images/spacepe/website-product-contact.png' height={100} width={100}/>
+            <Image alt='' className={styles['web-img-1']} unoptimized={true} src='/images/legalbuddy/lb-website-1.png' height={100} width={100}/>
+            <video src='/videos/legalbuddy/lb-mobile-version.mov' autoPlay muted loop/>
+            <Image alt='' className={styles['web-img-2']} unoptimized={true} src='/images/legalbuddy/lb-products.png' height={100} width={100}/>
+            <video src='/videos/legalbuddy.mp4' autoPlay muted loop/>
+            <Image alt='' className={styles['web-img-3']} unoptimized={true} src='/images/legalbuddy/lb-product-1.png' height={100} width={100}/>
+            <Image alt='' className={styles['web-img-4']} unoptimized={true} src='/images/legalbuddy/lb-product-2.png' height={100} width={100}/>
+            <Image alt='' className={styles['web-img-5']} unoptimized={true} src='/images/legalbuddy/lb-solutions.png' height={100} width={100}/>
         </aside>
         </div>
     </div>
