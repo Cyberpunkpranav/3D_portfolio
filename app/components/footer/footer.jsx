@@ -8,24 +8,24 @@ import styles from './footer.module.css'
 const Footer = () => {
   gsap.registerPlugin(ScrollTrigger)
 
-  useGSAP(()=>{
-    const Redwall = styles.redwall
-    gsap.to(`.${Redwall}`,{
-      // yPercent:100,
-      height:0,
-      duration:1,
-      scrollTrigger: {
-        trigger: "#footer",
-        start: "-100vh top",
-        end: "top bottom", 
-        scrub: false,      
-        markers:false,
-      },
-    })
-  })
+  // useGSAP(()=>{
+  //   const Redwall = styles.redwall
+  //   gsap.to(`.${Redwall}`,{
+  //     // yPercent:100,
+  //     height:0,
+  //     duration:1,
+  //     scrollTrigger: {
+  //       trigger: "#footer",
+  //       start: "-50vh top",
+  //       end: "top bottom", 
+  //       scrub: false,      
+  //       markers:true,
+  //     },
+  //   })
+  // })
   return (
     <footer id='footer' className={styles.footer}>
-      <div className={styles.redwall}></div>
+      {/* <div className={styles.redwall}></div> */}
     <div className="flex flex-wrap items-center h-[90vh]">
     <div className={styles.profile}>
     <img className={styles.image1} src="/images/profilepicture.jpg"/> 

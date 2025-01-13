@@ -135,24 +135,23 @@ return()=>{
         markers:false,
       },
     })
-  })
 
+  },[])
 
-  
   return (
       <div id="portfolio">
     <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`} >
         <h1 className="flex flex-wrap justify-center z-[500] ">
         <span className={styles.punchline}>
-          <div className={styles.creative}>C</div>
-          <div className={styles.creative}>r</div>
-          <div className={styles.creative}>e</div>
-          <div className={styles.creative}>a</div>
-          <div className={styles.creative}>t</div>
-          <div className={styles.creative}>i</div>
-          <div className={styles.creative}>v</div>
-          <div className={styles.creative}>e</div>
+          <div style={{color:'var(--red)'}} className={styles.creative}>C</div>
+          <div style={{color:'var(--red)'}} className={styles.creative}>r</div>
+          <div style={{color:'var(--red)'}} className={styles.creative}>e</div>
+          <div style={{color:'var(--red)'}} className={styles.creative}>a</div>
+          <div style={{color:'var(--red)'}} className={styles.creative}>t</div>
+          <div style={{color:'var(--red)'}} className={styles.creative}>i</div>
+          <div style={{color:'var(--red)'}} className={styles.creative}>v</div>
+          <div style={{color:'var(--red)'}} className={styles.creative}>e</div>
           </span>
           <span className={styles.punchline}>
           <div className={styles.creative}>W</div>
@@ -160,15 +159,15 @@ return()=>{
           <div className={styles.creative}>b</div>
           </span>
         <span className={styles.punchline}>
-        <div className={styles.creative} style={{color:"var(--red)"}}>D</div>
-        <div className={styles.creative} style={{color:"var(--red)"}}>e</div>
-        <div className={styles.creative} style={{color:"var(--red)"}}>v</div>
-        <div className={styles.creative} style={{color:"var(--red)"}}>e</div>
-        <div className={styles.creative} style={{color:"var(--red)"}}>l</div>
-        <div className={styles.creative} style={{color:"var(--red)"}}>o</div>
-        <div className={styles.creative} style={{color:"var(--red)"}}>p</div>
-        <div className={styles.creative} style={{color:"var(--red)"}}>e</div>
-        <div className={styles.creative} style={{color:"var(--red)"}}>r</div>
+        <div className={styles.creative}>D</div>
+        <div className={styles.creative}>e</div>
+        <div className={styles.creative}>v</div>
+        <div className={styles.creative}>e</div>
+        <div className={styles.creative}>l</div>
+        <div className={styles.creative}>o</div>
+        <div className={styles.creative}>p</div>
+        <div className={styles.creative}>e</div>
+        <div className={styles.creative}>r</div>
         </span>
         </h1>
       <div className={styles.horizontal_rectangle} style={{height:'10vh',width:'10vw'}}></div>
@@ -293,7 +292,7 @@ return()=>{
         </div>
       </article>  
       </Link>
-      <div id="experience2" className={styles.experience}>
+      <Link href='/experience/legalbuddy' id="experience2" className={styles.experience}>
       <article>
       <div className={styles['experience-explain']}>
         <p>JAN 2024 - MAY 2024</p>
@@ -306,7 +305,7 @@ return()=>{
       <aside>
       <video autoPlay muted loop src="/videos/legalbuddy.mp4"/>
       </aside>
-      </div>
+      </Link>
       <div id="experience3" className={styles.experience}>
       <aside>
       <video autoPlay muted loop src="/videos/connectapp.mp4"/>  

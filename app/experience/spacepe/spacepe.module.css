@@ -1,4 +1,5 @@
 .section{
+    min-height: 100vh;
     font-family: "IBM Plex Sans", serif;
 }
 .heading {
@@ -13,97 +14,6 @@
     margin-top: 10px;
     font-weight: 300;
 }
-/* .crm{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    margin-top: 5vh;
-    position: relative;
-}
- .crm-images{
-    position: relative;
-    perspective: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 65%;
-    height: 100%;
-}
-
- .case-study{
-    display: grid;
-    place-items: center;
-    font-family: "IBM Plex Sans", serif;
-    width: 35%;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-/* .case-study h6{
-    font-weight: 500;
-    margin-bottom:8px;
-}
-.crm1-img1,.crm2-img1{
-    transform: rotateX(10deg) scale(0.7);
-    position: absolute;
-    top: 19%;
-    left:0%;
-    box-shadow: 0px 0px 4px 3px var(--darkgray);
-    width: 100%;
-    height: auto;
-}
-.crm1-img2,.crm2-img2{
-    box-shadow: 0px 0px 4px 3px var(--darkgray);
-    transform: rotateX(10deg) scale(0.8);
-    position: absolute;
-    top: 10%;
-    left:0%;
-    width: 100%;
-    height: auto;
-}
-.crm1-img3,.crm2-img3{
-    transform: rotateX(10deg) scale(0.9);
-    position: absolute;
-    top: 0%;
-    left:0%;
-    box-shadow: 0px 0px 4px 3px var(--darkgray);
-    width: 100%;
-    height: auto;
-}
-.crm2{
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    margin-top: 5vh;
-    position: relative;
-    align-items: center;
-}
-.crm3-img1{
-    width: auto;
-    height: 0%;
-    position: absolute;
-    top: 25%;
-    left:25%;
-    transform: scale(0.8);
-    box-shadow: 0px 0px 4px 3px var(--darkgray);
-}
-.crm4-img1{
-    position: absolute;
-    top:5%;
-    left:5%;
-    width: auto;
-    height:0%;
-    transform: scale(0.8);
-    box-shadow: 0px 0px 4px 3px var(--darkgray);
-}
-
-.crm4-img2{
-    position: absolute;
-    top:15%;
-    left:25%;
-    width: auto;
-    height:0%;
-    transform: scale(0.8);
-    box-shadow: 0px 0px 4px 3px var(--darkgray);
-} */
 .crm{
     display: flex;
     position: relative;
@@ -148,13 +58,11 @@
     width: auto;
     height: 50vh;
     margin: 25px;
-    /* border: 1px solid var(--black); */
 }
 .website video{
     width: auto;
     height: 50vh;
     margin: 25px;
-    /* border: 1px solid var(--black); */
 }
 .website article{
 display: flex;
@@ -192,6 +100,7 @@ width: 100%;
 }
 @media screen and (min-width:1400px) {
     .section{
+        min-height: 100vh;
         padding:20px
     }
     .crm aside{
