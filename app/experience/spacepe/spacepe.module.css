@@ -56,21 +56,21 @@
 }
 .website img{
     width: auto;
-    height: 50vh;
-    margin: 25px;
-    border: 1px solid var(--brown);
+    height: 65vh;
+    margin-right: 25px;
+    border: 1px solid var(--cream);
 }
 .website video{
     width: auto;
-    height: 50vh;
-    margin: 25px;
-    border: 1px solid var(--brown);
+    height: 65vh;
+    margin-right: 25px;
+    border: 1px solid var(--cream);
 }
 .crm article video{
-    border: 1px solid var(--brown);
+    border: 1px solid var(--cream);
 }
 .crm article img{
-    border: 1px solid var(--brown);
+    border: 1px solid var(--cream);
 }
 .website article{
 display: flex;

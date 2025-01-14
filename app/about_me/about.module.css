@@ -1,6 +1,7 @@
 .about{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     min-height: 100vh;
 }
 .about article .about_char{
@@ -12,9 +13,12 @@
 .about article h1{
     color: var(--black);
 }
+.about aside{
+    background-color: var(--white);
+}
 aside .images{
     position: sticky;
-    top: 0;
+    top: 10vh;
 }
 .images .image_cover{
     position: fixed;
@@ -45,7 +49,6 @@ aside .images{
         width: 40%;
     }
     .about article{
-        padding-right: 10vh;
         width: 60%;
         overflow-y: auto;
     }
@@ -58,28 +61,29 @@ aside .images{
 @media screen and (min-width:1400px) {
     .about aside{
         position: sticky;
-        width: 40%;
+        width: 35%;
     }
     .images .image1{
-        padding-top: 10vh;
+        margin-top: 10vh;
         width:30vw;
         height: auto;
     }
     .about article{
-        padding-right: 10vh;
-        width: 60%;
+        width: 65%;
         overflow-y: auto;
     }
     .about article h4{
-        font-size: 5rem;
+        margin-left:2.5%;
+        font-size: 2.5rem;
         font-weight: 300;
-        letter-spacing: -0.4vw;
+        letter-spacing: -0.2vw;
+        word-spacing: 0.3vw;
     }   
     .about_char{
-        margin-bottom: 5vh;
+        margin-bottom: 2vh;
     }
     .images .image_cover{
-        width:40%;
+        width:35%;
     }
 }
 @keyframes RevealImages {
@@ -88,5 +92,13 @@ aside .images{
     }
     to{
         height: 0;
+    }
+}
+@keyframes liftup {
+    from{
+        transform: translateY(-100);
+    }
+    to{
+        transform: translateY(0);
     }
 }

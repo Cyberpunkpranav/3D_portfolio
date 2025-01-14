@@ -31,9 +31,9 @@ useGSAP(()=>{
               stagger:0.1,
               scrollTrigger:{
                 trigger: "#about",
-                start: "-350vh top",
+                start: "-250vh top",
                 end: `${aboutArticle.offsetHeight+convertVhToPx(50)}px bottom`,
-                scrub: 2,      
+                scrub: 1,      
                 markers:false,
               }
             })

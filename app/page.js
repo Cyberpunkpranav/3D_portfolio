@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Home() {  
   const [x,setX] = useState(0)
   const [y,setY] = useState(0)
-  const frontendRef = useRef(null)
+  
   useEffect(()=>{
 const MouseMov = (e)=>{
 setX(e.clientX)
@@ -72,11 +72,12 @@ return()=>{
     const ThumbnailArray = gsap.utils.toArray(`.${Thumbnail}`)
 
     gsap.to(ThumbnailArray,{
+      opacity: 1,
       color:'var(--brown)',
-      stagger: 0.1,
+      stagger: 0.5,
       scrollTrigger:{
         trigger: "#thumbnail-container",
-        start: "-400vh top",
+        start: "-500vh top",
         end: "bottom center",
         scrub: true,      
         markers:false,
@@ -115,25 +116,22 @@ return()=>{
         markers:false,
       }
     })
-    const ExperienceExplain = styles['experience-explain']
+    const ExperienceExplain = styles['multicolor']
     const ExperienceExplainArray = gsap.utils.toArray(`.${ExperienceExplain}`)
     
-    gsap.fromTo(ExperienceExplainArray, {
-      scale:0.5,
-      opacity:0.6
-      },{
-        scale:1,
-        opacity:1,
+    gsap.to(ExperienceExplainArray, {
+      width:'100%',
+      // xPercent:-100,
         ease: "power2.out", // Add easing for smooth effect
         duration:1,
-        stagger:0.8,
+        stagger:0.1,
         scrollTrigger: {
         trigger: `#experiences`,
         start: "-250vh top",
         end: "bottom bottom", 
-        scrub: 4,      
+        scrub: false,      
         markers:false,
-      },
+        }
     })
 
   },[])
@@ -282,7 +280,7 @@ return()=>{
       <aside>
       <video autoPlay muted loop src="/videos/techrajendra.mp4"/>
       </aside>
-      <article>
+      <article className="relative">
         <div className={styles['experience-explain']}>
         <h6>MAY 2024 - PRESENT</h6>
         <h2>Space Pe LLP </h2>
@@ -290,6 +288,7 @@ return()=>{
         <small className="mb-10">Subsidary company of Rajendra management group pvt ltd</small>
         <h3 className="font-light">Software Engineer</h3>
         </div>
+        <div className={styles.multicolor}></div>
       </article>  
       </Link>
       <Link href='/experience/legalbuddy' id="experience2" className={styles.experience}>
