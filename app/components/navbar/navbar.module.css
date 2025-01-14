@@ -1,4 +1,6 @@
 .navbar{
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -6,7 +8,18 @@
     background-color:transparent;
     z-index: 1000;
     padding:10px 20px 10px 20px;
+    backdrop-filter: blur(10px);
 
+}
+.name{
+    font-weight: 400;
+    word-spacing: 5px;
+    padding-left:5%;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    padding-right:15%;
 }
 .navbar img{
     height: 10vh;
@@ -16,7 +29,7 @@
     animation: rotate 10s linear infinite;
 }
 
-.navbar h6{
+.navbar p{
     color: var(--black);
     font-family: "IBM Plex Sans", serif;
 }
@@ -26,5 +39,13 @@
     }
     to{
         transform: rotate(360deg);
+    }
+}
+@media screen and (min-width:1440px) {
+    .name{
+        width: 55%;
+    }
+    .options{
+        width: 45%;
     }
 }

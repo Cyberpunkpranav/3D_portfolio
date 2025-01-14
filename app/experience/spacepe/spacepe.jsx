@@ -15,7 +15,6 @@ const SpacePe = () => {
         const screenwidth = imagesdiv.offsetWidth;
         const imageswidth = imagesdiv.scrollWidth;
         const scrollWidth = imageswidth - screenwidth;
-        console.log(scrollWidth);
         const t5 = gsap.timeline()
         t5.fromTo(`#web-images`,{
             x:0
@@ -33,37 +32,57 @@ const SpacePe = () => {
             scrub:true,
             markers:false
         })
+
+        // const t6 = gsap.timeline()
+        // const WebCreatives = styles['web-creative']
+        // const WebCreativesArray = gsap.utils.toArray(`.${WebCreatives}`)
+
+        // t6.to(WebCreativesArray,{
+        //     xPercent:-100
+        // })
+        // ScrollTrigger.create({
+        //     animation:t6,
+        //     pin:'#section1',
+        //     duration:2,
+        //     trigger:'#website',
+        //     start:'top top',
+        //     end:`${scrollWidth+(scrollWidth/7)}px botttom`,
+        //     scrub:false,
+        //     markers:true
+        // })
     },[])
 
   return (
-    <div className='bg-cream'>
+    <div className='bg-cream overflow-x-hidden'>
      <section className={styles.section} id='section1'>
     <div id='website' className={styles.website}>
+    <div>
     <article className='bg-brown text-white pt-[5vh]'>
         <div className={styles.box1}>
-        <h2>TechRajendra</h2>
+        <h5 className='font-light'>TechRajendra</h5>
         </div>
         <div className={styles.box2}>
-        <p>techrajendra.com is a site where clients can see and have faith in the company&#39;s team that we can deliver the projects. The products we are working on and have delivered are smooth and good to use. Using animations, I made the website more catchy, and the product pages show the exact information and capability of our products.</p>
+        <h5 className='font-light'><span className='ml-10'></span>techrajendra.com is a site where clients can see and have faith in the company&#39;s team that we can deliver the projects. The products we are working on and have delivered are smooth and good to use. Using animations, I made the website more catchy, and the product pages show the exact information and capability of our products.</h5>
         </div>
         <div className={styles.box3}>
-        <p>Contribution</p>
-        <p>Developed and maintaining whole website as a solo project</p>
+        <p className='font-light'>Contribution</p>
+        <p className='font-light'>Developed and maintaining whole website as a solo project</p>
         <p className={styles.livesite}><a target='__blank' href='https://www.techrajendra.com' >Live site</a></p>
         </div>
     </article>
-    <div className='overflow-x-hidden pt-[5vh]'>
-        <aside id='web-images' className='relative'>
-            <Image alt='' className={styles['web-img-1']} unoptimized={true} src='/images/spacepe/website-homepage.png' height={100} width={100}/>
-            <video src='/videos/spacepe/website-baas-mobile.mp4' autoPlay muted loop/>
-            <Image alt='' className={styles['web-img-2']} unoptimized={true} src='/images/spacepe/website-contact.png' height={100} width={100}/>
-            <video src='/videos/techrajendra.mp4' autoPlay muted loop/>
-            <Image alt='' className={styles['web-img-3']} unoptimized={true} src='/images/spacepe/website-product-baas.png' height={100} width={100}/>
-            <Image alt='' className={styles['web-img-4']} unoptimized={true} src='/images/spacepe/website-products.png' height={100} width={100}/>
-            <video src='/videos/spacepe/website-product-crm.mp4' autoPlay muted loop/>
-            <Image alt='' className={styles['web-img-5']} unoptimized={true} src='/images/spacepe/website-product-contact.png' height={100} width={100}/>
+    <div className='pt-[5vh]'>
+        <aside id='web-images' className='relative w-full'>
+            <Image alt='' className={styles['web-creative']} unoptimized={true} src='/images/spacepe/website-homepage.png' height={100} width={100}/>
+            <video className={styles['web-creative']} src='/videos/spacepe/website-baas-mobile.mp4' autoPlay muted loop/>
+            <Image alt='' className={styles['web-creative']} unoptimized={true} src='/images/spacepe/website-contact.png' height={100} width={100}/>
+            <video className={styles['web-creative']} src='/videos/techrajendra.mp4' autoPlay muted loop/>
+            <Image alt='' className={styles['web-creative']} unoptimized={true} src='/images/spacepe/website-product-baas.png' height={100} width={100}/>
+            <Image alt='' className={styles['web-creative']} unoptimized={true} src='/images/spacepe/website-products.png' height={100} width={100}/>
+            <video className={styles['web-creative']} src='/videos/spacepe/website-product-crm.mp4' autoPlay muted loop/>
+            <Image alt='' className={styles['web-creative']} unoptimized={true} src='/images/spacepe/website-product-contact.png' height={100} width={100}/>
         </aside>
         </div>
+    </div>
     </div>
     </section>
     <section className={styles.section} id='section2'>

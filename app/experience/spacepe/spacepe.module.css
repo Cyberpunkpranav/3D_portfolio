@@ -47,6 +47,8 @@
     perspective: 1000px;
     height: 100%;
     width: 100%;
+    display: grid;
+    place-items: center;
     font-family: "IBM Plex Sans", serif;
 }
 .website aside{
@@ -56,13 +58,13 @@
 }
 .website img{
     width: auto;
-    height: 65vh;
+    height: 40vh;
     margin-right: 25px;
     border: 1px solid var(--cream);
 }
 .website video{
     width: auto;
-    height: 65vh;
+    height: 40vh;
     margin-right: 25px;
     border: 1px solid var(--cream);
 }
@@ -91,6 +93,7 @@ padding: 25px 25px 25px 25px;
     display: inline-block;
     position: relative;
     border-bottom:0px solid var(--black);
+    font-weight: 300;
     margin-top:30px;
 }
 .livesite::before{
@@ -99,7 +102,7 @@ padding: 25px 25px 25px 25px;
     top:100%;
     left:0;
     width: 0%;
-    height: 2px;
+    height: 1px;
     transition: all 0.4s;
     background-color: var(--white);
 }

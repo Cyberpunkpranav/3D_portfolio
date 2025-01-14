@@ -196,10 +196,11 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    color: var(--white);
+    color: var(--brown);
     background-color: var(--brown);
     font-family: "IBM Plex Sans", serif;
     padding: 5%;
+    transition: all 0.3s;
   }
   .experience video{
     width:auto;
@@ -276,9 +277,10 @@
   .multicolor{
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     height: 100%;
     width:0;
+    transition: all 0.3s;
     background: linear-gradient(to bottom, 
     var(--gray) 0%, 
     var(--gray) 20%, 

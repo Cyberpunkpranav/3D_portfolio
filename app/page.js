@@ -116,23 +116,41 @@ return()=>{
         markers:false,
       }
     })
-    const ExperienceExplain = styles['multicolor']
+    const MultiColor = styles['multicolor']
+    const MultiColorArray = gsap.utils.toArray(`.${MultiColor}`)
+    const ExperienceExplain = styles['experience-explain']
     const ExperienceExplainArray = gsap.utils.toArray(`.${ExperienceExplain}`)
-    
-    gsap.to(ExperienceExplainArray, {
+    const t1 = gsap.timeline()
+    t1.to(MultiColorArray,{
       width:'100%',
-      // xPercent:-100,
-        ease: "power2.out", // Add easing for smooth effect
-        duration:1,
-        stagger:0.1,
-        scrollTrigger: {
-        trigger: `#experiences`,
-        start: "-250vh top",
-        end: "bottom bottom", 
-        scrub: false,      
-        markers:false,
-        }
+      stagger:1,
+    }).to(MultiColorArray,{
+      xPercent:100,
+      stagger:1,
+
+    },0.8).to(ExperienceExplainArray,{
+      color:'var(--white)',
+      stagger:1,
+    },0.8)
+    ScrollTrigger.create({
+      animation:t1,
+      trigger: `#experiences`,
+      start: "top top",
+      end: "bottom bottom", 
+      toggleActions:'play reverse reverse reverse',
+      scrub: false,      
+      markers:true,
     })
+    // gsap.to(ExperienceExplainArray, {
+    //   width:'100%',
+    //   // xPercent:-100,
+    //     ease: "power2.out", // Add easing for smooth effect
+    //     duration:1,
+    //     stagger:0.1,
+    //     scrollTrigger: {
+   
+    //     }
+    // })
 
   },[])
 
@@ -292,13 +310,14 @@ return()=>{
       </article>  
       </Link>
       <Link href='/experience/legalbuddy' id="experience2" className={styles.experience}>
-      <article>
+      <article className="relative">
       <div className={styles['experience-explain']}>
         <p>JAN 2024 - MAY 2024</p>
         <h2>Legal Buddy India Pvt Ltd</h2>
         <h5 className="inline-block mt-5">Legal Tech</h5>
         <small className="mb-10">A startup to help lawyers maintain compliance for the companies</small>
         <h3 className="font-light">Full Stack Engineer</h3>
+        <div className={styles.multicolor}></div>
       </div>
       </article>
       <aside>
@@ -309,24 +328,26 @@ return()=>{
       <aside>
       <video autoPlay muted loop src="/videos/connectapp.mp4"/>  
       </aside>
-      <article>
+      <article className="relative">
       <div className={styles['experience-explain']}>
         <p>OCT 2022 - DEC 2023</p>
         <h2 className="">Aartas Care Pvt Ltd</h2>
         <h5 className="inline-block mt-5">Medical Care</h5>
         <small className="mb-10">An innovative startup helps doctor provide medical space and care</small>
         <h3 className="font-light">Software Developer Associate</h3> 
+        <div className={styles.multicolor}></div>
       </div>
       </article>
       </div>
       <div id="experience4" className={styles.experience}>
-      <article>
+      <article className="relative">
       <div className={styles['experience-explain']}>
         <p>APR 2022 - OCT 2022</p>
         <h2>Addon ShareWare Pvt Ltd</h2>
         <h5 className="inline-block mt-5">IT Services</h5>
         <small className="mb-10">Delivers bespoken custom softwares and projects to clients </small>
         <h3 className="font-light">Front End Developer </h3>
+        <div className={styles.multicolor}></div>
       </div>
       </article>
       <aside>
