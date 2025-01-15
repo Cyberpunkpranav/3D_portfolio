@@ -25,6 +25,7 @@
   margin: 0;
 }
 body {
+  font-family: "IBM Plex Sans", serif;
   /* font-family: "wulkan-display", serif; */
   font-size: 16px;
 }

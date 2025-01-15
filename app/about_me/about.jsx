@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 
 const About = () => {
-    const about = `A Software Engineer who is deeply passionate about creating solutions With over 3 years of experience in software development . Contributing to projects that help businesses simplify complex processes, and embrace the future of technology. These experiences laid the foundation for my curiosity and drive to continuously learn and innovate. I can design and develop intuitive systems or crafting animated websites that captivate users. I’m committed to using my skills to build tools and experiences that uplift and empower. Let’s connect and work towards a future where technology truly works for everyone!.`
+    const about = ``
     
     const aboutArray = about.split("")
     const about_space = aboutArray.map((data)=>(
@@ -17,29 +17,30 @@ const About = () => {
 gsap.registerPlugin(ScrollTrigger)    
 
 useGSAP(()=>{
-            const AboutClass = styles.about_char;  
-            const AboutArray = gsap.utils.toArray(`.${AboutClass}`)
-            const aboutArticle = document.getElementById('about-article')
-            console.log(aboutArticle.offsetHeight);
-            const convertVhToPx = (vh=50) => {
-                const oneVhInPx = window.innerHeight / 100;
-                return oneVhInPx * vh;
-            };
-            
-            gsap.to(AboutArray,{
-              color:'var(--black)',
-              stagger:0.1,
-              scrollTrigger:{
-                trigger: "#about",
-                start: "-250vh top",
-                end: `${aboutArticle.offsetHeight+convertVhToPx(50)}px bottom`,
-                scrub: 1,      
-                markers:false,
-              }
-            })
+            const aboutArticle = styles['about-article']
+
+            gsap.fromTo(`.${aboutArticle}`, {
+                transform: 'translateY(15vh)',
+                clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+                },{
+                  transform: 'translateY(0)',
+                  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                  ease: "power2.out", // Add easing for smooth effect
+                  duration:1,
+                  stagger: 0.5,
+                  scrollTrigger: {
+                  trigger: "#about",
+                  start: "top center",
+                  end: "bottom center", 
+                  scrub: false,      
+                  markers:false,
+                }
+              })
     },[])
     
   return (
+    <>
+    <h1 className={styles.heading}>All About Me</h1>
     <section id='about' className={styles.about}>
         <aside>
             <div className={styles.images}>
@@ -48,20 +49,31 @@ useGSAP(()=>{
             </div>
         </aside>
         <article className='scroll'>
-            <div className=''>
-            <h4 id='about-article' className='flex flex-wrap'>
-                {
+            <h4 id='about-article' className='text-wrap'>
+            A Software Engineer who is deeply passionate about creating solutions With over 3 years of experience in software development . Contributing to projects that help businesses simplify complex processes, and embrace the future of technology. These experiences laid the foundation for my curiosity and drive to continuously learn and innovate. I can design and develop intuitive systems or crafting animated websites that captivate users. I&#39;m committed to using my skills to build tools and experiences that uplift and empower. Let&#39;s connect and work towards a future where technology truly works for everyone!.
+                {/* {
                about_space.map((data,i)=>(
                     data == '&nbsp;' ?                    
                     <span key={i} className={styles.about_char}>&nbsp;</span>
                     :
                     <span key={i} className={styles.about_char}>{data}</span>
                 ))
-                }
+                } */}
                 </h4>
-            </div>
         </article>
     </section>
+    <section className={styles.education}>
+        <h2 className={styles.heading}>Education</h2>
+        <article>
+        <h4>Indira gandhi National Open University</h4>
+        <h3>Bachelor in Computer Application</h3>
+        </article>
+        <article>
+        <h4>CSI Polytechnic College</h4>
+        <h3>Diploma in Electronics & Communication Engineering</h3>
+        </article>
+    </section>
+    </>
   )
 }
 

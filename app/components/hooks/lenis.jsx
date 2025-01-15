@@ -12,7 +12,7 @@ export default function LenisProvider({ children }) {
       duration: 2,
       direction: "vertical",
       smooth: true,
-      smoothTouch: false,
+      smoothTouch: true,
     });
 
     const raf = (time) => {

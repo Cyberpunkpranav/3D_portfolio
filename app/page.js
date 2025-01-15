@@ -73,6 +73,7 @@ return()=>{
 
     gsap.to(ThumbnailArray,{
       color:'var(--red)',
+      y:0,
       opacity: 1,
       stagger: 0.1,
       scrollTrigger:{
@@ -87,14 +88,20 @@ return()=>{
     const Utilities = styles['dev-utilities-wraps']
     const UtilitiesArray = gsap.utils.toArray(`.${Utilities}`)
 
-    gsap.to(UtilitiesArray,{
-      xPercent:-100,
-      stagger: 0.1,
-      scrollTrigger:{
-        trigger: "#thumbnail-container",
+    gsap.fromTo(UtilitiesArray, {
+      transform: 'translateY(15vh)',
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+      },{
+        transform: 'translateY(0)',
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        ease: "power2.out", // Add easing for smooth effect
+        duration:1,
+        stagger: 0.5,
+        scrollTrigger: {
+        trigger: "#rectangle1",
         start: "top center",
-        end: "1000vh center",
-        scrub: 4,      
+        end: "bottom center", 
+        scrub: false,      
         markers:false,
       }
     })
@@ -109,7 +116,7 @@ return()=>{
       stagger: 0.1,
       scrollTrigger:{
         trigger: "#rectangle1",
-        start: "-300vh top",
+        start: "-100vh top",
         end: "bottom center",
         scrub: true,      
         markers:false,
@@ -142,7 +149,8 @@ return()=>{
     ScrollTrigger.create({
       animation:t1,
       trigger: `#experiences`,
-      start: "top top",
+      start: "-300vh top",
+      ease: "power2.out",
       end: "bottom bottom", 
       scrub: false,      
       markers:false,
@@ -161,7 +169,8 @@ return()=>{
     ScrollTrigger.create({
       animation:t2,
       trigger: `#experiences`,
-      start:  `${divheight()}px top`,
+      start:  `${divheight()/2}px top`,
+      ease: "power2.out",
       end: "bottom bottom", 
       scrub: false,      
       markers:false,
@@ -180,8 +189,9 @@ return()=>{
     ScrollTrigger.create({
       animation:t3,
       trigger: `#experiences`,
-      start: `${divheight()*2}px top`,
+      start: `${divheight()}px top`,
       end: "bottom bottom", 
+      ease: "power2.out",
       scrub: false,      
       markers:false,
     })
@@ -200,8 +210,9 @@ return()=>{
     ScrollTrigger.create({
       animation:t4,
       trigger: `#experiences`,
-      start: `${divheight()*3}px top`,
+      start: `${divheight()*2}px top`,
       end: "bottom bottom", 
+      ease: "power2.out",
       scrub: false,      
       markers:false,
     })
@@ -312,13 +323,9 @@ return()=>{
           </p>
     </div>
     <div id="rectangle1" className={styles.rectangle1}>
-    <div className={`${styles['dev-utilities-wrap1']} ${styles['dev-utilities-wraps']}`}></div>  
-    <div className={`${styles['dev-utilities-wrap2']} ${styles['dev-utilities-wraps']}`}></div>  
-    <div className={`${styles['dev-utilities-wrap3']} ${styles['dev-utilities-wraps']}`}></div>  
-    <div className={`${styles['dev-utilities-wrap4']} ${styles['dev-utilities-wraps']}`}></div>  
-      <article>New Edge Designs</article>
-      <article>Pixel Perfect Results</article>
-      <article>Responsive Designs</article>
+      <article className={styles['dev-utilities-wraps']}>New Edge Designs</article>
+      <article className={styles['dev-utilities-wraps']}>Pixel Perfect Results</article>
+      <article className={styles['dev-utilities-wraps']}>Responsive Designs</article>
             <div id="developments" className={styles.developments}>
             <div className="text-center">
             <h2 className={styles.subheading}>Knowledge</h2>

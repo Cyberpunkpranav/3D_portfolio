@@ -71,11 +71,13 @@
   }
   .thumbnail{
     /* font-family: "IBM Plex Sans", serif; */
+    opacity: 0;
     font-size:3rem;
     letter-spacing: -0.5vw;
     display: inline-block;
     color: var(--white);
-    transition: all 0.1s;
+    transform: translateY(15%);
+    transition: all 0.2s;
   }
   .thumbnail-outline{
     color: transparent;
@@ -97,11 +99,12 @@
     width: 50%;
     background-color: white;
   }
-  .rectangle1 article{
+  .rectangle1 .dev-utilities-wraps{
     display: flex;
     justify-content: end;
     text-wrap: nowrap;
     color: var(--black);
+    transform: rotate(10deg);
   }
 
   .developments{
@@ -121,24 +124,22 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: var(--cream);
-    color: var(--red);
+    background-color: var(--gray);
+    color: var(--black);
   }
   .tech-square h4{
     font-size: 1rem;
-    font-family: "IBM Plex Sans", serif;
-    font-weight: 600;
+    font-weight: 400;
   }
   
   .experience {
     display: flex;
     flex-wrap: wrap;
+    height: 80vh;
     /* margin-bottom:10vh; */
   }
   .experience aside{
     width: 100%;
-    padding: 5%;
-    background-color: var(--cream);
   }
   .experience article{
     width: 100%;
@@ -158,7 +159,6 @@
   .experience video{
     width:auto;
     height: 100%;
-    border: 5px solid var(--brown);
   }
   
   .education{
@@ -263,6 +263,7 @@
   @media screen and (min-width:768px) {
     .experience aside{
       width: 50%;
+      background-color: var(--cream);
     }
     .experience article{
       width: 50%;
@@ -336,12 +337,9 @@ transition: all 0.s;
   text-align: center;
   align-items: center;
   justify-content: center;
-  background-color: var(--cream);
-  color: var(--red);
 }
 .tech-square h4{
   font-size: 1.5vw;
-  font-weight: 600;
 }
 .experience aside{
   display: grid;
@@ -357,9 +355,8 @@ transition: all 0.s;
   padding: 5%;
 }
 .experience video{
-  width:80%;
-  height: auto;
-  border: 5px solid var(--brown);
+  width:auto;
+  height: 100%;
 }
 
 /* .education{
@@ -421,9 +418,10 @@ z-index: 300;
 } */
 .subheading{
   font-size: 5vw;
+  font-weight: 200;
 }
 .subheading-description{
-  font-family: "IBM Plex Sans", serif;
+  font-weight: 100;
 }
 
 }

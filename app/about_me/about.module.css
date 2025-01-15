@@ -1,12 +1,12 @@
 .about{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    min-height: 100vh;
 }
 .about article .about_char{
     font-family: "IBM Plex Sans", serif;
-    color: var(--gray);
+    color: var(--black);
     flex-wrap: wrap;
     text-wrap: wrap;
 }
@@ -16,15 +16,10 @@
 .about aside{
     background-color: var(--white);
 }
-aside .images{
-    position: sticky;
-    top: 10vh;
-}
+
 .images .image_cover{
-    position: fixed;
     width:100%;
-    height: 70vh;
-    animation: RevealImages 1s 0.5s linear forwards;
+    /* animation: RevealImages 1s 0.5s linear forwards; */
     background-color: var(--white);
 }
 .about article{
@@ -37,9 +32,23 @@ aside .images{
 .about article h4{
     font-size: 1.25rem;
     padding: 10px;
-    line-height: 5vh;
-    color: var(--gray);
+    color: var(--black);
 }   
+.education{
+    display: grid;
+    text-align: left;
+    place-items: center;
+    height: 100vh;
+}
+.education article{
+    width: 100%;
+}
+.education h4{
+    font-weight: 100;
+}
+.education h3{
+    font-weight: 400;
+}
 @media screen and (min-width:568px) {
 
     .about aside {
@@ -54,20 +63,18 @@ aside .images{
     }
     .about article h4{
         font-size: 3rem;
-        line-height: 10vh;
-        color: var(--gray);
     }   
 }
 @media screen and (min-width:1400px) {
-    .about{
-        margin-top: 10vh;
+    .heading{
+        margin-top:5vh;
+        font-weight: 100;
+        font-size: 15vh;
     }
     .about aside{
-        position: sticky;
         width: 35%;
     }
     .images .image1{
-        margin-top: 10vh;
         width:30vw;
         height: auto;
     }
@@ -76,11 +83,9 @@ aside .images{
         overflow-y: auto;
     }
     .about article h4{
-        margin-left:2.5%;
-        font-size: 2.5rem;
-        font-weight: 300;
-        letter-spacing: -0.2vw;
-        word-spacing: 0.3vw;
+        padding: 5vh;
+        font-size: 1rem;
+        font-weight: 100;
     }   
     .about_char{
         margin-bottom: 2vh;
