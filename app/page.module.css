@@ -5,7 +5,7 @@
   }
   .cover{
     position: relative;
-    height: 90vh;
+    height: 100vh;
     background-color: var(--white);
   
   } 
@@ -55,8 +55,10 @@
     background-color: white;
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     margin-bottom:5vh;
+    display: grid;
+    place-items: center;
   }
   .thumbnails{
     display: flex;
@@ -68,13 +70,12 @@
     transition: all 0.5s;
   }
   .thumbnail{
-    font-weight: 300;
     /* font-family: "IBM Plex Sans", serif; */
     font-size:3rem;
     letter-spacing: -0.5vw;
     display: inline-block;
-    color: var(--gray);
-    transition: all 0.3s;
+    color: var(--white);
+    transition: all 0.1s;
   }
   .thumbnail-outline{
     color: transparent;
@@ -87,6 +88,7 @@
     position: relative;
     width: 100%;
     z-index: 400;
+    min-height: 100vh;
     height: 100%;
     overflow: hidden;
   }
@@ -98,59 +100,10 @@
   .rectangle1 article{
     display: flex;
     justify-content: end;
-    height: 5vh;
-    font-weight: 800;
-    font-size: 2rem;
     text-wrap: nowrap;
-    line-height: 10vh;
-    margin-left:5vw;
-    margin-right: 5vw;
-    color: var(--white);
+    color: var(--black);
   }
-  .dev-utilities-wrap1{
-    position: absolute;
-    top:0;
-    right:0;
-    width: 100%;
-    height: 5vh;
-    transform: translateX(100%);
-    color: var(--white);
-    z-index: -1;
-    background-color: var(--orange);
-  }
-  .dev-utilities-wrap2{
-    position: absolute;
-    top:5vh;
-    right:0;
-    width: 100%;
-    height: 5vh;
-    transform: translateX(100%);
-    color: var(--white);
-    background-color: var(--red);
-    z-index: -1;
-  }
-  .dev-utilities-wrap3{
-    position: absolute;
-    top:10vh;
-    right:0;
-    width: 100%;
-    height: 5vh;
-    transform: translateX(100%);
-    color: var(--white);
-    background-color: var(--cream);
-    z-index: -1;
-  }
-  .dev-utilities-wrap4{
-    position: absolute;
-    top:15vh;
-    right:0;
-    width: 100%;
-    height: 5vh;
-    transform: translateX(100%);
-    color: var(--white);
-    background-color: var(--gray);
-    z-index: -1;
-  }
+
   .developments{
     display: flex;
     flex-wrap: wrap;
@@ -196,8 +149,8 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    color: var(--brown);
-    background-color: var(--brown);
+    color: var(--white);
+    background-color: var(--white);
     font-family: "IBM Plex Sans", serif;
     padding: 5%;
     transition: all 0.3s;
@@ -271,8 +224,12 @@
   .subheading-description{
     font-family: "IBM Plex Sans", serif;
   }
+  .experiences{
+    overflow-x: hidden;
+  }
   .experience article:nth-child(odd){
     order: 1;
+    z-index: 500;
   }
   .multicolor{
     position: absolute;
@@ -280,8 +237,9 @@
     left: 0;
     height: 100%;
     width:0;
+    background-color: var(--cream);
     transition: all 0.3s;
-    background: linear-gradient(to bottom, 
+    /* background: linear-gradient(to bottom, 
     var(--gray) 0%, 
     var(--gray) 20%, 
     var(--orange) 20%, 
@@ -291,10 +249,16 @@
     var(--brown) 60%, 
     var(--brown) 80%, 
     var(--red) 80%, 
-    var(--red) 100%
-);
-
-  
+    var(--red) 100%); */
+}
+.multicolor2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width:0;
+  background-color: var(--cream);
+  transition: all 0.3s;
 }
   @media screen and (min-width:768px) {
     .experience aside{
@@ -341,37 +305,23 @@
   margin-right:2vw;
 }
 .thumbnail{
-  opacity: 0.5;
-  font-weight: 500;
-  font-size:15vh;
-letter-spacing: -0.3vw;
-transition: all 0.4s;
+opacity: 0.5;
+font-size:30vh;
+font-weight: 100;
+line-height: 30vh;
+letter-spacing: 0.1vw;
+transition: all 0.s;
 }
 .thumbnail-outline{
   color: transparent;
   -webkit-text-stroke: 1px var(--black);
 }
+
 .rectangle1 article{
-  height: 10vh;
-  font-weight: 800;
-  font-size: 5rem;
-  line-height: 20vh;
-  margin-left:5vw;
-  margin-right: 5vw;
+  font-weight: 100;
+  font-size: 18vh;
 }
-.dev-utilities-wrap1,.dev-utilities-wrap2,.dev-utilities-wrap3,.dev-utilities-wrap4{
-  height: 10vh;
-  height: 10vh;
-}
-.dev-utilities-wrap2{
-top:10vh;
-}
-.dev-utilities-wrap3{
-  top:20vh;
-  }
-  .dev-utilities-wrap4{
-    top:30vh;
-    }
+
 .developments{
   row-gap: 2vh;
   column-gap: 2vh;
@@ -394,8 +344,9 @@ top:10vh;
   font-weight: 600;
 }
 .experience aside{
+  display: grid;
+  place-items: center;
   width: 50%;
-  padding: 10%;
 }
 .experience article{
   width: 50%;
@@ -406,8 +357,8 @@ top:10vh;
   padding: 5%;
 }
 .experience video{
-  width:auto;
-  height: 100%;
+  width:80%;
+  height: auto;
   border: 5px solid var(--brown);
 }
 

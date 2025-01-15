@@ -59,6 +59,9 @@ aside .images{
     }   
 }
 @media screen and (min-width:1400px) {
+    .about{
+        margin-top: 10vh;
+    }
     .about aside{
         position: sticky;
         width: 35%;

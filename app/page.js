@@ -50,35 +50,35 @@ return()=>{
         markers:false,
       }
     })
-    const HorizontalRectangles = styles.horizontal_rectangle
-    const HorizontalRectanglesArray = gsap.utils.toArray(`.${HorizontalRectangles}`)
-    gsap.fromTo(HorizontalRectanglesArray, {
-      scale:0,
-      },{
-        scale:1,
-        ease: "power2.out", // Add easing for smooth effect
-        duration:1,
-        delay:2,
-        stagger: 0.1,
-        scrollTrigger: {
-        trigger: "#cover",
-        start: "top bottom",
-        end: "top center", 
-        scrub: false,      
-        markers:false,
-      },
-    })
+    // const HorizontalRectangles = styles.horizontal_rectangle
+    // const HorizontalRectanglesArray = gsap.utils.toArray(`.${HorizontalRectangles}`)
+    // gsap.fromTo(HorizontalRectanglesArray, {
+    //   scale:0,
+    //   },{
+    //     scale:1,
+    //     ease: "power2.out", // Add easing for smooth effect
+    //     duration:1,
+    //     delay:2,
+    //     stagger: 0.1,
+    //     scrollTrigger: {
+    //     trigger: "#cover",
+    //     start: "top bottom",
+    //     end: "top center", 
+    //     scrub: false,      
+    //     markers:false,
+    //   },
+    // })
     const Thumbnail = styles.thumbnail;  
     const ThumbnailArray = gsap.utils.toArray(`.${Thumbnail}`)
 
     gsap.to(ThumbnailArray,{
+      color:'var(--red)',
       opacity: 1,
-      color:'var(--brown)',
-      stagger: 0.5,
+      stagger: 0.1,
       scrollTrigger:{
         trigger: "#thumbnail-container",
-        start: "-500vh top",
-        end: "bottom center",
+        start: "top center",
+        end: "center top",
         scrub: true,      
         markers:false,
       }
@@ -116,42 +116,95 @@ return()=>{
         markers:false,
       }
     })
-    const MultiColor = styles['multicolor']
-    const MultiColorArray = gsap.utils.toArray(`.${MultiColor}`)
-    const ExperienceExplain = styles['experience-explain']
-    const ExperienceExplainArray = gsap.utils.toArray(`.${ExperienceExplain}`)
-    const t1 = gsap.timeline()
-    t1.to(MultiColorArray,{
-      width:'100%',
-      stagger:1,
-    }).to(MultiColorArray,{
-      xPercent:100,
-      stagger:1,
 
-    },0.8).to(ExperienceExplainArray,{
-      color:'var(--white)',
-      stagger:1,
-    },0.8)
+    const MultiColor = styles['multicolor']
+    const MultiColor2 = styles['multicolor2']
+
+    function divheight(){
+      const className = styles['experience']; // Get the class name from the styles object
+      const divElement = document.querySelector(`.${className}`); // Select the element with the class
+      if (divElement) {
+        const divHeight = divElement.clientHeight; // Get the height of the element
+       return divHeight
+      }
+    }
+
+    const t1 = gsap.timeline()
+    t1.to(`#experience1 .${MultiColor}`,{
+      width:'100%',
+    }).to(`#experience1 .${MultiColor}`,{
+      xPercent:100,
+    },0.9)
+    .to(`#experience1 .${styles['experience-explain']}`,{
+      backgroundColor:'var(--brown)'
+    },0.9)
+
     ScrollTrigger.create({
       animation:t1,
       trigger: `#experiences`,
       start: "top top",
       end: "bottom bottom", 
-      toggleActions:'play reverse reverse reverse',
       scrub: false,      
-      markers:true,
+      markers:false,
     })
-    // gsap.to(ExperienceExplainArray, {
-    //   width:'100%',
-    //   // xPercent:-100,
-    //     ease: "power2.out", // Add easing for smooth effect
-    //     duration:1,
-    //     stagger:0.1,
-    //     scrollTrigger: {
-   
-    //     }
-    // })
 
+    const t2 = gsap.timeline()
+    t2.to(`#experience2 .${MultiColor2}`,{
+      width:'100%',
+    }).to(`#experience2 .${MultiColor2}`,{
+      xPercent:-100,
+    },0.9)
+    .to(`#experience2 .${styles['experience-explain']}`,{
+      backgroundColor:'var(--brown)'
+    },0.9)
+
+    ScrollTrigger.create({
+      animation:t2,
+      trigger: `#experiences`,
+      start:  `${divheight()}px top`,
+      end: "bottom bottom", 
+      scrub: false,      
+      markers:false,
+    })
+   
+    const t3 = gsap.timeline()
+    t3.to(`#experience3 .${MultiColor}`,{
+      width:'100%',
+    }).to(`#experience3 .${MultiColor}`,{
+      xPercent:100,
+    },0.9)
+    .to(`#experience3 .${styles['experience-explain']}`,{
+      backgroundColor:'var(--brown)'
+    },0.9)
+       
+    ScrollTrigger.create({
+      animation:t3,
+      trigger: `#experiences`,
+      start: `${divheight()*2}px top`,
+      end: "bottom bottom", 
+      scrub: false,      
+      markers:false,
+    })
+
+    const t4 = gsap.timeline()
+    t4.to(`#experience4 .${MultiColor2}`,{
+      width:'100%',
+    }).to(`#experience4 .${MultiColor2}`,{
+      xPercent:-100,
+    },0.9)
+    .to(`#experience4 .${styles['experience-explain']}`,{
+      backgroundColor:'var(--brown)'
+    },0.9)
+
+        
+    ScrollTrigger.create({
+      animation:t4,
+      trigger: `#experiences`,
+      start: `${divheight()*3}px top`,
+      end: "bottom bottom", 
+      scrub: false,      
+      markers:false,
+    })
   },[])
 
   return (
@@ -186,14 +239,14 @@ return()=>{
         <div className={styles.creative}>r</div>
         </span>
         </h1>
-      <div className={styles.horizontal_rectangle} style={{height:'10vh',width:'10vw'}}></div>
+      {/* <div className={styles.horizontal_rectangle} style={{height:'10vh',width:'10vw'}}></div>
       <div className={styles.horizontal_rectangle} style={{height:'20vh',width:'20vw'}}></div>
       <div className={styles.horizontal_rectangle} style={{height:'30vh',width:'30vw'}}></div>
       <div className={styles.horizontal_rectangle} style={{height:'40vh',width:'40vw'}}></div>
       <div className={styles.horizontal_rectangle} style={{height:'50vh',width:'50vw'}}></div>
       <div className={styles.horizontal_rectangle} style={{height:'60vh',width:'60vw'}}></div>
       <div className={styles.horizontal_rectangle} style={{height:'70vh',width:'70vw'}}></div>
-      <div className={styles.horizontal_rectangle} style={{height:'80vh',width:'80vw'}}></div>
+      <div className={styles.horizontal_rectangle} style={{height:'80vh',width:'80vw'}}></div> */}
 
       </div>
     </div>
@@ -317,8 +370,8 @@ return()=>{
         <h5 className="inline-block mt-5">Legal Tech</h5>
         <small className="mb-10">A startup to help lawyers maintain compliance for the companies</small>
         <h3 className="font-light">Full Stack Engineer</h3>
-        <div className={styles.multicolor}></div>
       </div>
+      <div className={styles.multicolor2}></div>
       </article>
       <aside>
       <video autoPlay muted loop src="/videos/legalbuddy.mp4"/>
@@ -335,8 +388,8 @@ return()=>{
         <h5 className="inline-block mt-5">Medical Care</h5>
         <small className="mb-10">An innovative startup helps doctor provide medical space and care</small>
         <h3 className="font-light">Software Developer Associate</h3> 
-        <div className={styles.multicolor}></div>
       </div>
+      <div className={styles.multicolor}></div>
       </article>
       </div>
       <div id="experience4" className={styles.experience}>
@@ -347,8 +400,8 @@ return()=>{
         <h5 className="inline-block mt-5">IT Services</h5>
         <small className="mb-10">Delivers bespoken custom softwares and projects to clients </small>
         <h3 className="font-light">Front End Developer </h3>
-        <div className={styles.multicolor}></div>
       </div>
+      <div className={styles.multicolor2}></div>
       </article>
       <aside>
       <video autoPlay muted loop src="/videos/ayurhomes.mp4"/> 

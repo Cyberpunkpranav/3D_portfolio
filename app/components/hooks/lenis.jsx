@@ -1,14 +1,15 @@
-// app/components/LenisProvider.jsx
 "use client";
 
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import { usePathname } from "next/navigation";
 
 export default function LenisProvider({ children }) {
+  const pathname = usePathname(); // Get current pathname
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 2,
-      // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       direction: "vertical",
       smooth: true,
       smoothTouch: false,
@@ -21,10 +22,13 @@ export default function LenisProvider({ children }) {
 
     requestAnimationFrame(raf);
 
+    // Scroll to the top when pathname changes
+    lenis.scrollTo(0, { immediate: true });
+
     return () => {
       lenis.destroy();
     };
-  }, []);
+  }, [pathname]); // Re-run effect when pathname changes
 
   return <>{children}</>;
 }
