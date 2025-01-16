@@ -17,7 +17,7 @@ const SpacePe = () => {
         const scrollWidth = imageswidth - screenwidth;
         const t5 = gsap.timeline()
         t5.fromTo(`#web-images`,{
-            x:0
+            x:0,
         },{
             x:-(scrollWidth+(scrollWidth/7)),
             ease:"none"
@@ -53,11 +53,11 @@ const SpacePe = () => {
     },[])
 
   return (
-    <div className='bg-cream overflow-x-hidden'>
+    <div className='overflow-x-hidden'>
      <section className={styles.section} id='section1'>
     <div id='website' className={styles.website}>
     <div>
-    <article className='bg-brown text-white pt-[5vh]'>
+    <article className=' pt-[5vh]'>
         <div className={styles.box1}>
         <h5 className='font-light'>TechRajendra</h5>
         </div>

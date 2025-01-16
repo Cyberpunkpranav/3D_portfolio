@@ -1,6 +1,5 @@
 .section{
     min-height: 100vh;
-    font-family: "IBM Plex Sans", serif;
 }
 .heading {
     text-align: right;
@@ -49,7 +48,6 @@
     width: 100%;
     display: grid;
     place-items: center;
-    font-family: "IBM Plex Sans", serif;
 }
 .website aside{
     display: flex;
@@ -113,9 +111,11 @@ width: 100%;
     .section{
         min-height: 100vh;
     }
+    .crm{
+        height: 100vh;
+    }
     .crm aside {
         width: 40%;
-        height: 100vh;
         position: sticky;
         top: 0;
         padding: 25px;
