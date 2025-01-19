@@ -5,6 +5,7 @@ import { Navbar } from "./components/navbar/navbar";
 import { Suspense } from "react";
 import Loading from "./loading";
 import LenisProvider from './components/hooks/lenis';
+import Cursor from './components/cursor/cursor';
 
 export const metadata = {
   title:"Pranav Sharma",
@@ -13,7 +14,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="page-container">
+      <body style={{ cursor: 'url(/icons/circle.png),auto'}} className="page-container">
+        <Cursor/>
         <Suspense fallback={<Loading/>}>
         <Navbar/>
         <LenisProvider>{children}</LenisProvider>

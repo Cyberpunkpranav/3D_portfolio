@@ -216,10 +216,11 @@ return()=>{
       scrub: false,      
       markers:false,
     })
+
   },[])
 
   return (
-      <div id="portfolio">
+    <div id="portfolio">
     <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`} >
         <h1 className="flex flex-wrap justify-center z-[500] ">
@@ -250,15 +251,6 @@ return()=>{
         <div className={styles.creative}>r</div>
         </span>
         </h1>
-      {/* <div className={styles.horizontal_rectangle} style={{height:'10vh',width:'10vw'}}></div>
-      <div className={styles.horizontal_rectangle} style={{height:'20vh',width:'20vw'}}></div>
-      <div className={styles.horizontal_rectangle} style={{height:'30vh',width:'30vw'}}></div>
-      <div className={styles.horizontal_rectangle} style={{height:'40vh',width:'40vw'}}></div>
-      <div className={styles.horizontal_rectangle} style={{height:'50vh',width:'50vw'}}></div>
-      <div className={styles.horizontal_rectangle} style={{height:'60vh',width:'60vw'}}></div>
-      <div className={styles.horizontal_rectangle} style={{height:'70vh',width:'70vw'}}></div>
-      <div className={styles.horizontal_rectangle} style={{height:'80vh',width:'80vw'}}></div> */}
-
       </div>
     </div>
     <div id="thumbnail-container" className={styles['thumbnail-container']}>
@@ -354,7 +346,7 @@ return()=>{
       <h2 className={styles.subheading}>Experience</h2>
       <h6 className={styles['subheading-description']}>Making softwares from <span className="text-red font-semibold">3 years</span> and going on..</h6>
       </div>
-      <Link href='/experience/spacepe' id="experience1" className={styles.experience}>
+      <a href='/experience/spacepe' id="experience1" className={styles.experience}>
       <aside>
       <video autoPlay muted loop src="/videos/techrajendra.mp4"/>
       </aside>
@@ -368,8 +360,8 @@ return()=>{
         </div>
         <div className={styles.multicolor}></div>
       </article>  
-      </Link>
-      <Link href='/experience/legalbuddy' id="experience2" className={styles.experience}>
+      </a>
+      <a href='/experience/legalbuddy' id="experience2" className={styles.experience}>
       <article className="relative">
       <div className={styles['experience-explain']}>
         <p>JAN 2024 - MAY 2024</p>
@@ -383,8 +375,8 @@ return()=>{
       <aside>
       <video autoPlay muted loop src="/videos/legalbuddy.mp4"/>
       </aside>
-      </Link>
-      <div id="experience3" className={styles.experience}>
+      </a>
+      <a   href="/experience/aartas" id="experience3" className={styles.experience}>
       <aside>
       <video autoPlay muted loop src="/videos/connectapp.mp4"/>  
       </aside>
@@ -398,7 +390,7 @@ return()=>{
       </div>
       <div className={styles.multicolor}></div>
       </article>
-      </div>
+      </a>
       <div id="experience4" className={styles.experience}>
       <article className="relative">
       <div className={styles['experience-explain']}>
@@ -415,22 +407,6 @@ return()=>{
       </aside>
       </div>
     </div>
-
-      {/* <div id="education" className={styles.education}>
-        <div className={styles.heading}>EDUCATION</div>
-        <div className={styles.educations}>
-          <div className={styles.education1}>
-            <h2>Bachelor in Computer Application</h2>
-            <h3>Indira Gandhi National Open University</h3>
-            <img style={{left:x}} src="/images/degree.jpg"/>
-          </div>
-          <div className={styles.education2}>
-            <h2>Diploma in Electronics and Communication Engineering</h2>
-            <h3>CSI Polytechnic college</h3>
-            <img style={{left:x}} src="/images/diploma.jpg"/>
-          </div>
-        </div>
-      </div> */}
     </div>   
   )
 }

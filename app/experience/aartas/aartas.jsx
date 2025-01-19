@@ -4,10 +4,10 @@ import React, { useEffect } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import styles from './spacepe.module.css'
+import styles from './aartas.module.css'
 import Link from 'next/link';
 
-const SpacePe = () => {
+const Aartas = () => {
 
     gsap.registerPlugin(ScrollTrigger)
 
@@ -45,7 +45,7 @@ const SpacePe = () => {
     <div id='website' className={styles.website}>
     <article>
         <div className={styles.box1}>
-        <h2>tech rajendra.com</h2>
+        <h2>Connect App</h2>
         </div>
         <div className={styles.box2}>
         <h6><span className='ml-10'></span>techrajendra.com is a site where clients can see and have faith in the company&#39;s team that we can deliver the projects. The products we are working and delivered, are smooth and good to use. Using animations, I made the website more catchy, and the product pages show the exact information and capability of our products.</h6>
@@ -109,4 +109,4 @@ const SpacePe = () => {
   )
 }
 
-export default SpacePe
+export default Aartas

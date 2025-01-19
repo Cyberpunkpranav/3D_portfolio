@@ -3,7 +3,7 @@
     top: 0;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     width: 100%;
     background-color:transparent;
     z-index: 1000;
@@ -14,22 +14,34 @@
 .name{
     font-weight: 400;
     word-spacing: 5px;
-    padding-left:5%;
 }
-.options{
-    display: flex;
-    justify-content: space-between;
-    padding-right:15%;
-}
+
 .navbar img{
-    height: 10vh;
-    width: 10vh;
-    padding: 10px;
+    height: 5vh;
+    width: 5vh;
+    padding: 5px;
     border-radius: 9999px;
     animation: rotate 10s linear infinite;
 }
-
+.options a{
+    width: 100%;
+    position: relative;
+}
+.options .hovereffect{
+position: absolute;
+top: 0;
+width: 0%;
+height: 0%;
+border: 1px solid transparent;
+transition: all 0.3s;
+}
+.options a:hover .hovereffect{
+    border: 1px solid var(--black);
+    height: 100%;
+    width: 100%;
+}
 .navbar p{
+    display: block;
     color: var(--black);
     font-family: "IBM Plex Sans", serif;
 }
@@ -41,11 +53,11 @@
         transform: rotate(360deg);
     }
 }
-@media screen and (min-width:1440px) {
+/* @media screen and (min-width:1440px) {
     .name{
         width: 55%;
     }
     .options{
         width: 45%;
     }
-}
+} */

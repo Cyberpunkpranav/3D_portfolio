@@ -133,6 +133,7 @@
   }
   
   .experience {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     height: 80vh;
@@ -180,7 +181,6 @@
   .educations .education2{
   position: relative;
   min-height: 30vh;
-  cursor: pointer;
   } 
   .educations h2{
     font-size: 5vw;
@@ -225,6 +225,7 @@
     font-family: "IBM Plex Sans", serif;
   }
   .experiences{
+    position: relative;
     overflow-x: hidden;
   }
   .experience article:nth-child(odd){
@@ -239,17 +240,6 @@
     width:0;
     background-color: var(--cream);
     transition: all 0.3s;
-    /* background: linear-gradient(to bottom, 
-    var(--gray) 0%, 
-    var(--gray) 20%, 
-    var(--orange) 20%, 
-    var(--orange) 40%, 
-    var(--cream) 40%, 
-    var(--cream) 60%, 
-    var(--brown) 60%, 
-    var(--brown) 80%, 
-    var(--red) 80%, 
-    var(--red) 100%); */
 }
 .multicolor2{
   position: absolute;
@@ -260,6 +250,7 @@
   background-color: var(--cream);
   transition: all 0.3s;
 }
+
   @media screen and (min-width:768px) {
     .experience aside{
       width: 50%;
