@@ -1,0 +1,11 @@
+.work{
+    margin-top:10vh;
+    padding: 25px;
+}
+.videos{
+    width:40%;
+    height: auto;
+}
+.video1 , .video2, .video3, .video4{
+    filter: brightness(0.5);
+}

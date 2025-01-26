@@ -31,7 +31,7 @@ const Footer = () => {
     <img className={styles.image1} src="/images/profilepicture.jpg"/> 
   </div>
   <div className={styles['footer-content']}>
-    <h3>PRANAV SHARMA</h3>
+    <h3>Let&#39;s work Together</h3>
     <h2 className={styles.contact}>CONTACT ME</h2>
     <div className='flex lg:justify-between flex-wrap lg:mt-10 mt-3'>
     <h6><a href='tel:+91 7339023531'>+917339023531</a></h6>

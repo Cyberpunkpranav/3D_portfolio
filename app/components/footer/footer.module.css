@@ -1,17 +1,20 @@
 .footer{
   min-height: 100vh;
   overflow: hidden;
-  background-color: var(--cream);
+  background-color: var(--red);
   margin-top:10vh;
 }
 .footer-content{
   width: 100%;
-  font-family: "IBM Plex Sans", serif;
   margin: 15px;
+  color: var(--orange);
 }
 .footer-content h6{
   margin-bottom:10px;
   width: 100%;
+}
+.footer p{
+  color: var(--orange);
 }
 .redwall{
   position: absolute;
@@ -37,7 +40,6 @@
     margin-top:2.5vh;
     letter-spacing:3vw;
     flex-wrap: wrap;
-    font-family: "wulkan-display", serif;
     font-size: 1.5rem;
 }
 @media screen and (min-width:1400px){
