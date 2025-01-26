@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 export default function Home() {  
   const [x,setX] = useState(0)
@@ -118,7 +119,7 @@ return()=>{
           <small> Started in 2021</small>
         </div>
         <div>
-        <p className="text-left p-2">I ' m a</p>
+        <p className="text-left p-2">I &#39; m a</p>
         <h1 className="flex flex-wrap justify-center z-[500] ">
         <span className={styles.punchline}>
           <div style={{color:'var(--red)'}} className={styles.creative}>C</div>
@@ -245,7 +246,7 @@ return()=>{
       <h6>Making softwares from <span className="text-red font-semibold">3 years</span> and going on..</h6>
       </div>
 
-      <a href='#' id="experience1" className={styles.experience}>
+      <Link href='#' id="experience1" className={styles.experience}>
           <div>
           <p>Work Tenure</p>
           <h5>MAY 2024 - PRESENT</h5>
@@ -263,8 +264,8 @@ return()=>{
         <p>Designation</p>
         <h4>Software Engineer</h4>
         </div>
-      </a>
-      <a href='/#' id="experience2" className={styles.experience}>
+      </Link>
+      <Link href='#' id="experience2" className={styles.experience}>
         <div>
           <p>Work Tenure</p>
           <h5>JAN 2024 - MAY 2024</h5>
@@ -282,8 +283,8 @@ return()=>{
         <p>Designation</p>
         <h4>Full Stack Engineer</h4>
         </div>
-      </a>
-      <a href="/#" id="experience3" className={styles.experience}>
+      </Link>
+      <Link href="#" id="experience3" className={styles.experience}>
         <div>
         <p>Work Tenure</p>
         <h5>OCT 2022 - DEC 2023</h5>
@@ -301,8 +302,8 @@ return()=>{
           <p>Designation</p>
           <h4>Software Developer Associate</h4> 
         </div>
-      </a>
-      <a href="/#" id='experience4' className={styles.experience}>
+      </Link>
+      <Link href="#" id='experience4' className={styles.experience}>
         <div>
           <p>Work Tenure</p>
           <h5>APR 2022 - OCT 2022</h5>
@@ -320,7 +321,7 @@ return()=>{
           <p>Designation</p>
           <h4>Front End Developer </h4>
         </div>
-      </a>
+      </Link>
     </div>
     </div>   
   )
