@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ cursor: 'url(/icons/circle.png),auto'}} className="page-container">
+      <body className="page-container">
         {/* <Cursor/> */}
         <Suspense fallback={<Loading/>}>
         <Navbar/>

@@ -112,7 +112,7 @@ return()=>{
     <div id="portfolio">
     <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`} >
-        <div className="absolute bottom-0 text-right right-0 p-4">
+        <div className="absolute bottom-0 text-right right-0 p-4 mb-[5vh] lg:mb-0">
           <small>18.12.2000</small>
           <br/>
           <small> Started in 2021</small>
@@ -241,7 +241,7 @@ return()=>{
     </div>
     <div id="experiences" className={styles.experiences}>
       <div className="mb-10 text-center flex flex-wrap items-center justify-between">
-      <h2 className="mr-5">Experience</h2>
+      <h2 className="mr-10">Experience</h2>
       <h6>Making softwares from <span className="text-red font-semibold">3 years</span> and going on..</h6>
       </div>
 
