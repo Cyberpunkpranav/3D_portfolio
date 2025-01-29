@@ -113,7 +113,7 @@ return()=>{
     <div id="portfolio">
     <div id="cover" className={styles.cover}>
       <div className={`${styles.content} grid place-items-center h-full w-full`} >
-        <div className="absolute bottom-0 text-right right-0 p-4">
+        <div className="absolute bottom-0 text-right right-0 p-4 mb-[5vh] lg:mb-0">
           <small>18.12.2000</small>
           <br/>
           <small> Started in 2021</small>
@@ -242,11 +242,11 @@ return()=>{
     </div>
     <div id="experiences" className={styles.experiences}>
       <div className="mb-10 text-center flex flex-wrap items-center justify-between">
-      <h2 className="mr-5">Experience</h2>
+      <h2 className="mr-10">Experience</h2>
       <h6>Making softwares from <span className="text-red font-semibold">3 years</span> and going on..</h6>
       </div>
 
-      <Link href='#' id="experience1" className={styles.experience}>
+      <a href='/work' id="experience1" className={styles.experience}>
           <div>
           <p>Work Tenure</p>
           <h5>MAY 2024 - PRESENT</h5>
@@ -264,8 +264,8 @@ return()=>{
         <p>Designation</p>
         <h4>Software Engineer</h4>
         </div>
-      </Link>
-      <Link href='#' id="experience2" className={styles.experience}>
+      </a>
+      <a href='/work' id="experience2" className={styles.experience}>
         <div>
           <p>Work Tenure</p>
           <h5>JAN 2024 - MAY 2024</h5>
@@ -277,14 +277,14 @@ return()=>{
         <div>
           <p>Specialization</p>
           <h5>Legal Tech</h5>
-          <p>A startup to help lawyers maintain compliance for the companies</p>
+          <p>A startup to help lawyers to do compliance for the companies</p>
         </div>
         <div className="text-right">
         <p>Designation</p>
         <h4>Full Stack Engineer</h4>
         </div>
-      </Link>
-      <Link href="#" id="experience3" className={styles.experience}>
+      </a>
+      <a href="/work" id="experience3" className={styles.experience}>
         <div>
         <p>Work Tenure</p>
         <h5>OCT 2022 - DEC 2023</h5>
@@ -296,14 +296,14 @@ return()=>{
         <div>
           <p>Specialization</p>
           <h5>Medical Care</h5>
-          <p>An innovative startup helps doctor provide medical space and care</p>
+          <p>A startup helps doctor provide medical space and care</p>
         </div>
         <div className="text-right">
           <p>Designation</p>
           <h4>Software Developer Associate</h4> 
         </div>
-      </Link>
-      <Link href="#" id='experience4' className={styles.experience}>
+      </a>
+      <a href="/work" id='experience4' className={styles.experience}>
         <div>
           <p>Work Tenure</p>
           <h5>APR 2022 - OCT 2022</h5>

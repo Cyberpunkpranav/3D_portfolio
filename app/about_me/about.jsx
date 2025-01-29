@@ -21,7 +21,7 @@ useGSAP(()=>{
         start: "top top",
         end: "bottom center", 
         toggleActions:'play reverse restart complete',
-        scrub: 2,      
+        scrub: 1,      
         markers:false,
       })
 
@@ -43,7 +43,7 @@ useGSAP(()=>{
           }
         })
           gsap.fromTo('#education-image',{
-            top:'-15%'
+            top:'-10%'
             },{
             top:'10%',
               scrollTrigger:{
@@ -51,7 +51,7 @@ useGSAP(()=>{
               start: "-200vh top",
               end: "bottom center", 
               toggleActions:'play reverse restart complete',
-              scrub: 2,      
+              scrub: 1,      
               markers:false,
               }
               })

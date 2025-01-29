@@ -1,6 +1,25 @@
 .work{
     margin-top:10vh;
     padding: 25px;
+    color: var(--brown);
+}
+.work main{
+    margin-top:5vh;
+    margin-bottom:5vh;
+}
+.work h2{
+    margin-top: 30px;
+
+}
+.work h3{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.work aside{
+    margin-top: 25px;
+}
+.work article{
+    margin-top: 25px;
 }
 .videos{
     width:40%;
@@ -8,4 +27,64 @@
 }
 .video1 , .video2, .video3, .video4{
     filter: brightness(0.5);
+}
+.work p{
+    letter-spacing: 1px;
+    line-height: 150%;
+}
+.work h6 span{
+    margin-right:5px;
+    margin-bottom:5px;
+}
+.video{
+    position: relative;
+    filter: brightness(0.4);
+    transition: all 0.3s;
+    cursor:pointer;
+}
+.video:hover{
+    filter: brightness(1);
+
+}
+.work aside img{
+    height: auto;
+    width: 100%;
+}
+.work h2{
+    color: var(--black);
+}
+.work p{
+    line-height: 150%;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+@media screen and (min-width:1024px) {
+    .work{
+        padding: 25px;
+    }
+    .work h2{
+        margin-top:45px;
+        margin-bottom:45px;
+    }    
+    .work h5{
+        margin-bottom:20px;
+    }
+    .work p{
+        margin-bottom:10px;
+    }
+    .work main{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom:5vh;
+        min-height: 60vh;
+    }
+    .work aside {
+        width: 40%;
+    }
+    .work article{
+        width: 50%;
+    }
 }
