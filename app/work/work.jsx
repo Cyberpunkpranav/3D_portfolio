@@ -182,7 +182,7 @@ const Work = () => {
       <h3><span className='mr-5'>2.</span>Prototype Website</h3>
       <main>
       <article>
-        <p>It was a frequent one month project to make a animted website for the company's profile total of 3-4 pages showcasing aartas capibilites and their doctors. </p>
+        <p>It was a frequent one month project to make a animted website for the company&#39;s profile total of 3-4 pages showcasing aartas capibilites and their doctors. </p>
         <div className="flex flex-wrap gap-10 items-start mt-10">
       <div>
       <h6 className='text-red'>Main Stack</h6>
