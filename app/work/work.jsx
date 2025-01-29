@@ -6,7 +6,10 @@ import Image from 'next/image'
 const Work = () => {
   return (
     <section className={styles.work}>
-        <h1>Work</h1>
+      <div className="flex justify-between items-end border-b-2 border-black">
+        <h1 className='mr-5 text-red'>Work</h1>
+        <p className='text-brown'>Versatile experience | Different domains</p>
+      </div>
         <div className={styles.videos}>
         <div className="relative h-full w-full">
         </div>
@@ -29,8 +32,7 @@ const Work = () => {
       <div>
       <h6 className='text-red'>Main Stack</h6>
       <p>Next JS</p>
-      <p>Scss</p>
-      <p>Tailwind CSS</p>
+      <p>Tailwind & SCSS</p>
       <p>GSAP</p>
       </div>
       <div>
@@ -44,29 +46,35 @@ const Work = () => {
       <p>2024-2025</p>
       </div>
       </div>
-    
-
       </article>
       </main>
       <main>
       <article>
       <h5>About techrajendra CRM </h5>
-            <p> In Customer Relationship Management , executive needs to create a lead in order to solve customer problems.
-             Leads will get assigned to that corresponding task to execute it.
-            If any customer still gets the issue , the executive could also create a complaint against a task or lead in it.
-            Customers account lists with custom search facility.
-            Account statements of each customer to get the information of ones statements
-            Customer explained detail to help executive to know customer better
-            Facility to download excel sheet of leads, tasks and complaints to help executive to complete their jobs.
-            I contribute in Rule Based Access - RBA feature along with the project manager to make it happen in front end as well as the backend structure
-            It filters up the customers on the based conditions for choosen offer
-            Executive can download the filtered customers to call and explain the offer to them.</p>
+      <p>CRM is a bank cusotmer relationship management tool to help executives makes work easy and solve problems of the customers smoothly. The main feature of the crm is RBA which help executives to get customers filtered by certain merits and parameters so that they could offer bank deals to them according to the customer eligibility.</p>
+      <div className="flex flex-wrap gap-10 items-start mt-10">
+      <div>
+      <h6 className='text-red'>Main Stack</h6>
+      <p>React JS</p>
+      <p>Tailwind CSS</p>
+      <p>odoo APIs</p>
+      </div>
+      <div>
+      <h6 className='text-red'>Contribution</h6>
+      <p>leads, tasks complaint & accounts system</p>
+      <p>Feature design of Rule based Access</p>
+      <p>Stable Predevelopment management</p>
+      </div>
+      <div>
+      <h6 className='text-red'>Date</h6>
+      <p>2024-2025</p>
+      </div>
+      </div>     
       </article>
       <aside>
         <div className="relative">
         <video className={styles.video} src='/videos/spacepe/crm-dashboard.mov'/>
         <Image width={100} height={100} alt='play video' src='/icons/play.png'/>
-
         </div>
       </aside>
       </main>
@@ -80,6 +88,24 @@ const Work = () => {
         </aside>
       <article>
       <p>legalbuddy.in is a platform designed to simplify access to legal services and resources. It offers user-friendly solutions for legal queries, documentation, and expert consultations. The website ensures a seamless experience for individuals and businesses seeking professional legal support. With LegalBuddy.in, navigating legal complexities becomes effortless.</p>
+      <div className="flex flex-wrap gap-10 items-start mt-10">
+      <div>
+      <h6 className='text-red'>Main Stack</h6>
+      <p>Next JS</p>
+      <p>Bootstrap</p>
+      <p>Node Js</p>
+      </div>
+      <div>
+      <h6 className='text-red'>Contribution</h6>
+      <p>RazorPay Integration</p>
+      <p>Feature design of Rule based Access</p>
+      <p>Stable Predevelopment management</p>
+      </div>
+      <div>
+      <h6 className='text-red'>Date</h6>
+      <p>2024-2025</p>
+      </div>
+      </div>   
       </article>
       </main>
       <h2 className='w-full'>Aartas Care Pvt Ltd</h2>
