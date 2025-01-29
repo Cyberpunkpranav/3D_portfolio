@@ -9,7 +9,7 @@
     z-index: 1000;
     padding:10px 20px 10px 20px;
     color: var(--red);
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(5px);
     /* mix-blend-mode: darken; */
 }
 

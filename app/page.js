@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 export default function Home() {  
   const [x,setX] = useState(0)
@@ -245,7 +246,7 @@ return()=>{
       <h6>Making softwares from <span className="text-red font-semibold">3 years</span> and going on..</h6>
       </div>
 
-      <a href='#' id="experience1" className={styles.experience}>
+      <a href='/work' id="experience1" className={styles.experience}>
           <div>
           <p>Work Tenure</p>
           <h5>MAY 2024 - PRESENT</h5>
@@ -264,7 +265,7 @@ return()=>{
         <h4>Software Engineer</h4>
         </div>
       </a>
-      <a href='/#' id="experience2" className={styles.experience}>
+      <a href='/work' id="experience2" className={styles.experience}>
         <div>
           <p>Work Tenure</p>
           <h5>JAN 2024 - MAY 2024</h5>
@@ -276,14 +277,14 @@ return()=>{
         <div>
           <p>Specialization</p>
           <h5>Legal Tech</h5>
-          <p>A startup to help lawyers maintain compliance for the companies</p>
+          <p>A startup to help lawyers to do compliance for the companies</p>
         </div>
         <div className="text-right">
         <p>Designation</p>
         <h4>Full Stack Engineer</h4>
         </div>
       </a>
-      <a href="/#" id="experience3" className={styles.experience}>
+      <a href="/work" id="experience3" className={styles.experience}>
         <div>
         <p>Work Tenure</p>
         <h5>OCT 2022 - DEC 2023</h5>
@@ -295,14 +296,14 @@ return()=>{
         <div>
           <p>Specialization</p>
           <h5>Medical Care</h5>
-          <p>An innovative startup helps doctor provide medical space and care</p>
+          <p>A startup helps doctor provide medical space and care</p>
         </div>
         <div className="text-right">
           <p>Designation</p>
           <h4>Software Developer Associate</h4> 
         </div>
       </a>
-      <a href="/#" id='experience4' className={styles.experience}>
+      <a href="/work" id='experience4' className={styles.experience}>
         <div>
           <p>Work Tenure</p>
           <h5>APR 2022 - OCT 2022</h5>

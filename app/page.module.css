@@ -74,9 +74,10 @@
 
   .rectangle1 .dev-utilities-wraps{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: end;
+    /* align-items: end; */
+    padding-right: 20px;
+    text-align: right;
     border-top: 1px solid var(--red);
     font-size: 2rem;
     color: var(--red);
