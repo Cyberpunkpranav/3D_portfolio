@@ -321,7 +321,7 @@ return()=>{
           <p>Designation</p>
           <h4>Front End Developer </h4>
         </div>
-      </Link>
+      </a>
     </div>
     </div>   
   )
