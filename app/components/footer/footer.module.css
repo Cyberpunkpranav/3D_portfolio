@@ -1,4 +1,6 @@
 .footer{
+  display: grid;
+  place-items: center;
   min-height: 100vh;
   overflow: hidden;
   background-color: var(--red);
@@ -16,13 +18,7 @@
 .footer p{
   color: var(--orange);
 }
-.redwall{
-  position: absolute;
-  left:0;
-  right: 0;
-  height: 100vh;
-  background-color: var(--red);
-}
+
 .profile{
   margin-top:10vh;
   display: grid;
@@ -30,25 +26,33 @@
   height: auto;
   width:100%;
 }
+
 .profile .image1{
+  margin:0 auto;
   transition: all 0.6s;
   border: 10px solid var(--orange);
   height: auto;
-  width: 65%;
+  width: 50%;
   }
 .contact{
     margin-top:2.5vh;
-    letter-spacing:3vw;
     flex-wrap: wrap;
     font-size: 1.5rem;
 }
-@media screen and (min-width:1400px){
+.footer-caption{
+  padding: 25px;
+  color: var(--orange);
+  font-size: 20vw;
+}
+
+@media screen and (min-width:568px){
 .footer-content{
-    width: 50%;
+    width: 40%;
     margin: 25px;
 }
 .footer-content h6{
   width: auto;
+  margin-right: 10px;
   }
 .profile{
     margin: 25px;
@@ -57,7 +61,7 @@
 }
 .contact{
     margin-top:5vh;
-    letter-spacing:1vw;
     font-size: 5vw;
 }
 }
+

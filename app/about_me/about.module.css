@@ -19,7 +19,12 @@
 .about h1{
     color: var(--red);
 }
-
+.about p{
+    line-height: 150%;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    color: var(--brown);
+}
 .images {
     position: relative;
     perspective: 1000px;
