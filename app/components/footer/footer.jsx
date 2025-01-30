@@ -26,15 +26,14 @@ const Footer = () => {
   return (
     <footer id='footer' className={styles.footer}>
       {/* <div className={styles.redwall}></div> */}
-    <div className="flex flex-wrap items-center h-[90vh]">
+    <div className="flex flex-wrap items-center">
     <div className={styles.profile}>
     <img className={styles.image1} src="/images/profilepicture.jpg"/> 
   </div>
   <div className={styles['footer-content']}>
-    <h3>Let&#39;s work Together</h3>
-    <h2 className={styles.contact}>CONTACT ME</h2>
+    <h2 className={styles.contact}>Let&#39;s work Together</h2>
     <div className='flex lg:justify-between flex-wrap lg:mt-10 mt-3'>
-    <h6><a href='tel:+91 7339023531'>+917339023531</a></h6>
+    <h6><a href='tel:+917339023531'>+917339023531</a></h6>
     <h6><a target='__blank' href='mailto:pranavsharma733902@gmail.com'>EMAIL</a></h6>
     <h6><a href='https://www.linkedin.com/in/pranav-sharma-618914187/' target='__blank'>LINKED_IN</a></h6>
     <h6><a href='https://www.instagram.com/cyberpunkpranav/' target='__blank'>INSTAGRAM</a></h6>

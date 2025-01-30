@@ -104,7 +104,26 @@ return()=>{
         markers:false,
       }
     })
+    const Experience = styles['experience']
+    const ExperiencesArray = gsap.utils.toArray(`.${Experience}`)
 
+    gsap.fromTo(ExperiencesArray, {
+      yPercent:100,
+      opacity:0
+      },{
+        yPercent:0,
+        opacity:1,
+        ease: "power2.out", // Add easing for smooth effect
+        duration:1,
+        stagger: 0.2,
+        scrollTrigger: {
+        trigger: "#experiences",
+        start: "-200vh top",
+        end: "bottom bottom", 
+        scrub: true,      
+        markers:false,
+      }
+    })
 
 
   },[])
