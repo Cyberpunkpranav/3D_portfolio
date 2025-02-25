@@ -325,7 +325,7 @@ return()=>{
       <a href="/work" id='experience4' className={styles.experience}>
         <div>
           <p>Work Tenure</p>
-          <h5>APR 2022 - OCT 2022</h5>
+          <h5>SEP 2022 - OCT 2022</h5>
         </div>
         <div>
           <p>Company</p>

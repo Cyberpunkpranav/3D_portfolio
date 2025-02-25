@@ -28,7 +28,15 @@ const Work = () => {
           </div>
         </aside>
         <article>
-      <p><a className='text-red' target='__blank' href='https://www.techrajendra.com'>techrajendra.com</a> is a site where clients can see and have faith in the company&#39;s team that we can deliver the projects. The products we are working and delivered, are smooth and good to use. Using animations, I made the website more catchy, and the product pages show the exact information and capability of our products.</p>
+        <p><a className='text-red' target='__blank' href='https://www.techrajendra.com'>techrajendra.com</a> is a site where clients can see and have faith in the company&#39;s team that we can deliver the projects. The products we are working and delivered, are smooth and good to use. Using animations, I made the website more catchy, and the product pages show the exact information and capability of our products.</p>
+          <ul className='list-disc'>
+         <li> Developed a fully responsive and scalable website using a headless architecture by integrating the WordPress REST API
+      for dynamic content management.</li>
+<li>Implemented GSAP animations to enhance user engagement and create a smooth, interactive browsing experience.</li>
+<li> Collaborated with an SEO specialist to optimize website structure, metadata, and content for improved search engine
+visibility.</li>
+<li> Ensured seamless navigation and responsiveness across devices for an enhanced user experience.</li>
+          </ul>
       <div className="flex flex-wrap gap-10 items-start mt-10">
       <div>
       <h6 className='text-red'>Main Stack</h6>
@@ -53,6 +61,28 @@ const Work = () => {
       <main>
       <article>
       <p><a className='text-red' target='__blank' href='http://crm.southeast.ind.deploy.techrajendra.com/'>CRM</a> is a bank cusotmer relationship management tool to help executives makes work easy and solve problems of the customers smoothly. The main feature of the crm is RBA which help executives to get customers filtered by certain merits and parameters so that they could offer bank deals to them according to the customer eligibility.</p>
+      <ul className='list-disc'>
+        <li>Designed and developed the complete frontend of a Customer Relationship Management (CRM) system with a
+        user-friendly UI.</li>
+        <li>
+        Implemented dynamic forms for lead creation, task management, and complaint tracking, streamlining customer
+        interactions.
+        </li>
+        <li>
+        Developed the accounts section to display customer details along with their bank statements for financial tracking.
+        </li>
+        <li>
+        Built a rule-based access control (RBA) feature, allowing executives to filter customers, leads, tasks, and complaints
+        using customizable rule combinations.
+        </li>
+        <li>
+        Integrated an Excel export functionality, enabling filtered data to be downloaded for reporting and analysis.
+        </li>
+        <li>
+        Collaborated with multiple frontend developers, merged and optimized React code for a seamless pre-deployment process.
+        </li>
+      </ul>
+ 
       <div className="flex flex-wrap gap-10 items-start mt-10">
       <div>
       <h6 className='text-red'>Main Stack</h6>
