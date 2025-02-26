@@ -7,15 +7,16 @@
     margin-top:5vh;
     margin-bottom:5vh;
 }
-.work h2{
+.work h3{
     margin-top: 30px;
 
 }
 .work h3{
     margin-top: 25px;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 .work aside{
+   display: none;
     margin-top: 25px;
 }
 .work article{
@@ -50,7 +51,7 @@
     height: auto;
     width: 100%;
 }
-.work h2{
+.work h3{
     color: var(--black);
 }
 .work p{
@@ -63,28 +64,27 @@
     .work{
         padding: 25px;
     }
-    .work h2{
+    /* .work h3{
         margin-top:45px;
         margin-bottom:45px;
-    }    
-    .work h5{
+    }     */
+    /* .work h5{
         margin-bottom:20px;
-    }
-    .work p{
+    } */
+    /* .work p{
         margin-bottom:10px;
-    }
+    } */
     .work main{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        margin-bottom:5vh;
-        min-height: 60vh;
+        /* margin-bottom:5vh; */
     }
-    .work aside {
+    /* .work aside {
         width: 40%;
     }
     .work article{
         width: 50%;
-    }
+    } */
 }

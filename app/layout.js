@@ -1,4 +1,4 @@
-import '../public/wulkan-display/wulkan-display.css'
+// import '../public/wulkan-display/wulkan-display.css'
 import "./globals.css";
 import Footer from "./components/footer/footer";
 import { Navbar } from "./components/navbar/navbar";

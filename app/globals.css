@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --white: #ffffff;
   --black: #1A1313;
@@ -55,9 +55,15 @@ a {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'WorkSans';
+  src: url('/fonts/WorkSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body{
   background-color: var(--cream);
-  font-family: 'Brolimo';
+  font-family: "Nunito Sans", serif;
 }
  
 body::-webkit-scrollbar {
