@@ -140,7 +140,7 @@ export default function Home() {
             <small> Started in 2021</small>
           </div>
           <div>
-            <p className="text-left p-2">I ' m a</p>
+            <p className="text-left p-2">I &#39; m a</p>
             <h1 className="flex flex-wrap justify-center z-[500] ">
               <span className={styles.punchline}>
                 <div style={{ color: 'var(--red)' }} className={styles.creative}>C</div>
@@ -347,7 +347,7 @@ export default function Home() {
             <ul>
               <li>Developed a medical dashboard for care coordinators to monitor doctor in/out timings and manage patient vitals
               efficiently.</li>
-              <li> Implemented a monthly timing management system to track doctor's working hours, enabling accurate billing for their
+              <li> Implemented a monthly timing management system to track doctor&#39;s working hours, enabling accurate billing for their
               services.</li>
               <li>Built a pharmacy management system, allowing executives to bill patients, manage inventory, and track purchases,
               returns, sales, and dumps.</li>
