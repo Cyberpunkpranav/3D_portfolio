@@ -133,8 +133,8 @@ export default function Home() {
   return (
     <div id="portfolio">
       <div id="cover" className={styles.cover}>
-        <div className={`${styles.content} grid place-items-center h-full w-full`} >
-          <div className="absolute bottom-0 text-right right-0 p-4 mb-[5vh] lg:mb-0">
+        <div className={`${styles.content} h-full w-full`} >
+          <div className="absolute bottom-0 text-right right-0 p-4 lg:mb-[5vh]">
             <small>18.12.2000</small>
             <br />
             <small> Started in 2021</small>
@@ -376,7 +376,7 @@ export default function Home() {
           />
           </aside>
           <article>
-            <h4>Ayur Homes and others projects contribution</h4>
+            <h4>Ayur Homes and other projects contribution</h4>
             <ul>
               <li>Developed responsive websites, ensuring cross-device compatibility and a seamless user experience.</li>
               <li>Implemented interactive contact forms with validation and user-friendly UI to enhance customer engagement.</li>

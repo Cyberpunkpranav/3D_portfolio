@@ -17,6 +17,13 @@
   --sparkles-duration:1s;
   --sparkles-delay:0.5s;
   --line-width:10%;
+
+  --cream:#03202d;
+  --white:#02212d;
+  --orange:#7fd9ff;
+  --red:#0284bc;
+  --brown:#c9e0e9;
+  --black:#eaf9ff;
 }
 
 * {
@@ -28,6 +35,7 @@ body {
   /* font-family: "IBM Plex Sans", serif; */
   /* font-family: "wulkan-display", serif; */
   font-size: 16px;
+  color: var(--black);
 }
 
 a {
@@ -239,9 +247,9 @@ h5{
 h6{
   font-size: 14px;
 }
-p{
+/* li, p{
   font-size: 11px;
-}
+} */
 small{
   font-size: 9px;
 }
@@ -264,9 +272,9 @@ small{
   h6{
     font-size: 15px;
   }
-  p{
+  /* p{
     font-size: 12px;
-  }
+  } */
   small{
     font-size: 9px;
   }
@@ -290,9 +298,9 @@ small{
   h6{
     font-size: 16px;
   }
-  p{
+  /* p{
     font-size: 13px;
-  }
+  } */
   small{
     font-size: 10px;
   }
@@ -316,9 +324,9 @@ small{
   h6{
     font-size: 17px;
   }
-  p{
+  /* p{
     font-size: 14px;
-  }
+  } */
   small{
     font-family: 11px;
   }
@@ -342,9 +350,9 @@ small{
   h6{
     font-size: 18px;
   }
-  p{
+  /* p{
     font-size: 16px;
-  }
+  } */
   small{
     font-size: 12px;
   }
