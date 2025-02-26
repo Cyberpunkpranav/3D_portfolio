@@ -97,20 +97,12 @@
     .about aside {
         width: 60%;
     }
-    .about article{
-        width: 40%;
-        overflow-y: auto;
-    }  
 }
 @media screen and (min-width:992px) {
 
     .about aside {
         width: 40%;
     }
-    .about article{
-        width: 60%;
-        overflow-y: auto;
-    }  
 
 }
 
@@ -125,10 +117,6 @@
     .images .image1{
         width:30vw;
         height: auto;
-    }
-    .about article{
-        width: 50%;
-        overflow-y: auto;
     }
     .about article h4{
         padding: 5vh;
