@@ -71,7 +71,7 @@ useGSAP(()=>{
         <article>
         <h1>All About Me</h1>
             <p id='about-article' className='text-wrap'>
-            A Software Engineer who is deeply passionate about creating solutions With over 3 years of experience in software development. Contributing to projects that help businesses simplify complex processes, and embrace the future of technology.These experiences laid the foundation for my curiosity and drive to continuously learn and innovate. I can design and develop intuitive systems or crafting animated websites that captivate users. I&#39;m committed to using my skills to build tools and experiences that uplift and empower.Let&#39;s connect and work towards a future where technology truly works for everyone!.
+            A Software Engineer who is deeply passionate about creating solutions With over 2 years of experience in software development. Contributing to projects that help businesses simplify complex processes, and embrace the future of technology.These experiences laid the foundation for my curiosity and drive to continuously learn and innovate. I can design and develop intuitive systems or crafting animated websites that captivate users. I&#39;m committed to using my skills to build tools and experiences that uplift and empower.Let&#39;s connect and work towards a future where technology truly works for everyone!.
                 </p>
                 <p className='text-right mt-5'> - Pranav Sharma</p>
         </article>

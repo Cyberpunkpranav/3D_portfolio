@@ -7,7 +7,7 @@ const Work = () => {
   return (
     <section className={styles.work}>
       <div className="flex flex-wrap justify-between items-end border-b-2 border-black">
-        <h1 className='mr-5 text-red'>Work</h1>
+        <h2 className='mr-5 text-red'>Work</h2>
         <p className='text-brown'>Versatile experience | Different domains</p>
       </div>
         <div className={styles.videos}>
@@ -15,12 +15,12 @@ const Work = () => {
         </div>
       </div>
       <div id='spacepe' className="flex flex-wrap justify-between items-center">
-      <h2 className='inline-block mr-5'>SpacePe LLP</h2>
+      <h3 className='inline-block mr-5'>SpacePe LLP</h3>
       <p className='inline-block text-brown'>may 2024 - current</p>
-        </div> 
-      <h3><span className='mr-5'>1.</span>techrajendra.com</h3>
+      </div> 
       <main>
         <aside>
+        <h4><span className='mr-5'>1.</span>techrajendra.com</h4>
           <div className='relative'>
           <video autoPlay muted loop className={styles.video}>
           <source src='/videos/techrajendra.mp4' />
@@ -57,7 +57,7 @@ visibility.</li>
       </div>
       </article>
       </main>
-      <h3><span className='mr-5'>2.</span>Customer Relationship Management</h3>
+      <h4><span className='mr-5'>2.</span>Customer Relationship Management</h4>
       <main>
       <article>
       <p><a className='text-red' target='__blank' href='http://crm.southeast.ind.deploy.techrajendra.com/'>CRM</a> is a bank cusotmer relationship management tool to help executives makes work easy and solve problems of the customers smoothly. The main feature of the crm is RBA which help executives to get customers filtered by certain merits and parameters so that they could offer bank deals to them according to the customer eligibility.</p>
@@ -109,10 +109,10 @@ visibility.</li>
       </aside>
       </main>
       <div id='legalbuddy' className="flex flex-wrap justify-between items-center">
-      <h2 className='inline-block mr-5'>Legal Buddy Pvt Ltd</h2>
+      <h3 className='inline-block mr-5'>Legal Buddy Pvt Ltd</h3>
       <p className='inline-block text-brown'>Jan 2024 - May 2024</p>
       </div> 
-      <h3><span className='mr-5'>1.</span>legalbuddy.in</h3>
+      <h4><span className='mr-5'>1.</span>legalbuddy.in</h4>
       <main>
         <aside>
           <div className="relative">
@@ -143,7 +143,7 @@ visibility.</li>
       </div>   
       </article>
       </main>
-      <h3><span className='mr-5'>2.</span>legalbuddy.in Dashboard</h3>
+      <h4><span className='mr-5'>2.</span>legalbuddy.in Dashboard</h4>
       <main>
       <article>
       <p>Dashboard allows lawyers and their executives to write and manage legal practices content. Lawyers can write clauses resolutions acts & rules and blogs which is designed to understand and consume the easiest way possible all gets powered and controlled by this dashboard in the website. All the user subscribtion could also managed inside the dashboard too and much more. </p>
@@ -175,10 +175,10 @@ visibility.</li>
         </aside>
       </main>
       <div id='aartas' className="flex flex-wrap justify-between items-center">
-      <h2 className='inline-block mr-5'>Aartas Care Pvt Ltd</h2>
+      <h3 className='inline-block mr-5'>Aartas Care Pvt Ltd</h3>
       <p className='inline-block text-brown'>Oct 2022 - Dec 2023</p>
       </div> 
-      <h3><span className='mr-5'>1.</span>ConnectApp Dashboard</h3>
+      <h4><span className='mr-5'>1.</span>ConnectApp Dashboard</h4>
       <main>
       <aside>
           <div className="relative">
@@ -209,7 +209,7 @@ visibility.</li>
       </div>   
       </article>
       </main>
-      <h3><span className='mr-5'>2.</span>Prototype Website</h3>
+      <h4><span className='mr-5'>2.</span>Prototype Website</h4>
       <main>
       <article>
         <p>It was a frequent one month project to make a animted website for the company&#39;s profile total of 3-4 pages showcasing aartas capibilites and their doctors. </p>
@@ -241,10 +241,10 @@ visibility.</li>
       </aside>
       </main>
       <div id='addon' className="flex flex-wrap justify-between items-center">
-      <h2 className='inline-block mr-5'>Addon Shareware Pvt Ltd</h2>
+      <h3 className='inline-block mr-5'>Addon Shareware Pvt Ltd</h3>
       <p className='inline-block text-brown'>Apr 2022 - Oct 2022</p>
       </div> 
-      <h3><span className='mr-5'>1.</span>Ayur Homes</h3>
+      <h4><span className='mr-5'>1.</span>Ayur Homes</h4>
       <main>
         <aside>
           <div className="relative">
@@ -273,7 +273,7 @@ visibility.</li>
       </div>
       </div> 
         </article>
-        <h3><span className='mr-5'>2.</span>Andy & Sara</h3>
+        <h4><span className='mr-5'>2.</span>Andy & Sara</h4>
       </main>
       <main>
         <article>

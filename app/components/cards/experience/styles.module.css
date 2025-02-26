@@ -1,0 +1,22 @@
+@media screen and (max-width:992px) {
+    .experience-card {
+        margin-top:15px;
+        margin-bottom: 15px;
+    }
+    .experience-card .company{
+        margin-top:5px;
+    }
+    
+}
+.experience-card .role h3{
+    color: var(--red);
+}
+.experience-card .company h4{
+    color: var(--black);
+}
+@media screen and (min-width:992px) {
+    .experience-card .company{
+        margin-top:25px;
+    }
+    
+}
