@@ -20,9 +20,9 @@
     color: var(--red);
 }
 .about p{
-    line-height: 150%;
-    letter-spacing: 1px;
-    word-spacing: 5px;
+    /* line-height: 150%; */
+    /* letter-spacing: 1px; */
+    /* word-spacing: 5px; */
     color: var(--brown);
 }
 .images {
@@ -70,34 +70,6 @@
     position: relative;
     overflow: hidden;
 }
-.education .education_cover_top{
-    position: absolute;
-    top:-10%;
-    height: 10vh;
-    width:100%;
-    z-index: 500;
-    background-color: var(--cream);
-}
-
-.education .education_cover_down{
-    position: absolute;
-    bottom:0;
-    height: 10vh;
-    width:100%;
-    background-color: var(--cream);
-}
-.education .education-page{
-    height: 100vh;
-    width: 100%;
-}
-.education .education-image{
-    position: absolute;
-    top: 0;
-    right:0;
-    height: 100%;
-    width: auto;
-    z-index: -1;
-}
 
 .education article{
     padding: 5%;
@@ -115,64 +87,25 @@
     margin-bottom:10vh
 }
 .education h2{
-    color: var(--white);
+    color: var(--red);
 }
 .education .education_content{
-    color: var(--white);
+    color: var(--black);
 }
 @media screen and (min-width:568px) {
 
     .about aside {
         width: 60%;
     }
-    .about article{
-        width: 40%;
-        overflow-y: auto;
-    }  
 }
 @media screen and (min-width:992px) {
 
     .about aside {
         width: 40%;
     }
-    .about article{
-        width: 60%;
-        overflow-y: auto;
-    }  
 
-    .education-page{
-        display: flex;
-        position: relative;
-        overflow: hidden;
-    }
+}
 
-    .education .education-image{
-        position: absolute;
-        top: 0;
-        right:0;
-        height: auto;
-        width: 100%;
-        z-index: -1;
-    }
-}
-@media screen and (min-width:1200px) {
-    .education h2{
-        color: var(--red);
-    }
-    .education .education-page{
-        height: 100vh;
-        width: 100%;
-    }
-    .education .education_content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        color: var(--black);
-        background-color: var(--cream);
-        width: 50%;
-       }
-}
 @media screen and (min-width:1400px) {
     .about{
         justify-content: space-between;
@@ -184,10 +117,6 @@
     .images .image1{
         width:30vw;
         height: auto;
-    }
-    .about article{
-        width: 50%;
-        overflow-y: auto;
     }
     .about article h4{
         padding: 5vh;

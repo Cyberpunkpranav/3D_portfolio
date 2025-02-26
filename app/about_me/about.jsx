@@ -42,34 +42,21 @@ useGSAP(()=>{
             markers:false,
           }
         })
-          gsap.fromTo('#education-image',{
-            top:'-10%'
-            },{
-            top:'10%',
-              scrollTrigger:{
-              trigger: "#education",
-              start: "-200vh top",
-              end: "bottom center", 
-              toggleActions:'play reverse restart complete',
-              scrub: 1,      
-              markers:false,
-              }
-              })
-
+        
     },[])
     
   return (
     <>
     <section id='about' className={styles.about}>
-        <aside>
+        {/* <aside>
             <div className={styles.images}>
             <Image id='profile' alt='profile' unoptimized={true} className={styles.image1} width={100} height={100} quality={100} src='/images/picture_far.jpeg'/>
             <div className={styles.image_cover_top}></div>
             <div className={styles.image_cover_down}></div>
             </div>
-        </aside>
+        </aside> */}
         <article>
-        <h1>All About Me</h1>
+        <h1>About Me</h1>
             <p id='about-article' className='text-wrap'>
             A Software Engineer who is deeply passionate about creating solutions With over 2 years of experience in software development. Contributing to projects that help businesses simplify complex processes, and embrace the future of technology.These experiences laid the foundation for my curiosity and drive to continuously learn and innovate. I can design and develop intuitive systems or crafting animated websites that captivate users. I&#39;m committed to using my skills to build tools and experiences that uplift and empower.Let&#39;s connect and work towards a future where technology truly works for everyone!.
                 </p>
@@ -79,8 +66,6 @@ useGSAP(()=>{
     <section id='education' className={styles.education}>
    
         <div className={styles['education-page']}>
-        <div className={styles.education_cover_top}></div>
-        <Image id='education-image' unoptimized={true} className={styles['education-image']} width={100} height={100} quality={100} src='/images/education.jpeg'/>
         <div className={styles.education_content}>
         <article id='education1'>
         <h2>Education</h2>
@@ -94,7 +79,6 @@ useGSAP(()=>{
         <p>CSI Polytechnic College</p>
         </article>        
         </div>
-         <div id='page_down' className={styles.education_cover_down}></div>
     </div>
     </section>
     </>
